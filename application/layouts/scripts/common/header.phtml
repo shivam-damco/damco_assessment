@@ -1,0 +1,29 @@
+  <header id="header" class="row"  <?php echo !empty($this->get["chkme"]) ? " style='display:none;' ": "";?>>
+    <div class="logo col-lg-2 col-md-2  col-sm-2"><img src="<?php echo $this->serverUrl()."/images/logo.png";?>" alt="Damco"></div>
+
+    <div class="col-md-4">
+        <?php 
+          echo $this->render('common/navigation.phtml');
+        ?>
+    </div>
+    <div class="head-right-links col-lg-6 col-md-6  col-sm-6 select-lang-wrapp">
+      <ul class="list-inline">
+        <?php $user = Zend_Auth::getInstance()->getIdentity(); ?>
+        <li><?php echo $this->translate('Welcome');?> <strong><i class="glyphicon glyphicon-user"></i> <?php echo $user->first_name . ' ' . $user->last_name; ?></strong></li>
+        <li><a href="<?php echo $this->url( array( 'module' => 'default', 'controller' => 'index', 'action' => 'logout' ), null, true ); ?>"><?php echo $this->translate('');?><i class="glyphicon glyphicon-off"></i></a></li>
+      </ul>
+<!--         <div class="select-lang"><?php echo $this->assessment_select_prefer_language_text; ?> 
+        <?php //  $arroptions = $this->getLanguages("report");  ?>
+        <select id="translatePage"  class="selectmenu">
+            <?php
+//            foreach ($arroptions as $arrd) :
+            ?>
+                <option value="<?php // echo $arrd["langid"]?>"
+                    <?php // echo (!empty($this->lang["langid"]) && $this->lang["langid"] ==$arrd["langid"] )  ? "selected" : "" ?>><?php echo $arrd["local_name"]?></option>
+            <?php
+//            endforeach;
+            ?>
+        </select>
+      </div>     -->
+    </div>
+  </header>

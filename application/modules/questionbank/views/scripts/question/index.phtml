@@ -1,0 +1,117 @@
+<h2><?php echo $this->translate('List Questions - '); ?><a href="<?php echo HTTP_PATH.'/survey/eventtype/index'?>" ><?php echo $this->translate($this->eventName)?></a></h2>
+<?php
+    // print_r($this->EventTypesData);
+?>
+
+<?php echo $this->flashMessages( $this->flashMessages ); ?>
+<form name="data-filters" action="<?php echo HTTP_PATH.'/question/index/'?>" method="get">
+<?php 
+//    echo $this->dataFilters( array() );
+?>
+</form>
+<div class="form-group">
+<?php if($this->surveyInprogress == '1') {?>
+        <div class="col-sm-6 col-xs-6 btn-search pull-right">
+            <div class="manage-branching-btn-group">
+                <?php
+                    if ( $this->hasAccess( $this->role_name, $this->get['module'], 'question', 'import' ) ) {
+                ?>
+                    <span class="button sbtn pull-right">
+                        <span>
+                            <a href="<?php echo HTTP_PATH.'/survey/question/import/eventtypeid/'.$this->eventTypeId?>">
+                                <button class="btn btn-primary pull-right">Import Questions</button>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="button sbtn pull-right">
+                        <span>
+                            <a href="<?php echo HTTP_PATH.'/survey/question/excelimport/eventtypeid/'.$this->eventTypeId?>">
+                                <button class="btn btn-primary pull-right">Import Excel</button>
+                            </a>
+                        </span>
+                    </span>
+                <?php
+                    }
+                    if ( $this->hasAccess( $this->role_name, $this->get['module'], 'question', 'add' ) ) {
+                ?>
+                    <span class="button sbtn pull-right"><span>
+                    <a href="<?php echo HTTP_PATH.'/survey/question/add/eventtypeid/'.$this->eventTypeId?>">
+                        <button class="btn btn-primary pull-right">Add Question</button>
+                    </a>
+                    </span></span>
+                <?php
+                    }
+                    if ( $this->hasAccess( $this->role_name, $this->get['module'], 'eventtype', 'managebranching' ) ) {
+                ?>
+                    <span class="button sbtn pull-right"><span>
+                        <a href="<?php echo HTTP_PATH.'/survey/eventtype/managebranching/eventtypeid/'.$this->eventTypeId?>">
+                            <button class="btn btn-primary pull-right">Manage Branching</button>
+                        </a>
+                    </span></span>
+                <?php } ?>
+            </div>
+        </div>    
+        <?php } ?>	
+</div>        
+<div class="data-table white-bg padding20">
+     
+<table id="question-grid" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Question');?></th>
+            <th><?php echo $this->translate('Input Type');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th><?php echo $this->translate('Question');?></th>
+            <th><?php echo $this->translate('Input Type');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </tfoot>
+    
+</table>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+   var datatableObj=  $('#question-grid').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "bFilter": false,
+        "bSort" : true,
+        "iDisplayLength": 10,
+        "order": [[ 0, "desc" ]],
+        "aoColumnDefs": [
+            {
+                "aTargets": [0],
+                "mData": null,
+                "mRender": function(data, type, full) {
+                     var view = '';
+                     if (data[4] == 'Closed' || data[4] == 'Did not qualify') {
+                         view = '<a href="'+BASE_URL+'/event/scorecard/index?eventid='
+                +btoa(data[0])+'&modulename=eventlist" title="View Record" target="_blank">'+data[0]+'</a>';
+                    }
+                    else
+                    {
+                        view=data[0];
+                    }
+                    return view;
+                }
+            },
+            {
+                "aTargets": [2],
+                "bSortable": false
+            }
+            ],
+        "ajax": CURRENT_URL
+    });
+
+   
+
+    
+   
+});
+</script>

@@ -1,0 +1,29 @@
+<form action='' id="languageForm" name="languageForm" method="POST">
+<?php 
+echo $this->form->langid;
+echo $this->form->questionid;
+echo $this->form->question;
+echo $this->form->response1;
+echo $this->form->response2;
+echo $this->form->response3;
+echo $this->form->response4;
+echo $this->form->response5;
+echo $this->form->response6;
+echo $this->form->response7;
+echo $this->form->response8;
+echo $this->form->response9;
+echo $this->form->response10;
+echo $this->form->response11;
+echo $this->form->grade_label_text;
+echo $this->form->submit;
+?>
+</form>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    var formName ='#languageForm';
+    var btnSave = '#submit';
+    $(btnSave).click( function() {
+       $(formName).trigger('submit'); 
+    });
+});
+</script>

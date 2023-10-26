@@ -1,0 +1,634 @@
+<section id="wrapper">
+    <div id="inner-wrapper">
+
+        <h2><?php echo $this->translate('Add Question'); ?></h2>
+        <?php echo $this->flashMessages( $this->flashMessages ); ?>
+        <div class="error-messages">
+        <?php
+        if (!empty($this->messages)) {
+            $error = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+                    . $this->messages . '</div</div </div></div>';
+            echo $error;
+        }
+        ?>
+        </div>
+        <div class="edit-event-form white-bg padding20 question-add">
+            <form class="form-horizontal" role="form" name="question" action="" method="POST" onsubmit=""> 
+                <?php //echo "<pre>";print_R($this->form->getElement("dealer_name"));//echo "<pre>";print_r($this->EventData); ?>
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->coverage_area->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->coverage_area->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->coverage_level->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->coverage_level->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->input_type->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->input_type->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <!--<div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php //echo $this->form->event_code->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php //echo $this->form->event_code->renderViewHelper(); ?>
+                    </div>
+                </div> -->
+                
+                <div class="form-group" id="max_limit">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->max_res_limit->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->max_res_limit->renderViewHelper(); ?>
+                         
+                    </div>
+                </div>
+                
+                <div class="form-group" >
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->question->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->question->renderViewHelper(); ?>
+                         
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="max_score" class="col-md-3 col-sm-4"><?php echo $this->form->max_score->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->max_score->renderViewHelper(); ?>
+                         
+                    </div>
+                </div>
+<!--                 <div class="form-group custom-check" id="res1" id="res1">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response1->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response1->renderViewHelper(); ?>
+                         
+                    </div>
+                </div>
+                
+                
+                <div class="form-group custom-check" id="res2">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response2->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response2->renderViewHelper(); ?>
+                        
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res3">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response3->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response3->renderViewHelper(); ?>
+                        
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res4">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response4->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response4->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res5">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response5->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response5->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res6">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response6->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response6->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res7">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response7->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response7->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res8">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response8->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response8->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res9">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response9->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response9->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res10">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response10->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response10->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group custom-check" id="res11">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response11->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response11->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res12">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response12->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response12->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res13">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response13->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response13->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res14">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response14->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response14->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res15">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response15->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response15->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res16">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response16->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response16->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res17">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response17->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response17->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res18">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response18->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response18->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res19">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response19->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response19->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group custom-check" id="res20">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->response20->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->response20->renderViewHelper(); ?>
+                    </div>
+                </div> -->
+                <div class="form-group">
+                    <div class="data-table white-bg custompadding20">
+                        <table id="event-grid" class="display" cellspacing="0" width="100%">
+                            <thead id="hideType">
+                                <tr>
+                                    <th><?php echo $this->translate('Options');?></th>
+                                    <th><?php echo $this->translate('Correct Option');?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-8 custom-check" id="res1">
+                                        <label for="email_address"><?php echo $this->form->response1->renderLabel(); ?></label>
+                                        <?php echo $this->form->response1->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres1">
+                                        <?php echo $this->form->optionresponse1->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res2">
+                                        <label for="email_address"><?php echo $this->form->response2->renderLabel(); ?></label>
+                                        <?php echo $this->form->response2->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres2">
+                                        <?php echo $this->form->optionresponse2->renderViewHelper(); ?>  
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res3">
+                                        <label for="email_address"><?php echo $this->form->response3->renderLabel(); ?></label>
+                                        <?php echo $this->form->response3->renderViewHelper(); ?>   
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres3">
+                                        <?php echo $this->form->optionresponse3->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res4">
+                                        <label for="email_address"><?php echo $this->form->response4->renderLabel(); ?></label>
+                                        <?php echo $this->form->response4->renderViewHelper(); ?>  
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres4">
+                                        <?php echo $this->form->optionresponse4->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res5">
+                                        <label for="email_address"><?php echo $this->form->response5->renderLabel(); ?></label>
+                                        <?php echo $this->form->response5->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres5">
+                                        <?php echo $this->form->optionresponse5->renderViewHelper(); ?>  
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res6">
+                                        <label for="email_address"><?php echo $this->form->response6->renderLabel(); ?></label>
+                                        <?php echo $this->form->response6->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres6">
+                                        <?php echo $this->form->optionresponse6->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res7">
+                                        <label for="email_address"><?php echo $this->form->response7->renderLabel(); ?></label>
+                                        <?php echo $this->form->response7->renderViewHelper(); ?></td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres7">
+                                        <?php echo $this->form->optionresponse7->renderViewHelper(); ?>   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res8">
+                                        <label for="email_address"><?php echo $this->form->response8->renderLabel(); ?></label>
+                                        <?php echo $this->form->response8->renderViewHelper(); ?>  
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres8">
+                                        <?php echo $this->form->optionresponse8->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res9">
+                                        <label for="email_address"><?php echo $this->form->response9->renderLabel(); ?></label>
+                                        <?php echo $this->form->response9->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres9">
+                                        <?php echo $this->form->optionresponse9->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res10">
+                                        <label for="email_address"><?php echo $this->form->response10->renderLabel(); ?></label>
+                                        <?php echo $this->form->response10->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres10"><?php echo $this->form->optionresponse10->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res11">
+                                        <label for="email_address"><?php echo $this->form->response11->renderLabel(); ?></label>
+                                        <?php echo $this->form->response11->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres11">
+                                        <?php echo $this->form->optionresponse11->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res12">
+                                        <label for="email_address"><?php echo $this->form->response12->renderLabel(); ?></label>
+                                        <?php echo $this->form->response12->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres12">
+                                        <?php echo $this->form->optionresponse12->renderViewHelper(); ?>  
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res13">
+                                        <label for="email_address"><?php echo $this->form->response13->renderLabel(); ?></label>
+                                        <?php echo $this->form->response13->renderViewHelper(); ?> 
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres13">
+                                        <?php echo $this->form->optionresponse13->renderViewHelper(); ?>  
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res14">
+                                        <label for="email_address"><?php echo $this->form->response14->renderLabel(); ?></label>
+                                        <?php echo $this->form->response14->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres14"><?php echo $this->form->optionresponse14->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res15">
+                                        <label for="email_address"><?php echo $this->form->response15->renderLabel(); ?></label>
+                                        <?php echo $this->form->response15->renderViewHelper(); ?>  
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres15">
+                                        <?php echo $this->form->optionresponse15->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res16">
+                                        <label for="email_address"><?php echo $this->form->response16->renderLabel(); ?></label>
+                                        <?php echo $this->form->response16->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres16">
+                                        <?php echo $this->form->optionresponse16->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res17">
+                                        <label for="email_address"><?php echo $this->form->response17->renderLabel(); ?></label>
+                                        <?php echo $this->form->response17->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres17"><?php echo $this->form->optionresponse17->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-sm-5 custom-check" id="res18">
+                                        <label for="email_address"><?php echo $this->form->response18->renderLabel(); ?></label>
+                                        <?php echo $this->form->response18->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres18"><?php echo $this->form->optionresponse18->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res19">
+                                        <label for="email_address"><?php echo $this->form->response19->renderLabel(); ?></label>
+                                        <?php echo $this->form->response19->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres19">
+                                        <?php echo $this->form->optionresponse19->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-5 custom-check" id="res20">
+                                        <label for="email_address"><?php echo $this->form->response20->renderLabel(); ?></label>
+                                        <?php echo $this->form->response20->renderViewHelper(); ?>
+                                    </td>
+                                    <td class="col-md-3 col-sm-4 custom-check" id="optres20">
+                                        <?php echo $this->form->optionresponse20->renderViewHelper(); ?>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submit->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="goBack();" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                        <button class="btn btn-primary" type="submit" id="add-more" name="add-more" value="">Add More Question</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->event_typeid->renderViewHelper(); ?>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery(".question-add .custom-check").hide();
+        jQuery(".question-add #max_limit").hide();
+        jQuery("#hideType").hide();
+        jQuery("#max_limit").children('label').children('dt').children('label').addClass('required');
+        jQuery(".custom-check").children('label').children('dt').children('label').addClass('required');
+        
+//        var formName ='#question';
+//        var btnSave = '#submit';
+//        $(btnSave).click( function() {
+//            $(formName).trigger('submit'); 
+//        });
+        /*
+         * Show/Hide max_limit dropdown on basis of input_type
+         * 
+         */
+        jQuery(".question-add #input_type").on('change',function(){
+            var val = jQuery("#input_type option:selected").val();
+
+            if(val == 'checkbox'){
+                $(".custom-change-type").attr( { 'type':"checkbox", 'name':"correctanswer[]" } );
+                // $('.custom-change-type').attr('type', 'checkbox');
+            } else if(val == 'radio'){
+                $('.custom-change-type').attr('type', 'radio');
+            }
+
+            if(val == 'textarea' || val == 'date'){
+                jQuery("#max_res_limit").val("");
+                jQuery(".custom-check").hide();
+                jQuery("#max_limit").hide();
+                jQuery("#hideType").hide();
+                //jQuery("#res1").show();
+                //$('#res1').find('.optional').text('Comment');
+
+            } else if(val == 'radio' || val == 'checkbox'){
+                jQuery("#max_res_limit").val("");
+                jQuery("#max_limit").show();
+                jQuery("#hideType").hide();
+                jQuery(".custom-check").hide();
+                $('#res1').find('.optional').text('Option 1');
+            } else{
+                jQuery(".custom-check").hide();
+                jQuery("#max_limit").hide();
+                jQuery("#hideType").hide();
+                jQuery("#res1").hide();
+                $('#res1').find('.optional').text('Option 1');
+            }
+        });
+        /*
+         * Show/Hide responses dropdown on basis of max_limit
+         * 
+         */
+        jQuery(".question-add #max_res_limit").on('change',function(){
+            var val = jQuery("#max_limit option:selected").val();
+            jQuery("#hideType").show();
+            jQuery(".custom-check").hide();
+            var i = 0;
+            for(i = 1; i<= val; i++){
+                jQuery("#res"+i).show();
+                jQuery("#optres"+i).show();
+            }
+        });
+        
+        /*
+         * Validate form while submitting 
+         */
+        jQuery("#submit,#add-more").on('click',function(){
+            tinyMCE.triggerSave();
+            var inputType = jQuery('#input_type').val();
+            var maxScore = jQuery('#max_score').val();
+            var errors = new Array();
+            jQuery('.error-messages').html();
+            
+            if (inputType == '') 
+            {
+                errors.push('Please select type of question');
+            }
+            
+            if(jQuery('#question').val() == '')
+            {
+                errors.push('Please enter question text');
+            }
+            
+            // if questionScore is greater than zero then will validate radio/checkbox score option
+            if(maxScore > 0){
+                if(inputType == 'checkbox'){
+                    var checkedAnswers = $('input[name="correctanswer[]"]:checked').length;
+                    if (!checkedAnswers) {
+                        errors.push('Please select correct options');
+                    }
+                }
+
+                if(inputType == 'radio'){
+                    var correctAnswer =  $("input[name=correctanswer").is(":checked");
+                    if(correctAnswer == false){
+                        errors.push('Please select correct option');
+                    }
+                }
+            }
+            
+            if(jQuery('#max_limit').is(':visible'))
+            {
+                var maxResLimit = jQuery('#max_res_limit').val();
+                if (maxResLimit == '') 
+                {
+                    errors.push('Please select number of options');
+                }
+                else
+                {
+                    var errorString = '';
+                    for(var i =1;i<= maxResLimit;i++)
+                    {
+                        if(jQuery('#response'+i).val() == '')
+                        {
+                            errorString += 'option '+i+',';
+                        }
+                    }
+                    errorString = errorString.slice(0,-1)
+                    
+                    if(errorString != '')
+                        errors.push('Please enter '+errorString);
+                }
+            }
+            
+            
+            
+            if(inputType == 'textarea')
+            {
+                if(jQuery('#response1').val() == '')
+                {
+                   // errors.push('Please enter response1');
+                }
+            }
+
+            if(inputType == 'textarea' || inputType == 'date')
+            {
+                if(jQuery('#response1').val() == '')
+                {
+                   // errors.push('Please enter response1');
+                }
+            }
+            
+            if(errors.length != 0)
+            {
+                var errorHtml = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><br/>';
+                    for (i = 0; i < errors.length; i++) 
+                    {
+                       errorHtml += errors[i] + "<br>";
+                    }
+
+                errorHtml +=  '</div</div </div></div></div>';
+                
+                jQuery('.error-messages').html(errorHtml);
+                return false;
+            }
+        });
+    });
+/* way of using file_picker_callback */
+tinymce.init({
+  selector: 'textarea#question',
+  height: 300,
+  /* without images_upload_url set, Upload tab won't show up*/
+  images_upload_url: '/survey/question/uploadimagetinymce',
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste imagetools wordcount'
+  ],
+  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  /* enable title field in the Image dialog*/
+  image_title: true,
+  /* enable automatic uploads of images represented by blob or data URIs*/
+  automatic_uploads: true,
+  file_picker_types: 'image',
+
+  file_picker_callback: function (cb, value, meta) {
+    var input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.onchange = function () {
+        var file = this.files[0];
+        var reader = new FileReader();
+                        
+        // FormData
+        var fd = new FormData();
+        var files = file;
+        fd.append('filetype',meta.filetype);
+        fd.append("file",files);
+
+        var filename = "";
+        var BASE_URL = "<?php echo $this->serverUrl(); ?>" + '/survey/question/uploadimagetinymce';
+        // AJAX
+        var xhr, formData;
+        xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        xhr.open('POST', BASE_URL);
+
+        xhr.onload = function() {
+            var json;
+            if (xhr.status != 200) {
+                alert('HTTP Error: ' + xhr.status);
+                return;
+            }
+            json = JSON.parse(xhr.responseText);
+            if (!json || typeof json.location != 'string') {
+                alert('Invalid JSON: ' + xhr.responseText);
+                return;
+            }
+            filename = json.location;
+            reader.onload = function(e) {
+                cb(filename);
+            };
+            reader.readAsDataURL(file);
+        };
+        xhr.send(fd);
+        return
+    };
+
+    input.click();
+  }
+});
+</script>
+
+
+
+
+
+
+

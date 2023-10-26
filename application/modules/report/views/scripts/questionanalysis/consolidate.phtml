@@ -1,0 +1,310 @@
+<?php echo  !empty($this->get["chkme"]) ? 
+            $this->headLink()->appendStylesheet($this->baseUrl().'')->appendStylesheet('/css/pdf.css') //9/17/14 11:53 AM added by dipa 
+            : "" ;
+ ?>
+<h2><?php echo $this->translate('Consolidate Analysis Report'); ?></h2> 
+<?php $buttonHidden = "";
+if(empty($this->get["chkme"]))
+{ ?>
+<form name="data-filters" action="<?php echo HTTP_PATH . '/report/questionanalysis/' ?>" method="get" id="frmqa">          	
+   <?php
+    $startDate = !empty($this->get['startDate']) ? $this->get['startDate'] : '';
+    $endDate = !empty($this->get['endDate']) ? $this->get['endDate'] : '';
+    $dateArray = explode('-', $startDate);
+    $startDay = (isset($dateArray[2])) ? $dateArray[2] : '';
+    $startMonth = (isset($dateArray[1])) ? $dateArray[1] : '';
+    $dateArray = explode('-', $endDate);
+    $endDay = (isset($dateArray[2])) ? $dateArray[2] : '';
+    $endMonth = (isset($dateArray[1])) ? $dateArray[1] : '';
+    echo $this->dataFilters(
+            array('event_type','survey','question', 'period'), array(
+        'event_type' => (isset($this->get['event_type'])) ? $this->get['event_type'] : '1',
+        'survey_category' => (isset($this->get['survey_category'])) ? $this->get['survey_category'] : '1',
+        'survey' => (isset($this->get['survey_id'])) ? $this->get['survey_id'] : '0',
+        'questionid' => (isset($this->get["questionid"])) ? $this->get['questionid'] : '',
+        'date_range' => (isset($this->get['date_range_field'])) ? $this->get['date_range_field'] : '',
+        'period' => array(
+            'period' => (isset($this->get['period'])) ? $this->get['period'] : '',
+            'fromDate' => (isset($this->get['fromDate']))?$this->get['fromDate']:'',
+            'toDate' => (isset($this->get['toDate'])) ? $this->get['toDate']:'',
+            'endDate' => (isset($this->get['endDate']))?$this->get['endDate']:'',
+            'from_month' => (isset($this->get['from_month'])) ? $this->get['from_month'] : '',
+            'from_year' => (isset($this->get['from_year'])) ? $this->get['from_year'] : '',
+            'to_month' => (isset($this->get['to_month'])) ? $this->get['to_month'] : '',
+            'to_year' => (isset($this->get['to_year'])) ? $this->get['to_year'] : '',
+            'month' => (isset($this->get['month'])) ? $this->get['month'] : '',
+            'year' => (isset($this->get['year'])) ? $this->get['year'] : '',
+        ),
+            ), 'report');
+   /*  12/30/15 5:18 PM */
+    $dataString = "";
+    isset($this->get['event_type']) ? $dataString = "&event_type=" . $this->get['event_type'] : "";
+    isset($this->get['period']) ? $dataString.="&period=" . $this->get['period'] : "";
+    isset($this->get['from_month']) ? $dataString.="&from_month=" . $this->get['from_month'] : "";
+    isset($this->get['to_month']) ? $dataString.="&to_month=" . $this->get['to_month'] : "";
+    isset($this->get['month']) ? $dataString.="&month=" . $this->get['month'] : "";
+    isset($this->get['year']) ? $dataString.="&year=" . $this->get['year'] : "";
+    
+     
+    ?>
+	
+	
+    <input type="hidden" name="startDate" id="startDate" value="<?php echo $this->get['startDate'] ?>">
+    <input type="hidden" name="endDate" id="endDate" value="<?php echo $this->get['endDate'] ?>">
+</form>
+<?php
+ }
+ else
+{ ?>    
+    <?php
+     $buttonHidden = !empty($this->get["chkme"]) ? " style=' display: none !important;'" : "" ;
+    $this->get["Question:"]= $this->view->question;
+   /* echo $footertext = $this->CreatePdfInfo($this->get,"pdf_filter"); 12/30/15 5:16 PM */
+}
+
+?>
+<div class="ajax print-mdr">
+    <div class="data-table white-bg padding20">
+        <table id="employee-grid" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Employee Email</th>
+                    <th>Question</th>
+                    <th>Answers</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Employee Email</th>
+                    <th>Question</th>
+                    <th>Answers</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<!---->
+
+<!-- All Question Every Answer -->
+        <?php 
+            if(!empty($this->get["questionid"]) && !empty($this->questionResponse)){
+        ?>    
+        <!-- /* abhishek, tt-1454  question analysis report*/  -->
+        <div class="clearfix btn-holder">
+       <div class="pull-right"> 
+<!--        <button type="submit" class="btn btn-primary btn-lg print-button" id="createpdf" <?php echo $buttonHidden ?>><?php echo $this->translate('Export to PDF'); ?></button>-->
+         <!--  <button type="submit" class="btn btn-primary btn-lg print-button" id="exporttoexcel" <?php echo $buttonHidden ?> ><?php echo $this->translate('Export to Excel'); ?></button></div> -->
+        </div>
+        <div class="print-mdr" id="print-question-analysis">
+            <div class="logo-print" style="padding:10px;"><img width="100%" src="<?php echo $this->baseUrl() . "/images/triumph-logo-print.png"; ?>" alt="Triumph"></div>
+             <div class="print-h"><h2><?php echo $this->translate('Question Analysis Report');?></h2></div> 
+            <!-- EOC  /* abhishek, tt-1454  question analysis report*/  -->
+        <div class="panel panel-default panel-default-pdf">           
+            <div class="table-responsive">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="brand-table table small-fonts table-striped">
+                <tr>
+                  <th><?php echo $this->translate('Answer') ?></th>   
+                  <?php    
+                  foreach($this->arrmonthName as $monthName)
+                  {
+                  ?>
+                      <th><?php echo $monthName ?></th>
+                  <?php
+                  }
+                  ?>
+                </tr>
+  
+                <?php 
+                if(!empty($this->questionResponse))                
+                {  
+                    
+                    foreach($this->questionResponse as $reskey=>$questionwisedata)
+                    {//echo "<pre>"; print_r($questionwisedata);die;
+                        if(isset($questionwisedata["response_val"]) && strlen($questionwisedata["response_val"]) > 0 )
+                        {
+                            echo "<tr>";$tdcnt=0;$ansopt="";
+                            
+                            foreach($questionwisedata as $qdata)
+                            {                           
+                                ?>
+                                <td><?php  
+                                if($tdcnt > 0 ) {                    
+                                        preg_match_all("^\((.*?)\)^",$qdata,$fields);
+                                        preg_match_all("^\[(.*?)\]^",$qdata,$qstr);
+
+                                       $arrDtDetails = explode("-",$qstr[1][0]); 
+                                       $qdata = str_ireplace($qstr[0][0], "", $qdata);
+                                       $qresp = in_array($this->get["questionid"],$this->arrSplQids) ? $ansopt : str_ireplace("response","",$reskey);
+                                       $startDayString ='&startDay=01';
+                                       $endDayString ='&endDay=31';
+                                       if ($arrDtDetails[0] == $startMonth) { //if is first month
+                                        $startDayString ='&startDay=' . $startDay;
+                                       }
+                                       if ($arrDtDetails[0] == $endMonth) { //if is first month
+                                        $endDayString ='&endDay=' . $endDay;
+                                       }
+                                     echo($fields[1][0] > 0)   ? 
+                                            "<a href=\"".HTTP_PATH."/event/index/?event_status=Closed&date_range_field=survey_submission_date&period=by_month&esr_type=qans&month=".$arrDtDetails[0]."&year=".$arrDtDetails[1]."&qresp=".$qresp."&period=by_month" . $startDayString . $endDayString . $this->drilldownQueryString."\" target=\"_blank\">".$qdata."</a>"
+                                            : $qdata; 
+                                    }
+                                    else
+                                    {
+                                        $ansopt = $qdata;
+                                      echo $qdata;
+                                    }
+                                    ?>
+                                    </td>   
+                                    <?php    
+                                $tdcnt++;
+                            }
+                            echo "</tr>";
+                        }
+
+                    }
+                }
+                ?> 
+            </table>			
+            </div>            
+            </div>        
+        <!-- End All Question Every Answer -->
+        <!-- Graph Wrapper -->
+        
+        <?php
+        if($this->npsqid > 0 && !empty($this->get["questionid"]) && ($this->get["questionid"] == $this->npsqid) && !empty($this->questionResponse))
+        {
+            $styleFloat = !empty($this->get["chkme"]) ? " style='float:left;'" : "" ;
+            if ($this->recordCount1 == 0) { ?>
+                <div class="info-block white-bg ligh-bord alert-danger">
+
+                    <div class="alert-info" ><?php echo $this->translate('No record found');?></div>
+                </div> 
+            <?php }
+            if ($this->recordCount1 > 0) {
+            ?>
+                <div class="panel-body">
+                        <div class="chart-wrapper">
+                            <div>
+                             <!-- /* abhishek, tt-1454  question analysis report*/ -->
+                              <h2 class="question-analysis"><?php echo $this->translate('NPS'); ?></h2>
+                               <!-- /* EOC abhishek, tt-1454  question analysis report*/ -->
+                                <span class='highchart-title'></span>
+                                <div class="graphs" width='100%' id="container1" ></div>
+                            </div>                
+                        </div>
+                </div>
+            <?php           
+            } ?>
+
+        <?php
+        }
+        //For Pie chart
+        if ($this->recordCount2 > 0) { 
+        ?>
+         <div class="panel-body">
+            	<div class="chart-wrapper">
+                <div>
+                   <!-- /* abhishek, tt-1454  question analysis report*/ -->
+                  <h2 class="question-analysis"><?php echo $this->translate('Score'); ?></h2>                     <!-- /* EOC  abhishek, tt-1454  question analysis report*/ -->
+                    <div class="graphs" width='100%' id="container2" ></div>
+                </div>                
+                </div>
+        </div>        
+        <?php        
+        }
+        }
+        else
+        {
+           echo $this->msg; 
+        }
+       
+        
+     if (!empty($this->get["questionid"]) && $this->recordCount2 > 0) { 
+       $this->highcharts2->printScripts();  ?>
+         <!-- /* abhishek, tt-1454  question analysis report*/ --> 
+        </div>
+        <!-- EOC  abhishek, tt- 1454 -->
+      <script type="text/javascript" src="<?php echo HTTP_PATH?>/js/exporting.js"></script>
+<?php 
+        
+     }
+     if ($this->recordCount1 > 0 && !empty($this->get["questionid"])) { ?>
+    <script type="text/javascript"><?php echo $this->highcharts->render("chart1"); ?></script> 
+    <?php
+    }
+    if ($this->recordCount2 > 0 && !empty($this->get["questionid"])) { ?>  
+        <script type="text/javascript"><?php echo $this->highcharts2->render("chart1"); ?></script>    
+    <?php
+    }
+?>        
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var datatableObj=  $('#employee-grid').dataTable({
+            "processing": true,
+            "serverSide": true,
+            "bFilter": false,
+            "bSort" : true,
+            "iDisplayLength": 10,
+            "order": [[ 0, "asc" ]],
+            "aoColumnDefs": [
+            {
+                "aTargets": [1],
+                "bSortable": true
+            },
+            {
+                "aTargets": [2],
+                "bSortable": false
+            },
+			{
+                "aTargets": [3],
+                "bSortable": true
+            },
+			{
+                "aTargets": [4],
+                "bSortable": true
+            }
+            ],
+            "ajax": '/report/questionanalysis/consolidate?surveyID='+$('#SurveyID').val()
+        });
+        
+        <?php   if(isset($this->get['event_type']) && $this->get['event_type'] != ""){?>
+//        $('#EventTypeID option[value="1"]').prop('selected', true);
+            fillSurvey();
+        <?php } else{
+            ?>  $('#EventTypeID option[value="1"]').prop('selected', true);<?php
+        }
+        $qstr = "";
+        if(isset($this->get["month"]) )
+        {
+            $qstr = "&month=".$this->get["month"];
+        }
+        if(isset($this->get["year"]))
+        {
+            $qstr += "&year=".$this->get["year"];
+        }
+        ?>
+        var qstr = "<?php echo $qstr ?>"; 
+//        $("#createpdf").click(function() {
+//            window.location.href="<?php // echo HTTP_PATH."/report/questionanalysis/generatepdf/?event_type=".(isset($this->get["event_type"])? $this->get["event_type"] : 1).
+//                    "&period=".$this->get["period"].$this->drilldownQueryString?>//"+qstr;
+//            return false; 
+//        });
+
+//        $("#exporttoexcel").click(function() {
+//            <?php // if(!isset($this->get['event_type']) || !$this->get['event_type'] == ""){
+//                $this->get["event_type"] = 1;
+//            } 
+            ?>//
+//            window.location.href="<?php // echo HTTP_PATH."/report/questionanalysis/exporttoexcel/?event_type=".$this->get["event_type"].
+//                   "&period=".$this->get["period"].$this->drilldownQueryString?>//"+qstr;
+//            return false; }) 
+        });
+        
+        
+</script>

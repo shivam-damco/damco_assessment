@@ -1,0 +1,12 @@
+/* 
+    Created on : Jun 25, 2015, 6:34:57 PM
+    Author     : Harpreet Singh
+*/
+
+.logo img{float:left !important}
+.ques-type .grades{right:0 !important}
+/*.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:right !important}*/
+.form-group.col-lg-6.mb-0, .form-group.col-lg-2.mb-0{float:none}
+.ques-type.listseperate label {float: none !important}
+.ques-type.listseperate input[type="radio"]{float: none !important}
+ul.list-inline.ques-type{padding-right: 0 !important} 

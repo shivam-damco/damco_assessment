@@ -1,0 +1,81 @@
+<!--
+ * 
+ * @author Anuj
+ * @date   31 May, 2014
+ * @version 1.0
+-->
+<!--Content Wrapper -->
+
+
+<section id="wrapper" class="top-padding">
+    <div id="inner-wrapper">
+
+        <h2><?php echo $this->translate('Edit Survey Category'); ?></h2>
+        <div class="error-messages">
+        <?php
+        if (!empty($this->messages)) {
+            $error = '<div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+                    . $this->messages . '</div</div </div></div>';
+            echo $error;
+        }
+        ?>
+        </div>    
+        <div class="edit-event-form white-bg padding20">
+            <form class="form-horizontal" role="form" name="" action="" method="POST"> 
+
+                <?php //echo "<pre>";print_R($this->form->getElement("dealer_name"));//echo "<pre>";print_r($this->EventData); ?>
+
+                <div class="form-group">
+                    <label for="survey_category_name" class="col-md-3 col-sm-4"><?php echo $this->form->survey_category_name->renderLabel(); ?></label>
+<div class="col-sm-5">
+                         <?php echo $this->form->survey_category_name->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submitbtn->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="goBack();" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () 
+    {
+        $('#submit').on('click',function(){
+            var errors = new Array();
+        
+            jQuery('.error-messages').html('');
+        
+            if ($('#survey_category_name').val() == '') 
+            {
+                errors.push('Please enter survey category name');
+            }
+        
+        
+            if(errors.length != 0)
+            {
+                var errorHtml = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><br/>';
+                
+                for (i = 0; i < errors.length; i++) 
+                {
+                   errorHtml += errors[i] + "<br>";
+                }
+
+                errorHtml +=  '</div</div </div></div></div>';
+
+                jQuery('.error-messages').html(errorHtml);
+                return false;
+            }
+        
+        });
+        
+    });
+     
+     
+
+</script>

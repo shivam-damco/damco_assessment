@@ -1,0 +1,163 @@
+<section id="wrapper">
+    <div id="inner-wrapper">
+
+        <h2><?php echo $this->translate('Import Questions'); ?></h2>
+        <div class="error-messages">
+        <?php
+        if (!empty($this->messages)) {
+            $error = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+                    . $this->messages . '</div</div </div></div>';
+            echo $error;
+        }
+        ?>
+        </div>
+        <div class="edit-event-form white-bg padding20 question-add">
+            <form class="form-horizontal" role="form" name="question" action="" method="POST" onsubmit=""> 
+                <?php //echo "<pre>";print_R($this->form->getElement("dealer_name"));//echo "<pre>";print_r($this->EventData); ?>
+                 <div class="form-group">
+                    <label class="col-md-3 col-sm-4" for="email_address">
+                        <dt id="input_type-label">
+                            <label class="required" for="input_type">Survey Category</label>
+                        </dt>
+                    </label>
+                    <div class="col-sm-6">
+                        <select id="survey-category-select" class="dateDiv selectpicker form-control" name="input_type" onchange="">
+                            <option value="">Please Select</option>
+                            <?php
+                                if(is_array($this->surveyCategoryData) && !empty($this->surveyCategoryData))
+                                {
+                                    foreach($this->surveyCategoryData as $surveyCategory)
+                                    {
+                            ?>    
+                                    <option value="<?php echo $surveyCategory['survey_category_id']; ?>"><?php echo $surveyCategory['survey_category_name']; ?></option>
+                            <?php
+                                    }
+                                    
+                                }
+                            
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4" for="">
+                        <dt id="input_type-label">
+                            <label class="required" for="input_type">Survey Start</label>
+                        </dt>
+                    </label>
+                    <div class="col-sm-1">
+                        <label class="required" for="input_type">From</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="fromDate" value="" readonly="true" name="fromDate" class="form-control" style="cursor:pointer">
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="required" for="input_type">To</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="toDate" value="" readonly="true" name="fromDate" class="form-control" style="cursor:pointer">
+                    </div>
+		</div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <button id="backButton" type="button" onclick="getSurveyName(<?php echo $this->eventTypeId;?>);" class="btn btn-primary"><?php echo $this->translate('Search'); ?></button> 
+                        <button id="backButton" type="button" onclick="clearDateFilter();" class="btn btn-primary"><?php echo $this->translate('Clear Filter'); ?></button> 
+                    </div>
+                </div>
+                <div class="formAjax">
+                    <div class="form-group">
+                        <label class="col-md-3 col-sm-4" for="email_address">
+                            <dt id="input_type-label">
+                                <label class="required" for="input_type">Survey</label>
+                            </dt>
+                        </label>
+                        <div class="col-sm-6">
+                            <select id="event-type-select" class="dateDiv selectpicker form-control" name="input_type" onchange="getEventTypeQuestions();">
+                                <option value="">No Records</option>
+                            </select>
+                        </div>
+                    </div>
+               </div>
+                <!--<div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php //echo $this->form->event_code->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php //echo $this->form->event_code->renderViewHelper(); ?>
+                    </div>
+                </div> -->
+                <div class="ajax-row">
+                    
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submit->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="goBack();" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->event_typeid->renderViewHelper(); ?>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        
+        $("#fromDate").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'yy-mm-d',    
+        });
+        
+        $("#toDate").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'yy-mm-d', 
+        });
+        
+        jQuery("#submit").on('click',function(){
+            
+            jQuery('.error-messages').html('');
+            var errors = new Array();
+            if(jQuery('#event-type-select').val() == '')
+            {
+                errors.push('Please select survey');
+            }
+            else
+            {
+                var isCheckboxChecked = 0;
+                if(jQuery('input[name="question-details[]"]:checked').length == '0')
+                {
+                    errors.push('Please select atleast one question');
+                }
+            }    
+            
+            
+            if(errors.length != 0)
+            {
+                var errorHtml = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><br/>';
+                    for (i = 0; i < errors.length; i++) 
+                    {
+                       errorHtml += errors[i] + "<br>";
+                    }
+
+                errorHtml +=  '</div</div </div></div></div>';
+
+                jQuery('.error-messages').html(errorHtml);
+                return false;
+            }
+        });
+        
+        
+       
+    });
+</script>
+
+
+
+
+
+
+

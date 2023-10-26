@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<title>Triumph CSI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<!-- Force IE to use the latest version of its rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- =Bootstrap -->
+<?php
+	echo $this->render('common/styles.phtml');
+?>
+<!-- =Scripts -->
+<?php
+	echo $this->render('common/scripts.phtml');
+?>
+</head>
+<body>
+<!-- =Page Container -->
+<main class="container">
+  
+  <!--Content Wrapper -->
+	<section id="wrapper">
+		<div id="inner-wrapper">
+			<?php echo $this->layout()->content; ?>
+		</div>
+	</section>
+	
+  <!--End Content Wrapper -->
+  
+
+</main>
+</body>
+</html>

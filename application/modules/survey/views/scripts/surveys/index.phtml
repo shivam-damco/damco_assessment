@@ -1,0 +1,239 @@
+<h2><?php echo $this->translate('List Survey Instances'); ?></h2>
+<?php
+    // print_r($this->EventTypesData);
+?>
+<?php echo $this->flashMessages( $this->flashMessages ); ?>
+<form name="data-filters" action="<?php echo HTTP_PATH.'/event/index/'?>" method="get">
+<?php 
+//    echo $this->dataFilters( array() );
+//print_r($this->listcategory);
+if(isset($_GET['category']) && !empty($_GET['category'])){
+	$categories = $_GET['category'];
+}
+else{
+	$categories = '';
+}
+
+if(isset($_GET['start_date']) && !empty($_GET['start_date'])){
+	$startdate = $_GET['start_date'];
+}
+else{
+	$startdate = '';
+}
+if(isset($_GET['end_date']) && !empty($_GET['end_date'])){
+	$enddate = $_GET['end_date'];
+}
+else{
+	$enddate = '';
+}
+if(isset($_GET['search_data']) && !empty($_GET['search_data'])){
+	$search = $_GET['search_data'];
+}
+else{
+	$search ='';
+}
+?>
+</form>
+<!-- <a href="<?php echo HTTP_PATH.'/survey/surveys/add'?>"><button class="btn btn-primary pull-right">Add Survey Instance</button></a> -->       
+<div class="data-table white-bg padding20">
+    <form name = "search_field" action = "" method = "GET">
+    <div class="col-lg-3">
+   
+     <select name ="category" id ="category" class = "selectmenu">
+     <option value = "">--SELECT CATEGORY--</option>
+      <?php foreach($this->listcategory as $keys => $category) {
+      ?>
+	<option value = "<?php echo $category['survey_category_id']; ?>" <?php if($categories == $category['survey_category_id'] ) {echo "selected";}?> ><?php echo $category['survey_category_name'];?></option>
+     <?php } ?>
+    </select>
+    </div>
+    <div class="col-lg-3">
+    <input type="text" placeholder="Please Add Start Date"  autocomplete="off" class="form-control" value="<?php echo $startdate;?>" id="start_date" name="start_date">
+    </div>
+
+    <div class="col-lg-3">
+    <input type="text" placeholder="Please Add End Date"  autocomplete="off" class="form-control" value="<?php echo $enddate;?>" id="end_date" name="end_date">
+    </div>
+
+    <div class="col-lg-3">
+    <input type="text" placeholder="Search"  autocomplete="off" class="form-control" value="<?php echo $search;?>" id="search_data" name="search_data">
+    </div>
+    
+     <div class="col-lg-8 button-padding">
+    <input type="submit"  autocomplete="off"  id="submit" name="Submit" value = "Apply Filters" class = "btn btn-primary btn-lg">
+    <button class="btn btn-primary btn-lg" onclick="window.location.href='/survey/surveys'" id="df_clear_filter" type="button">
+    Clear Filters</button>
+    </div>   
+    </form>
+	<br/><br/>
+<table id="event-grid" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('');?></th>
+            <th><?php echo $this->translate('Survey Instance');?></th>			
+            <th><?php echo $this->translate('Survey Title');?></th>
+            <th><?php echo $this->translate('Category');?></th> 
+            <th width="100"><?php echo $this->translate('Statistics');?></th> 			
+            <th><?php echo $this->translate('Status');?></th>
+            <th><?php echo $this->translate('Start Date');?></th>
+            <th><?php echo $this->translate('End Date');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th><?php echo $this->translate('');?></th>
+            <th><?php echo $this->translate('Survey Instance');?></th> 
+            <th><?php echo $this->translate('Survey Title');?></th>
+            <th><?php echo $this->translate('Category');?></th>   
+            <th><?php echo $this->translate('Statistics');?></th> 			
+            <th><?php echo $this->translate('Status');?></th>
+            <th><?php echo $this->translate('Start Date');?></th>
+            <th><?php echo $this->translate('End Date');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </tfoot>
+    
+</table>
+</div>
+
+<div class="modal fade" id="ajax-crud-modal" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title" id="userCrudModal"></h4>
+    </div>
+    <div class="modal-body">
+        <form id="reminderForm" name="reminderForm" class="form-horizontal" action="" method="post">
+           <input type="hidden" name="surveyid" id="surveyid">
+            <div class="form-group">
+                <label for="name" class="col-sm-12 control-label" style="text-align:left;">Reminder Subject</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="reminder_subject" name="reminder_subject" value="" maxlength="50">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-sm-12 control-label" style="text-align:left;">Reminder Email Content</label>
+                <div class="col-sm-12">
+                    <textarea name="reminder_content" id="reminder_content"></textarea>
+                </div>
+            </div>
+            <div class="">
+             <button type="submit" class="btn btn-primary" id="btn-save" value="create">Send Reminder
+             </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+CURRENT_URL += '?var=asd&sr=ljkl';
+$(document).ready(function() {
+   var datatableObj=  $('#event-grid').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "bFilter": false,
+        "bSort" : true,
+        "iDisplayLength": 10,
+        "order": [[ 7, "desc" ]],
+       
+        "aoColumnDefs": [
+            {
+                "aTargets": [0],
+                "mData": null,
+                "mRender": function(data, type, full) {
+                     var view = '';
+                     if (data[4] == 'Closed' || data[4] == 'Did not qualify') {
+                         view = '<a href="'+BASE_URL+'/event/scorecard/index?eventid='
+                +btoa(data[0])+'&modulename=eventlist" title="View Record" target="_blank">'+data[0]+'</a>';
+                    }
+                    else
+                    {
+                        view=data[0];
+                    }
+                    return view;
+                }
+            },
+            {
+                "aTargets": [4],
+                "bSortable": false
+            },
+            {
+                "aTargets": [8],
+                "bSortable": false
+            },
+            {
+                "targets": [0],
+                "visible": false
+            }
+            ],
+        "ajax": CURRENT_URL
+    });
+
+   
+});
+
+
+$(document).ready(function () {
+        $("#start_date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',    
+            // minDate: 0, // 0 days offset = today
+    
+        });
+        
+        $("#end_date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',       
+             //minDate: 0, // 0 days offset = today
+        });
+     });
+
+$("#start_date,#end_date").change(function(){
+    if($('#start_date').val() != '' && $('#end_date').val() != '' && $('#end_date').datepicker("getDate") < $('#start_date').datepicker("getDate")) {
+	$('#end_date').removeAttr('value');
+	alert('Start date can not be greater than end date');
+     }
+    
+});
+
+$("#reminder_mail").click(function() {
+	alert();return false;
+});
+
+
+
+$('body').on('click', '.reminder-icon', function () {
+      var survey_id = $(this).data('id');
+	  var survey_id_encoded = $(this).data('survey');
+      $.get('<?php print $this->serverUrl() ?>/survey/surveys/getreminder/surveyid/' + survey_id, function (data) {
+		var json_obj = JSON.parse(data);
+		$('#name-error').hide();
+		$('#email-error').hide();
+		$('#userCrudModal').html("Send Reminder");
+		$('#btn-save').val("edit-user");
+		$('#ajax-crud-modal').modal('show');
+		$('#surveyid').val(json_obj[0].survey_id);
+		$('#reminder_subject').val(json_obj[0].reminder_subject);
+		$('#reminderForm').attr('action', '<?php print $this->serverUrl() ?>/survey/surveys/remindermail/id/'+survey_id_encoded);
+		tinyMCE.activeEditor.setContent(json_obj[0].reminder_content);		
+      })
+   });
+   
+   tinymce.init({
+	selector:'textarea#reminder_content',
+	height: 200,
+	menubar: false,
+	branding: false	
+  });  
+</script>

@@ -1,0 +1,17 @@
+body{font-family:Arial,Helvetica,sans-serif;}
+.width30{width:30%;}
+tr td{border-top:1px solid #ddd;}
+//tr{page-break-before: always;}
+.logo-print{display:block;}
+   // .pagebreak    { display: block; page-break-before: always; width:100%;}
+/* Abhishek , tt-1218 */
+tr td b.questionnumber{
+    display: inline-block;
+    width: 35px;
+}
+/* EOC abhishek , tt-1218 */
+
+
+/*BOC Customer Alert*/
+#hideform{height:0 !important; width:0 !important;}
+/*EOC Customer Alert*/

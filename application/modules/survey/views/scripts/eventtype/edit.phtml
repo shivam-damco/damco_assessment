@@ -1,0 +1,125 @@
+<!--
+ * 
+ * @author Anuj
+ * @date   31 May, 2014
+ * @version 1.0
+-->
+<!--Content Wrapper -->
+
+
+<section id="wrapper" class="top-padding">
+    <div id="inner-wrapper">
+
+        <h2><?php echo $this->translate('Edit Survey'); ?></h2>
+        <div class="error-messages">
+        <?php
+            if(!empty($this->messages)) 
+            {
+                $error = '<div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+                        . $this->messages . '</div</div </div></div>';
+                echo $error;
+            }
+        ?>
+        </div>    
+        <div class="edit-event-form white-bg padding20">
+            <form class="form-horizontal" role="form" name="editevent" action="" method="POST"> 
+
+                <?php //echo "<pre>";print_R($this->form->getElement("dealer_name"));//echo "<pre>";print_r($this->EventData); ?>
+
+				<div class="form-group">
+                    <label for="survey_category" class="col-md-3 col-sm-4"><?php echo $this->form->survey_category->renderLabel() ?></label>
+                    <div class="col-sm-5">
+                        <?php echo $this->form->survey_category->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+                <div class="form-group">
+                    <label for="dealer_name" class="col-md-3 col-sm-4"><?php echo $this->form->event_type->renderLabel() ?></label>
+                    <div class="col-sm-5">
+                        <?php echo $this->form->event_type->renderViewHelper(); ?>
+                        <?php echo $this->form->eventtypeid->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->description->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->description->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <!--<div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php //echo $this->form->event_code->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php //echo $this->form->event_code->renderViewHelper(); ?>
+                    </div>
+                </div> -->
+                
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->dept_select->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->dept_select->renderViewHelper(); ?>
+                         <?php echo $this->form->dept_value->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+                <!--<div class="form-group">
+                    <label for="required_time" class="col-md-3 col-sm-4"><?php echo $this->form->required_time->renderLabel(); ?></label>
+					<div class="col-sm-5">
+                         <?php echo $this->form->required_time->renderViewHelper(); ?>
+                    </div>
+                </div> -->
+                
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submitbtn->renderViewHelper(); ?>
+                        <?php //echo $this->form->resetbtn->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="location.href='<?php echo HTTP_PATH.'/survey/eventtype/'?>'" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () 
+    {
+        $('#submit').on('click',function()
+        {
+            var errors = new Array();
+        
+            jQuery('.error-messages').html('');
+            
+            if ($('#survey_category').val() == '') 
+            {
+                errors.push('Please select survey category');
+            }
+        
+            if ($('#event_type').val() == '') 
+            {
+                errors.push('Please enter survey');
+            }
+
+            if ($('#dept_select').val() == '') 
+            {
+                errors.push('Please select conducting department');
+            }
+
+            
+            
+            if(errors.length != 0)
+            {
+                var errorHtml = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><br/>';
+                    for (i = 0; i < errors.length; i++) 
+                    {
+                       errorHtml += errors[i] + "<br>";
+                    }
+
+                errorHtml +=  '</div</div </div></div></div>';
+
+                jQuery('.error-messages').html(errorHtml);
+                return false;
+            }         
+        
+        });
+    });
+</script>

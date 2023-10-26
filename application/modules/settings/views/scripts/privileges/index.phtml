@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><![endif]-->
+
+<!-- =Page Container -->
+
+<!--Header -->
+
+<!--End Header -->
+<!--Content Wrapper --><?php //echo "<pre>"; print_r($this->resources); print_r($this->roleResources);die;?>
+
+<script type="text/javascript">
+    function changeRole() {
+        $('#role_ids').submit();
+    }
+
+    function submitActionsForm() {
+        $('#actions').submit();
+    }
+</script>
+
+<div id="inner-wrapper">
+
+    <div class="white-bg padding20">
+        <!--Panel -->
+        <div class="panel panel-default">
+            <?php echo $this->flashMessages($this->flashMessages); ?>
+            <div class="panel-heading clearfix">
+                <div class="select-lang">
+                    <label class="col-sm-1 menu-label"><?php echo $this->translate('Roles');?></label>
+                    <div class="col-sm-3" > 
+                        <form name="role_ids" id="role_ids" action="" method="POST"> 
+                            <?php echo $this->form->role_id; ?>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+          <form name="actions" id="actions" action="" method="POST"> 
+                <input type="hidden" name="roles_id" value="<?php echo "$this->roleID"; ?>"  />
+                <div class="table-responsive priv-tbl">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="eventDetails table table-condensed">
+                        <tbody>
+                            <tr>
+                                <th width="20%"><strong><?php echo $this->translate('Module');?></strong></th>
+                                <th width="80%"><strong><?php echo $this->translate('Privileges');?></strong></th>
+                            </tr>
+
+
+                            <?php 
+//                            prx($this->resources);
+                            foreach ($this->resources as $res_id => $list) { ?>
+                                <tr>
+                                    <td> 
+                                        <?php echo $list['name']; ?> 
+                                    </td>
+                                    <td>    <?php if (!empty($list['actions'])) { ?>
+                                            <ul class="list pl-0">
+                                                <?php
+                                                foreach ($list['actions'] as $action_id => $action_label) {
+                                                    ?>
+                                                    <li>
+                                                        <?php $sel = ( in_array($action_id, $this->roleResources[$this->roleID]['resource_ids']) ) ? ' checked="checked"' : '';
+                                                        ?>
+                                                        <label>
+                                                            <input name="chk-box[]" type="checkbox" <?php echo $sel; ?> value="<?php echo $action_id; ?>">&nbsp;<?php echo $action_label; ?></label></li>
+                                                <?php } ?>
+                                            </ul><?php } ?>
+                                    </td> </tr>
+
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                   
+                </div>
+                 <div class="panel-footer">
+                        <button class="btn btn-primary" id="btnSave"><?php echo $this->translate('Save');?></button>
+                          <!--<button id="btnCancel" class="btn btn-primary" >Cancel</button>-->
+                 </div>
+        </form>
+            <!--End Panel -->
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function($) {
+        var btnSave = '#btnSave';
+        var btnCancel = '#btnCancel';
+        
+        $(btnSave).click( function() {
+		submitActionsForm();		    
+	});
+        
+        $(btnCancel).on('click', function() {
+            window.location.href='/report/dashboard/';	    
+            return false;
+	});
+    });
+    
+    
+</script>

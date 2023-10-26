@@ -1,0 +1,95 @@
+<script type="text/javascript" src="<?php echo $this->serverUrl().'/js/base64.js'?>"></script>
+<script type="text/javascript">
+    //IE 11 hack
+    var isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
+    if (isIE11) {
+        if (typeof window.attachEvent == "undefined" || !window.attachEvent)
+            window.attachEvent = window.addEventListener;
+    }
+    
+    if (typeof btoa === "undefined") {
+        _keyStr = Base64._keyStr;
+        btoa = Base64.encode;
+        atob = Base64.decode;
+      }
+</script>
+<?php 
+    $this->headScript()->appendFile($this->serverUrl().'/js/modernizr.custom.96959.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery-1.10.1.min.js'); ?>
+<!--[if gt IE 10]><!-->
+<?php 
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery-1.10.1.min-ie11.js'); 
+    ?>
+<!--<![endif]-->
+<?php
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.screwdefaultbuttonsV2.js'); 
+    $this->headScript()->appendFile($this->serverUrl().'/js/bootstrap-select.js'); 
+     
+    $this->headScript()->appendFile($this->serverUrl().'/js/custom.js'); 
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.dataTables.js'); 
+    $this->headScript()->appendFile($this->serverUrl().'/js/core.js'); 
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery-ui.js'); 
+    $this->headScript()->appendFile($this->serverUrl().'/js/bootstrap.min.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.printElement.min.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/print-extn.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/print.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.blockUI.js');
+    
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.collapse.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.collapse_cookie_storage.js');
+    $this->headScript()->appendFile($this->serverUrl().'/js/jquery.collapse_storage.js');
+	$this->headScript()->appendFile($this->serverUrl().'/js/tinymce.min.js');
+
+
+    echo $this->headScript();
+?> 
+<!-- =Scripts -->
+<script type="text/javascript">
+var BASE_URL = "<?php echo $this->serverUrl(); ?>";
+var CURRENT_URL = "<?php echo $this->userAgent()->getServerValue('request_uri'); ?>";
+var PAGINATION = ($(window).width() <= '400')?"simple":"simple_numbers";
+var LANGUAGE_FILE = '<?php echo $this->dataTablesLanguage ?>';
+var messages = new Array();
+messages['select_date_range_field'] = "<?php echo $this->translate('Please select date range field'); ?>";
+messages['from_date_greater_than_to_date'] = 
+        "<?php echo $this->translate('From date cannot be greater than To date'); ?>";
+messages['from_date_can_not_be_empty'] = 
+        "<?php echo $this->translate("'From Date' must not be blank"); ?>";
+messages['to_date_can_not_be_empty'] = 
+        "<?php echo $this->translate("'To Date' must not be blank"); ?>";
+messages['select_event_type'] = 
+        "<?php echo $this->translate('Please Select Event Type'); ?>";
+messages['select_branch'] = 
+        "<?php echo $this->translate('Please Select Branch'); ?>";
+messages['select_dealer'] = 
+        "<?php echo $this->translate('Please Select Dealer'); ?>";
+messages['select_month_greater_equal_current'] = 
+        "<?php echo $this->translate('Selected month can not be equal to or greater to current month'); ?>";
+messages['no_future_month'] = 
+        "<?php echo $this->translate('The month selected should not be in the future'); ?>";
+messages['period_diff_12_months'] = 
+        "<?php echo $this->translate('Period selected should not be greater than 12 months'); ?>";
+messages['exception_error'] = 
+        "<?php echo $this->translate('An Error has Occurred, Please Try Again'); ?>";
+var pathname = window.location.href;
+var defaultLangId = '<?php echo $this->lang_id;?>';
+//added by dipa
+var curmonth = "<?php echo date('m');?>";
+var curyear = "<?php echo date('Y');?>";
+
+jQuery(document).ready(function(){
+    $('#translatePage').val(defaultLangId);
+    $('#translatePage').on('change',function(){
+        translatePage($(this).val());
+    });
+    function translatePage(lang_id)
+    {
+        var url = pathname.replace(/[?|&]+?(langid)=([^&]$|[^&]*)/gi, "");
+        var path = url+'?langid='+lang_id;
+        if(url.toLowerCase().indexOf("?")!='-1'){
+          path = url+'&langid='+lang_id;
+        }
+        window.location.href = path; // <-- this should work.
+    }
+});
+</script>

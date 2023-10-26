@@ -1,0 +1,1032 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: triumph\n"
+"POT-Creation-Date: 2014-07-24 13:35+0530\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: translate;_\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\triumph\n"
+"X-Poedit-SearchPath-0: application\n"
+
+#: application/helpers/view/DataFilters.php:37
+msgid "Choose Event:"
+msgstr "Event:"
+
+#: application/helpers/view/DataFilters.php:66
+msgid "Select Model:"
+msgstr "Model:"
+
+#: application/helpers/view/DataFilters.php:89
+#: application/helpers/view/DataFilters.php:254
+#: application/modules/customer/controllers/IndexController.php:583
+msgid "Select Dealer"
+msgstr "Dealer:"
+
+#: application/helpers/view/DataFilters.php:111
+msgid "Select Event Status:"
+msgstr "Event Status:"
+
+#: application/helpers/view/DataFilters.php:134
+#: application/helpers/view/DataFilters.php:423
+msgid "Search Keyword:"
+msgstr "Search Keyword:"
+
+#: application/helpers/view/DataFilters.php:145
+msgid "Select Status:"
+msgstr "Status:"
+
+#: application/helpers/view/DataFilters.php:174
+#: application/modules/customer/controllers/IndexController.php:519
+msgid "Select Branch:"
+msgstr "Branch:"
+
+#: application/helpers/view/DataFilters.php:194
+#: application/modules/customer/controllers/IndexController.php:538
+msgid "Select Country:"
+msgstr "Country:"
+
+#: application/helpers/view/DataFilters.php:235
+#: application/modules/customer/controllers/IndexController.php:558
+msgid "Select Area Sales Manager:"
+msgstr "Area Sales Manager:"
+
+#: application/helpers/view/DataFilters.php:274
+msgid "Apply Date Range to:"
+msgstr "Apply Date Range to:"
+
+#: application/helpers/view/DataFilters.php:300
+msgid "Select Period:"
+msgstr "Period:"
+
+#: application/helpers/view/DataFilters.php:308
+#: application/modules/report/views/scripts/dashboard/index.phtml:64
+#: application/modules/report/views/scripts/dashboard/index.phtml:68
+msgid "Rolling 12 Months"
+msgstr "Rolling 12 Months"
+
+#: application/helpers/view/DataFilters.php:316
+#: application/modules/report/controllers/DashboardController.php:441
+#: application/modules/report/controllers/DashboardController.php:690
+msgid "By Month"
+msgstr "By Month"
+
+#: application/helpers/view/DataFilters.php:324
+msgid "By Period"
+msgstr "By Period"
+
+#: application/helpers/view/DataFilters.php:335
+msgid "From:"
+msgstr "From:"
+
+#: application/helpers/view/DataFilters.php:352
+msgid "To:"
+msgstr "To:"
+
+#: application/helpers/view/DataFilters.php:373
+#: application/helpers/view/DataFilters.php:401
+msgid "Month:"
+msgstr "Month:"
+
+#: application/helpers/view/DataFilters.php:435
+msgid "Search"
+msgstr "Search"
+
+#: application/helpers/view/DataFilters.php:445
+msgid "Clear Filters"
+msgstr "Clear Filters"
+
+#: application/modules/customer/controllers/IndexController.php:524
+msgid "All Branches"
+msgstr "All Branches"
+
+#: application/modules/customer/controllers/IndexController.php:543
+msgid "All Countries"
+msgstr "All Countries"
+
+#: application/modules/customer/controllers/IndexController.php:564
+#: application/modules/assessment/controllers/AjaxController.php:92
+#: application/modules/assessment/controllers/AjaxController.php:175
+msgid "All Sales Regions"
+msgstr "All Sales Regions"
+
+#: application/modules/customer/controllers/IndexController.php:588
+#: application/modules/assessment/controllers/AjaxController.php:94
+#: application/modules/assessment/controllers/AjaxController.php:138
+#: application/modules/assessment/controllers/AjaxController.php:176
+#: application/modules/assessment/controllers/AjaxController.php:216
+msgid "All Dealers"
+msgstr "All Dealers"
+
+#: application/modules/default/controllers/IndexController.php:164
+msgid "Your session has expired, Please re-login to continue"
+msgstr "Your session has expired, Please re-login to continue"
+
+#: application/modules/performance/controllers/TargetController.php:146
+#: application/layouts/scripts/common/scripts.phtml:43
+msgid "Please Select Dealer"
+msgstr "Please Select Dealer"
+
+#: application/modules/performance/controllers/TargetController.php:275
+msgid "Data Saved Successfully"
+msgstr "Data Saved Successfully"
+
+#: application/modules/report/controllers/DashboardController.php:269
+msgid "Promoters"
+msgstr "Promoters"
+
+#: application/modules/report/controllers/DashboardController.php:270
+msgid "Neutrals"
+msgstr "Neutrals"
+
+#: application/modules/report/controllers/DashboardController.php:271
+msgid "Detractors"
+msgstr "Detractors"
+
+#: application/modules/report/controllers/DashboardController.php:929
+#: application/modules/customer/views/scripts/index/eventdata.phtml:23
+#: application/modules/customer/views/scripts/index/index.phtml:64
+#: application/modules/customer/views/scripts/index/index.phtml:76
+#: application/modules/event/views/scripts/codered/index.phtml:69
+#: application/modules/event/views/scripts/codered/index.phtml:82
+#: application/modules/event/views/scripts/index/index.phtml:56
+#: application/modules/event/views/scripts/index/index.phtml:75
+#: application/modules/event/views/scripts/performancealert/index.phtml:58
+#: application/modules/event/views/scripts/performancealert/index.phtml:69
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:21
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:36
+msgid "ID"
+msgstr "ID"
+
+#: application/modules/report/controllers/DashboardController.php:930
+#: application/modules/event/views/scripts/codered/edit.phtml:63
+#: application/modules/event/views/scripts/codered/index.phtml:70
+#: application/modules/event/views/scripts/codered/index.phtml:83
+#: application/modules/event/views/scripts/index/index.phtml:57
+#: application/modules/event/views/scripts/index/index.phtml:76
+#: application/modules/event/views/scripts/performancealert/index.phtml:59
+#: application/modules/event/views/scripts/performancealert/index.phtml:70
+#: application/modules/event/views/scripts/scorecard/index.phtml:71
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:22
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:37
+msgid "Customer"
+msgstr "Customer"
+
+#: application/modules/report/controllers/DashboardController.php:930
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:23
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:38
+msgid "Model"
+msgstr "Model"
+
+#: application/modules/report/controllers/DashboardController.php:931
+#: application/modules/customer/views/scripts/index/add.phtml:260
+#: application/modules/customer/views/scripts/index/index.phtml:67
+#: application/modules/customer/views/scripts/index/index.phtml:79
+#: application/modules/event/views/scripts/codered/edit.phtml:67
+#: application/modules/event/views/scripts/codered/index.phtml:71
+#: application/modules/event/views/scripts/codered/index.phtml:84
+#: application/modules/event/views/scripts/index/index.phtml:58
+#: application/modules/event/views/scripts/index/index.phtml:77
+#: application/modules/event/views/scripts/performancealert/index.phtml:60
+#: application/modules/event/views/scripts/performancealert/index.phtml:71
+#: application/modules/event/views/scripts/scorecard/index.phtml:75
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:24
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:39
+msgid "VIN"
+msgstr "VIN"
+
+#: application/modules/report/controllers/DashboardController.php:931
+msgid "Dealer Name"
+msgstr "Dealer Name"
+
+#: application/modules/report/controllers/DashboardController.php:932
+#: application/modules/customer/views/scripts/index/eventdata.phtml:24
+#: application/modules/event/views/scripts/codered/edit.phtml:71
+#: application/modules/event/views/scripts/codered/index.phtml:73
+#: application/modules/event/views/scripts/codered/index.phtml:86
+#: application/modules/event/views/scripts/index/index.phtml:60
+#: application/modules/event/views/scripts/index/index.phtml:79
+#: application/modules/event/views/scripts/performancealert/index.phtml:62
+#: application/modules/event/views/scripts/performancealert/index.phtml:73
+#: application/modules/event/views/scripts/scorecard/index.phtml:79
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:26
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:41
+msgid "Event Type"
+msgstr "Event Type"
+
+#: application/modules/report/controllers/DashboardController.php:932
+#: application/modules/customer/views/scripts/index/eventdata.phtml:26
+#: application/modules/event/views/scripts/codered/edit.phtml:37
+#: application/modules/event/views/scripts/codered/index.phtml:75
+#: application/modules/event/views/scripts/codered/index.phtml:88
+#: application/modules/event/views/scripts/index/index.phtml:66
+#: application/modules/event/views/scripts/index/index.phtml:85
+#: application/modules/event/views/scripts/performancealert/index.phtml:63
+#: application/modules/event/views/scripts/performancealert/index.phtml:74
+#: application/modules/event/views/scripts/scorecard/index.phtml:41
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:27
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:42
+msgid "Event Date"
+msgstr "Event Date"
+
+#: application/modules/report/controllers/DashboardController.php:933
+#: application/modules/customer/views/scripts/index/eventdata.phtml:27
+#: application/modules/event/views/scripts/codered/index.phtml:76
+#: application/modules/event/views/scripts/codered/index.phtml:89
+#: application/modules/event/views/scripts/index/index.phtml:68
+#: application/modules/event/views/scripts/index/index.phtml:87
+#: application/modules/event/views/scripts/performancealert/index.phtml:64
+#: application/modules/event/views/scripts/performancealert/index.phtml:75
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:28
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:43
+msgid "Response Date"
+msgstr "Response Date"
+
+#: application/modules/report/controllers/DashboardController.php:933
+#: application/modules/customer/views/scripts/index/eventdata.phtml:25
+#: application/modules/event/views/scripts/codered/edit.phtml:274
+#: application/modules/event/views/scripts/codered/edit.phtml:317
+#: application/modules/event/views/scripts/codered/edit.phtml:350
+#: application/modules/event/views/scripts/codered/index.phtml:74
+#: application/modules/event/views/scripts/codered/index.phtml:87
+#: application/modules/event/views/scripts/index/index.phtml:61
+#: application/modules/event/views/scripts/index/index.phtml:80
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:29
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:44
+msgid "Status"
+msgstr "Status"
+
+#: application/modules/report/controllers/DashboardController.php:934
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:30
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:45
+#: application/modules/report/views/scripts/mdr/index.phtml:93
+msgid "NPS Score"
+msgstr "NPS Score"
+
+#: application/modules/report/controllers/MdrController.php:522
+msgid "PDF file downloaded successfully"
+msgstr "PDF file downloaded successfully"
+
+#: application/modules/report/controllers/MdrController.php:729
+#: application/modules/report/controllers/MdrController.php:788
+#: application/modules/report/views/scripts/mdr/index.phtml:97
+#: application/modules/report/views/scripts/mdr/index.phtml:156
+msgid "Rolling 12 month score: (As depicted on chart above)"
+msgstr "Rolling 12 month score: (As depicted on chart above)"
+
+#: application/modules/report/controllers/MdrController.php:736
+#: application/modules/report/controllers/MdrController.php:795
+#: application/modules/report/controllers/MdrController.php:993
+#: application/modules/report/controllers/MdrController.php:1026
+#: application/modules/report/controllers/MdrController.php:1036
+#: application/modules/report/controllers/MdrController.php:1045
+#: application/modules/customer/views/scripts/index/index.phtml:69
+#: application/modules/customer/views/scripts/index/index.phtml:81
+#: application/modules/event/views/scripts/codered/edit.phtml:55
+#: application/modules/event/views/scripts/codered/index.phtml:72
+#: application/modules/event/views/scripts/codered/index.phtml:85
+#: application/modules/event/views/scripts/index/edit.phtml:30
+#: application/modules/event/views/scripts/index/index.phtml:59
+#: application/modules/event/views/scripts/index/index.phtml:78
+#: application/modules/event/views/scripts/performancealert/index.phtml:61
+#: application/modules/event/views/scripts/performancealert/index.phtml:72
+#: application/modules/event/views/scripts/scorecard/index.phtml:63
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:25
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:40
+#: application/modules/report/views/scripts/mdr/index.phtml:54
+#: application/modules/report/views/scripts/mdr/index.phtml:70
+#: application/modules/report/views/scripts/mdr/index.phtml:115
+#: application/modules/report/views/scripts/mdr/index.phtml:174
+#: application/modules/report/views/scripts/mdr/index.phtml:297
+#: application/modules/report/views/scripts/mdr/overall.phtml:8
+#: application/modules/report/views/scripts/mdr/overall.phtml:29
+msgid "Dealer"
+msgstr "Dealer"
+
+#: application/modules/report/controllers/MdrController.php:741
+#: application/modules/report/controllers/MdrController.php:800
+#: application/modules/report/controllers/MdrController.php:995
+#: application/modules/report/views/scripts/mdr/index.phtml:127
+#: application/modules/report/views/scripts/mdr/index.phtml:187
+#: application/modules/report/views/scripts/mdr/index.phtml:299
+#: application/modules/report/views/scripts/mdr/overall.phtml:31
+msgid "National"
+msgstr "National"
+
+#: application/modules/report/controllers/MdrController.php:746
+#: application/modules/report/controllers/MdrController.php:805
+#: application/modules/report/controllers/MdrController.php:996
+#: application/modules/report/views/scripts/mdr/index.phtml:138
+#: application/modules/report/views/scripts/mdr/index.phtml:201
+#: application/modules/report/views/scripts/mdr/index.phtml:300
+#: application/modules/report/views/scripts/mdr/overall.phtml:32
+msgid "Top 25%"
+msgstr "Top 25%"
+
+#: application/modules/report/controllers/MdrController.php:774
+#: application/modules/report/views/scripts/mdr/index.phtml:153
+msgid "Overall Opinion"
+msgstr "Overall Opinion"
+
+#: application/modules/report/controllers/MdrController.php:820
+#: application/modules/report/views/scripts/mdr/index.phtml:219
+msgid "Top 3 Priority Areas"
+msgstr "Top 3 Priority Areas"
+
+#: application/modules/report/controllers/MdrController.php:823
+#: application/modules/report/views/scripts/mdr/index.phtml:221
+msgid ""
+"These are the three area of your performance are showing the biggest gap "
+"between the national overage score and yours."
+msgstr ""
+"These are the three area of your performance are showing the biggest gap "
+"between the national overage score and yours."
+
+#: application/modules/report/controllers/MdrController.php:889
+#: application/modules/report/views/scripts/mdr/index.phtml:231
+msgid "Alerts"
+msgstr "Alerts"
+
+#: application/modules/report/controllers/MdrController.php:896
+#: application/modules/event/views/scripts/codered/index.phtml:16
+#: application/modules/report/views/scripts/dashboard/index.phtml:55
+#: application/modules/report/views/scripts/mdr/index.phtml:249
+msgid "Customer Alerts"
+msgstr "Customer Alerts"
+
+#: application/modules/report/controllers/MdrController.php:901
+#: application/modules/event/views/scripts/performancealert/index.phtml:8
+#: application/modules/report/views/scripts/mdr/index.phtml:261
+msgid "Performance Alerts"
+msgstr "Performance Alerts"
+
+#: application/modules/report/controllers/MdrController.php:979
+#: application/modules/report/views/scripts/mdr/index.phtml:281
+#: application/modules/report/views/scripts/mdr/overall.phtml:13
+msgid "Sales Performance"
+msgstr "Sales Performance"
+
+#: application/modules/report/controllers/MdrController.php:982
+#: application/modules/report/controllers/MdrController.php:983
+msgid "12 Months:"
+msgstr "12 Months:"
+
+#: application/modules/report/controllers/MdrController.php:997
+#: application/modules/report/views/scripts/mdr/index.phtml:305
+msgid "Overall"
+msgstr "Overall"
+
+#: application/modules/report/controllers/MdrController.php:1024
+msgid "CSI Sales Performace Report Date"
+msgstr "CSI Sales Performace Report Date"
+
+#: application/modules/report/controllers/MdrController.php:1028
+#: application/modules/report/views/scripts/mdr/overall.phtml:9
+msgid "Country"
+msgstr "Country"
+
+#: application/modules/report/controllers/MdrController.php:1034
+#: application/modules/report/views/scripts/mdr/index.phtml:49
+msgid "Rank Position"
+msgstr "Rank Position"
+
+#: application/modules/report/controllers/MdrController.php:1036
+#: application/modules/report/views/scripts/mdr/index.phtml:55
+msgid "out of"
+msgstr "out of"
+
+#: application/modules/report/controllers/MdrController.php:1037
+msgid "Rank position based on 12 month rolling CSI score to"
+msgstr "Rank position based on 12 month rolling CSI score to"
+
+#: application/modules/report/controllers/MdrController.php:1038
+#: application/modules/report/views/scripts/mdr/index.phtml:57
+msgid "Rank provided where sample size 5 or more over 12 month period"
+msgstr "Rank provided where sample size 5 or more over 12 month period"
+
+#: application/modules/report/controllers/MdrController.php:1044
+#: application/modules/report/views/scripts/dashboard/index.phtml:105
+#: application/modules/report/views/scripts/dashboard/index.phtml:109
+#: application/modules/report/views/scripts/mdr/index.phtml:65
+msgid "Sample Size:"
+msgstr "Sample Size:"
+
+#: application/modules/report/controllers/MdrController.php:1057
+msgid "CSI Score"
+msgstr "CSI Score"
+
+#: application/modules/report/controllers/MdrController.php:1058
+#: application/modules/report/views/scripts/mdr/index.phtml:94
+msgid "Sales Index Score"
+msgstr "Sales Index Score"
+
+#: application/modules/settings/controllers/PrivilegesController.php:146
+msgid "Privileges Saved Successfully"
+msgstr "Privileges Saved Successfully"
+
+#: application/modules/settings/controllers/PrivilegesController.php:148
+msgid "Failed To Save Privileges"
+msgstr "Failed To Save Privileges"
+
+#: application/modules/assessment/controllers/AjaxController.php:89
+msgid "All Markets"
+msgstr "All Markets"
+
+#: application/layouts/scripts/common/header.phtml:6
+msgid "Welcome"
+msgstr "Welcome"
+
+#: application/layouts/scripts/common/header.phtml:7
+msgid "Logout"
+msgstr "Logout"
+
+#: application/layouts/scripts/common/scripts.phtml:35
+msgid "Please select date range field"
+msgstr "Please select date range field"
+
+#: application/layouts/scripts/common/scripts.phtml:37
+msgid "From date cannot be greater than To date"
+msgstr "From date cannot be greater than To date"
+
+#: application/layouts/scripts/common/scripts.phtml:39
+msgid "Please Select Event Type"
+msgstr "Please Select Event Type"
+
+#: application/layouts/scripts/common/scripts.phtml:41
+msgid "Please Select Branch"
+msgstr "Please Select Branch"
+
+#: application/layouts/scripts/common/scripts.phtml:45
+msgid "Selected month can not be equal to or greater to current month"
+msgstr "Selected month can not be equal to or greater to current month"
+
+#: application/modules/customer/views/scripts/index/add.phtml:11
+msgid "Add Customer"
+msgstr "Add Customer"
+
+#: application/modules/customer/views/scripts/index/add.phtml:26
+msgid "Address1"
+msgstr "Address1"
+
+#: application/modules/customer/views/scripts/index/add.phtml:34
+msgid "Address2"
+msgstr "Address2"
+
+#: application/modules/customer/views/scripts/index/add.phtml:42
+msgid "Address3"
+msgstr "Address3"
+
+#: application/modules/customer/views/scripts/index/add.phtml:52
+msgid "Country Code"
+msgstr "Country Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:60
+msgid "Country Of Region"
+msgstr "Country Of Region"
+
+#: application/modules/customer/views/scripts/index/add.phtml:68
+msgid "Date Of Birth"
+msgstr "Date Of Birth"
+
+#: application/modules/customer/views/scripts/index/add.phtml:77
+msgid "Date Of Sale"
+msgstr "Date Of Sale"
+
+#: application/modules/customer/views/scripts/index/add.phtml:87
+msgid "Dealer Code"
+msgstr "Dealer Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:95
+msgid "Dealer Locale"
+msgstr "Dealer Locale"
+
+#: application/modules/customer/views/scripts/index/add.phtml:103
+msgid "Dealer Region"
+msgstr "Dealer Region"
+
+#: application/modules/customer/views/scripts/index/add.phtml:111
+msgid "Dealer Status"
+msgstr "Dealer Status"
+
+#: application/modules/customer/views/scripts/index/add.phtml:119
+msgid "Dealer Town"
+msgstr "Dealer Town"
+
+#: application/modules/customer/views/scripts/index/add.phtml:130
+msgid "Dealer Country Code"
+msgstr "Dealer Country Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:139
+msgid "Dealer Contact Email"
+msgstr "Dealer Contact Email"
+
+#: application/modules/customer/views/scripts/index/add.phtml:145
+#: application/modules/customer/views/scripts/index/edit.phtml:27
+#: application/modules/event/views/scripts/index/edit.phtml:42
+msgid "Email"
+msgstr "Email"
+
+#: application/modules/customer/views/scripts/index/add.phtml:151
+msgid "Forename"
+msgstr "Forename"
+
+#: application/modules/customer/views/scripts/index/add.phtml:158
+msgid "Surname"
+msgstr "Surname"
+
+#: application/modules/customer/views/scripts/index/add.phtml:165
+msgid "Gender"
+msgstr "Gender"
+
+#: application/modules/customer/views/scripts/index/add.phtml:172
+msgid "Language"
+msgstr "Language"
+
+#: application/modules/customer/views/scripts/index/add.phtml:179
+msgid "Mobile Number"
+msgstr "Mobile Number"
+
+#: application/modules/customer/views/scripts/index/add.phtml:186
+msgid "Sales Person"
+msgstr "Sales Person"
+
+#: application/modules/customer/views/scripts/index/add.phtml:192
+msgid "Post Code"
+msgstr "Post Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:198
+msgid "Registration Date"
+msgstr "Registration Date"
+
+#: application/modules/customer/views/scripts/index/add.phtml:205
+#: application/modules/event/views/scripts/codered/edit.phtml:59
+#: application/modules/event/views/scripts/scorecard/index.phtml:67
+msgid "Registration Number"
+msgstr "Registration Number"
+
+#: application/modules/customer/views/scripts/index/add.phtml:211
+msgid "Stock Code ID"
+msgstr "Stock Code ID"
+
+#: application/modules/customer/views/scripts/index/add.phtml:218
+msgid "Telephone"
+msgstr "Telephone"
+
+#: application/modules/customer/views/scripts/index/add.phtml:224
+msgid "Title"
+msgstr "Title"
+
+#: application/modules/customer/views/scripts/index/add.phtml:230
+msgid "Town/City"
+msgstr "Town/City"
+
+#: application/modules/customer/views/scripts/index/add.phtml:236
+msgid "Vehicle Code"
+msgstr "Vehicle Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:242
+msgid "Vehicle Code Description"
+msgstr "Vehicle Code Description"
+
+#: application/modules/customer/views/scripts/index/add.phtml:248
+msgid "Vehicle Range Code"
+msgstr "Vehicle Range Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:254
+msgid "Vehicle Range Code Description"
+msgstr "Vehicle Range Code Description"
+
+#: application/modules/customer/views/scripts/index/add.phtml:266
+msgid "Colour Code"
+msgstr "Colour Code"
+
+#: application/modules/customer/views/scripts/index/add.phtml:272
+msgid "Colour Code Description"
+msgstr "Colour Code Description"
+
+#: application/modules/customer/views/scripts/index/add.phtml:282
+#: application/modules/performance/views/scripts/eventTargets.phtml:24
+#: application/modules/settings/views/scripts/privileges/index.phtml:80
+msgid "Save"
+msgstr "Save"
+
+#: application/modules/customer/views/scripts/index/add.phtml:283
+#: application/modules/customer/views/scripts/index/edit.phtml:35
+#: application/modules/customer/views/scripts/index/reassign.phtml:30
+#: application/modules/event/views/scripts/codered/edit.phtml:286
+#: application/modules/event/views/scripts/index/edit.phtml:53
+msgid "Cancel"
+msgstr "Cancel"
+
+#: application/modules/customer/views/scripts/index/edit.phtml:34
+#: application/modules/customer/views/scripts/index/reassign.phtml:29
+#: application/modules/event/views/scripts/codered/edit.phtml:285
+#: application/modules/event/views/scripts/index/edit.phtml:52
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: application/modules/customer/views/scripts/index/eventdata.phtml:16
+#: application/modules/customer/views/scripts/index/index.phtml:57
+#: application/modules/event/views/scripts/codered/index.phtml:64
+#: application/modules/event/views/scripts/index/index.phtml:50
+#: application/modules/event/views/scripts/performancealert/index.phtml:52
+#: application/modules/report/views/scripts/dashboard/showdrilldown.phtml:15
+msgid "Export to CSV"
+msgstr "Export to CSV"
+
+#: application/modules/customer/views/scripts/index/eventdata.phtml:28
+msgid "Action"
+msgstr "Action"
+
+#: application/modules/customer/views/scripts/index/eventdata.phtml:37
+msgid "assessment Events for"
+msgstr "assessment Events for"
+
+#: application/modules/customer/views/scripts/index/index.phtml:8
+msgid "List Customers"
+msgstr "List Customers"
+
+#: application/modules/customer/views/scripts/index/index.phtml:65
+#: application/modules/customer/views/scripts/index/index.phtml:77
+msgid "Name"
+msgstr "Name"
+
+#: application/modules/customer/views/scripts/index/index.phtml:66
+#: application/modules/customer/views/scripts/index/index.phtml:78
+msgid "Email Address"
+msgstr "Email Address"
+
+#: application/modules/customer/views/scripts/index/index.phtml:68
+#: application/modules/customer/views/scripts/index/index.phtml:80
+msgid "Date of Sale"
+msgstr "Date of Sale"
+
+#: application/modules/customer/views/scripts/index/index.phtml:70
+#: application/modules/customer/views/scripts/index/index.phtml:82
+msgid "No. of Events"
+msgstr "No. of Events"
+
+#: application/modules/customer/views/scripts/index/index.phtml:180
+msgid "assessment Events"
+msgstr "assessment Events"
+
+#: application/modules/customer/views/scripts/index/index.phtml:188
+msgid "Edit Customer"
+msgstr "Edit Customer"
+
+#: application/modules/customer/views/scripts/index/reassign.phtml:41
+msgid "Reassign"
+msgstr "Reassign"
+
+#: application/modules/default/views/scripts/error/noauth.phtml:3
+#: application/modules/default/views/scripts/error/noresource.phtml:3
+msgid "You are not authorized to access this page."
+msgstr "You are not authorized to access this page."
+
+#: application/modules/event/views/scripts/codered/edit.phtml:7
+msgid "Edit Customer Alert"
+msgstr "Edit Customer Alert"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:33
+#: application/modules/event/views/scripts/scorecard/index.phtml:37
+msgid "Event ID"
+msgstr "Event ID"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:46
+#: application/modules/event/views/scripts/scorecard/index.phtml:54
+msgid "assessment Date"
+msgstr "assessment Date"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:83
+#: application/modules/event/views/scripts/scorecard/index.phtml:92
+msgid "Scorecard"
+msgstr "Scorecard"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:88
+#: application/modules/event/views/scripts/scorecard/index.phtml:97
+#: application/modules/report/views/scripts/dashboard/index.phtml:97
+msgid "Questions"
+msgstr "Questions"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:89
+#: application/modules/event/views/scripts/scorecard/index.phtml:98
+msgid "Response"
+msgstr "Response"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:252
+#: application/modules/event/views/scripts/codered/edit.phtml:307
+#: application/modules/event/views/scripts/codered/edit.phtml:340
+msgid "Problem"
+msgstr "Problem"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:263
+#: application/modules/event/views/scripts/codered/edit.phtml:311
+#: application/modules/event/views/scripts/codered/edit.phtml:344
+msgid "Solution"
+msgstr "Solution"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:357
+msgid "Added By"
+msgstr "Added By"
+
+#: application/modules/event/views/scripts/codered/edit.phtml:364
+msgid "Added Date"
+msgstr "Added Date"
+
+#: application/modules/event/views/scripts/codered/index.phtml:77
+#: application/modules/event/views/scripts/codered/index.phtml:90
+msgid "Closed Date"
+msgstr "Closed Date"
+
+#: application/modules/event/views/scripts/index/edit.phtml:13
+msgid "Edit Event"
+msgstr "Edit Event"
+
+#: application/modules/event/views/scripts/index/index.phtml:1
+msgid "List Events"
+msgstr "List Events"
+
+#: application/modules/event/views/scripts/index/index.phtml:64
+#: application/modules/event/views/scripts/index/index.phtml:83
+msgid "Import Date"
+msgstr "Import Date"
+
+#: application/modules/event/views/scripts/scorecard/index.phtml:19
+msgid "Event Scorecard"
+msgstr "Event Scorecard"
+
+#: application/modules/event/views/scripts/scorecard/index.phtml:27
+msgid "Print"
+msgstr "Print"
+
+#: application/modules/performance/views/scripts/eventTargets.phtml:10
+msgid "Active"
+msgstr "Active"
+
+#: application/modules/performance/views/scripts/eventTargets.phtml:11
+msgid "Question"
+msgstr "Question"
+
+#: application/modules/performance/views/scripts/eventTargets.phtml:12
+msgid "Set Target"
+msgstr "Set Target"
+
+#: application/modules/performance/views/scripts/index/index.phtml:1
+msgid "Performance Target"
+msgstr "Performance Target"
+
+#: application/modules/performance/views/scripts/target/index.phtml:1
+msgid "Performance Target for Sales"
+msgstr "Performance Target for Sales"
+
+#: application/modules/performance/views/scripts/target/service.phtml:1
+msgid "Performance Target for Service"
+msgstr "Performance Target for Service"
+
+#: application/modules/report/views/scripts/allquesanswers/index.phtml:1
+msgid "All Questions Every Answer"
+msgstr "All Questions Every Answer"
+
+#: application/modules/report/views/scripts/allquesanswers/index.phtml:34
+msgid "The Dealership"
+msgstr "The Dealership"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:44
+#: application/modules/report/views/scripts/mdr/index.phtml:33
+msgid "No Record Found"
+msgstr "No Record Found"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:49
+msgid "Currently"
+msgstr "Currently"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:52
+msgid "Performance alerts"
+msgstr "Performance alerts"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:54
+msgid "new"
+msgstr "new"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:56
+msgid "for this location"
+msgstr "for this location"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:63
+msgid "NPS"
+msgstr "NPS"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:68
+msgid "Responses"
+msgstr "Responses"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:85
+msgid "Current Dealer Rank:"
+msgstr "Current Dealer Rank:"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:85
+msgid "Dealers"
+msgstr "Dealers"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:91
+msgid "Areas for Imporvement"
+msgstr "Areas for Imporvement"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:92
+msgid ""
+"Where the negative gap between the score achieved is greatest or where the "
+"positive gap is smallest"
+msgstr ""
+"Where the negative gap between the score achieved is greatest or where the "
+"positive gap is smallest"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:98
+msgid "Location"
+msgstr "Location"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:99
+msgid "Comparison"
+msgstr "Comparison"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:129
+msgid "Drilldown"
+msgstr "Drilldown"
+
+#: application/modules/report/views/scripts/dashboard/index.phtml:138
+#: application/modules/report/views/scripts/eventtype/index.phtml:59
+msgid "Close"
+msgstr "Close"
+
+#: application/modules/report/views/scripts/eventtype/index.phtml:1
+msgid "Event Type Summary"
+msgstr "Event Type Summary"
+
+#: application/modules/report/views/scripts/eventtype/index.phtml:49
+msgid "Event Type DrillDown"
+msgstr "Event Type DrillDown"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:23
+msgid "Download PDF"
+msgstr "Download PDF"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:24
+msgid "Downloading....."
+msgstr "Downloading....."
+
+#: application/modules/report/views/scripts/mdr/index.phtml:38
+msgid "NPS Sales Performace Report Date:"
+msgstr "NPS Sales Performace Report Date:"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:43
+msgid "Dealer:"
+msgstr "Dealer:"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:44
+msgid "Country:"
+msgstr "Country:"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:56
+msgid "Rank position based on 12 month rolling NPS score to"
+msgstr "Rank position based on 12 month rolling NPS score to"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:154
+msgid "Based on your purchase experience,"
+msgstr "Based on your purchase experience,"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:287
+#: application/modules/report/views/scripts/mdr/index.phtml:288
+#: application/modules/report/views/scripts/mdr/overall.phtml:19
+#: application/modules/report/views/scripts/mdr/overall.phtml:20
+msgid "12 Months"
+msgstr "12 Months"
+
+#: application/modules/report/views/scripts/mdr/index.phtml:368
+msgid "Some error occured, Please try again"
+msgstr "Some error occured, Please try again"
+
+#: application/modules/report/views/scripts/mdr/overall.phtml:7
+msgid "CSI Sales"
+msgstr "CSI Sales"
+
+#: application/modules/settings/views/scripts/privileges/index.phtml:32
+msgid "Roles"
+msgstr "Roles"
+
+#: application/modules/settings/views/scripts/privileges/index.phtml:48
+msgid "Module"
+msgstr "Module"
+
+#: application/modules/settings/views/scripts/privileges/index.phtml:49
+msgid "Privileges"
+msgstr "Privileges"
+
+#: application/modules/assessment/views/scripts/index/process-response.phtml:359
+msgid "assessment_index_textmessage"
+msgstr "assessment_index_textmessage"
+
+#~ msgid "Save For All Dealers"
+#~ msgstr "Save For All Dealers"
+
+#~ msgid "Report_MDR_index_priority_area"
+#~ msgstr "Report_MDR_index_priority_area"
+
+#~ msgid "Report_MDR_index_performance_area"
+#~ msgstr "Report_MDR_index_performance_area"
+
+#~ msgid "Reports"
+#~ msgstr "Reports"
+
+#~ msgid "Customers"
+#~ msgstr "Customers"
+
+#~ msgid "Events"
+#~ msgstr "Events"
+
+#~ msgid "Settings"
+#~ msgstr "Settings"
+
+#~ msgid "Sales Target"
+#~ msgstr "Sales Target"
+
+#~ msgid "Service Target"
+#~ msgstr "Service Target"
+
+#~ msgid "This email does not exist"
+#~ msgstr "This email does not exist"
+
+#~ msgid "All Event Types"
+#~ msgstr "All Event Types"
+
+#~ msgid "All Statuses"
+#~ msgstr "All Statuses"
+
+#~ msgid "Select"
+#~ msgstr "Select"
+
+#~ msgid "Male"
+#~ msgstr "Male"
+
+#~ msgid "Female"
+#~ msgstr "Female"
+
+#~ msgid "Profile"
+#~ msgstr "Profile"
+
+#~ msgid "Introduction"
+#~ msgstr "Introduction"
+
+#~ msgid "Change Password"
+#~ msgstr "Change Password"
+
+#~ msgid "Access Archive"
+#~ msgstr "Access Archive"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Monthly Dealer Report (MDR)"
+#~ msgstr "Monthly Dealer Report (MDR)"
+
+#~ msgid "Executive Summary Report (ESR)"
+#~ msgstr "Executive Summary Report (ESR)"
+
+#~ msgid "Unsatisfactory Resolution"
+#~ msgstr "Unsatisfactory Resolution"
+
+#~ msgid "Dealer Ranking"
+#~ msgstr "Dealer Ranking"
+
+#~ msgid "Average Score by Question"
+#~ msgstr "Average Score by Question"
+
+#~ msgid "Question Analysis Summary"
+#~ msgstr "Question Analysis Summary"
+
+#~ msgid "assessment Statistics Summary"
+#~ msgstr "assessment Statistics Summary"
+
+#~ msgid "Reopened assessments"
+#~ msgstr "Reopened assessments"
+
+#~ msgid "Service not Recorded"
+#~ msgstr "Service not Recorded"
+
+#~ msgid "User Activity"
+#~ msgstr "User Activity"
+
+#~ msgid "IP Tracker"
+#~ msgstr "IP Tracker"
+
+#~ msgid "Report Log"
+#~ msgstr "Report Log"
+
+#~ msgid "Service Targets"
+#~ msgstr "Service Targets"
+
+#~ msgid "Sales Targets"
+#~ msgstr "Sales Targets"

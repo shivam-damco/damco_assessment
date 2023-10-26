@@ -1,0 +1,458 @@
+<?php
+//echo '<pre>'; print_r($this->allGroupQuestion_dtls);die;
+//print_r($this->labels);
+//die;
+if (is_array($this->labels)) {
+    $i = 1;
+    foreach ($this->labels as $lbl) {
+        if ( $lbl['question_type'] == 'T' ) {
+            ?><center><?php echo $lbl['question'];?><br /><br /><br /></center><?php
+        }
+        else {
+            echo "<h3 id='text_" . $lbl['questionid'] . "_" . $this->question['display_page'] . $i . "' >" 
+                    . $lbl['question'] . "</h3>";
+        }
+        $i++;
+    }
+}
+
+if (!empty($this->allGroupQuestion_dtls)) {
+
+    $flag = FALSE;
+    foreach ($this->allGroupQuestion_dtls as $k => $arrallGroupQuestion_dtls) {
+        $buttonlastInfo = $arrallGroupQuestion_dtls;
+        $allGroupEngQuestion_dtls = $this->allGroupEngQuestion_dtls;
+        $answer = !empty($this->answer[$arrallGroupQuestion_dtls['questionid']]) ? $this->answer[$arrallGroupQuestion_dtls['questionid']] : array('');
+        
+        if ( $arrallGroupQuestion_dtls['parent_id'] == '0' && $flag ){ ?>
+            </div></div>
+            <?php
+            $flag = FALSE;
+        }
+        
+        if ($arrallGroupQuestion_dtls['parent_id'] == '0'): ?>
+            <div class="panel panel-default" id="ID_<?php echo $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']; ?>">
+                <div class="panel-heading">
+                    <?php echo /*$allGroupEngQuestion_dtls[$k]['question_number'] . ' ' 
+                               . */str_replace('  ', '&nbsp;&nbsp;', $arrallGroupQuestion_dtls['question'])?>
+                    <input type="hidden" name="questiontext" id="questiontext_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>" 
+                           value="<?php echo htmlspecialchars($allGroupEngQuestion_dtls[$k]['question_number']); ?>::::<?php echo str_replace('  ', '&nbsp;&nbsp;', htmlspecialchars($allGroupEngQuestion_dtls[$k]['question'])); ?>"></div>
+                <div class="panel-body">
+        <?php endif; ?>
+                    
+        <?php
+        if (empty($arrallGroupQuestion_dtls['is_parent'])) {
+            if ( $arrallGroupQuestion_dtls['is_parent'] 
+                 || $arrallGroupQuestion_dtls['parent_id'] > '0') :
+                $flag = TRUE; ?>
+                <div class="sub-question-wrapper">
+                    <div class="sub-questions">                                
+                <?php echo /*$allGroupEngQuestion_dtls[$k]['question_number']." ".*/str_replace('  ', '&nbsp;&nbsp;', $arrallGroupQuestion_dtls['question']); ?> 
+                    <input type="hidden" name="questiontext" id="questiontext_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>" 
+                           value="<?php echo htmlspecialchars($allGroupEngQuestion_dtls[$k]['question_number']); ?>::::<?php echo str_replace('  ', '&nbsp;&nbsp;', htmlspecialchars($allGroupEngQuestion_dtls[$k]['question'])); ?>">
+            <?php endif; 
+            $addextraclass = '';
+            if ( !empty($this->arrqIdForOneColumn) 
+                 && in_array($arrallGroupQuestion_dtls['questionid'], $this->arrqIdForOneColumn) ) {
+                $addextraclass = ' listseperate';
+            }
+            else {
+                $addextraclass = '';
+            }
+            ?>
+            <ul class="list-inline ques-type <?php echo $addextraclass?>">
+                <?php
+                $showgradelbl = 'No';
+                $arrshowgradelabel = array();
+                $setclass = '';
+                if (!empty($arrallGroupQuestion_dtls['grade_label_text']) ) {
+                    $showgradelbl = 'Yes';
+                    $arrgradeLabel = explode(',', trim($arrallGroupQuestion_dtls['grade_label_text']));
+                    foreach ($arrgradeLabel as $gl) {
+                        $showlbl = explode(':', $gl);
+                        $arrshowgradelabel[trim($showlbl[0])] = trim($showlbl[1]);
+                    }
+                }
+                
+                switch ( $arrallGroupQuestion_dtls['input_type'] ) {
+                    case 'radio':
+                        $tot_opt = 0;
+                        if ( !empty($this->arrqIdForOneColumn) 
+                             && !in_array( $arrallGroupQuestion_dtls['questionid'], $this->arrqIdForOneColumn) ) {
+                            for ($cnt = 1; $cnt <= 11; $cnt++) {
+                                if ( $arrallGroupQuestion_dtls['response' . $cnt] != "" 
+                                     && strlen($arrallGroupQuestion_dtls['response' . $cnt]) > 3) {
+                                    $tot_opt++;
+                                }
+                            }
+                            
+                            if ($tot_opt > 3) {
+                                $setclass = 'col-md-6 col-sm-6 col-xs-6';
+                            }
+                        }
+                        
+                        $totalResponses = 11;
+                        if ($arrallGroupQuestion_dtls['response11'] != ''
+                            && (strpos($arrallGroupQuestion_dtls['response11'], '|') !== false)) {
+                            $remainingResponses =  explode('|', $arrallGroupQuestion_dtls['response11']);
+                            unset($arrallGroupQuestion_dtls['response11']);
+                            foreach ($remainingResponses as $response) {
+                                $arrallGroupQuestion_dtls['response'. $totalResponses] = $response;
+                                $totalResponses++;
+                            }
+                            $totalResponses--;
+                        }
+                        
+                        for ($i = 1; $i <= $totalResponses; $i++) {
+                            if ($this->setOptions) {
+                                if (!in_array($i, $this->setOptions)) {
+                                    continue;
+                                }
+                            }
+
+                            // TT-3013
+                            if ( isset($this->hideQuestionOptions[$arrallGroupQuestion_dtls['questionid']])
+                                 && in_array($i, $this->hideQuestionOptions[$arrallGroupQuestion_dtls['questionid']]) ) {
+                                continue;
+                            }
+
+                            if ( $arrallGroupQuestion_dtls['response' . $i] != '' ) {
+                                $setclass = $txt = '';
+                                if ( $showgradelbl == 'Yes' ) {
+                                    if ( isset($arrshowgradelabel[$i]) 
+                                         && !empty($arrshowgradelabel[$i]) ) {
+                                        $txt = $arrshowgradelabel[$i];
+                                        $setclass = 'grades-pare';
+                                    } 
+                                    else {
+                                        $txt = $setclass = '';
+                                    }
+                                }
+                                elseif( !empty($this->arrqIdForTwoColumn) 
+                                        && in_array($arrallGroupQuestion_dtls['questionid'], $this->arrqIdForTwoColumn) ) {
+                                     $setclass = 'col-md-6 col-sm-12 col-xs-12';
+                                }
+                                ?>
+                                <li <?php echo (!empty($txt) > 0 || $tot_opt > 3) ? "class=\"" . $setclass . "\"" : "" ?>>
+                                    <input type="radio" class="process-question<?php echo !empty($arrallGroupQuestion_dtls['parent_id']) ? ' sub-question' : '';?>"
+                                        data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques']; ?>"
+                                        name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]" 
+                                        id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"
+                                        value="<?php echo $i; ?>" 
+                                        <?php
+                                        if ( !empty($answer['response_options']) 
+                                             && $answer['response_options'] == $i ) {
+                                            echo " checked='checked' ";
+                                        }
+                                        ?>>
+                                    <label for="question[<?php echo $arrallGroupQuestion_dtls['questionid'] . ']_' . $i; ?>">
+                                        <?php echo $arrallGroupQuestion_dtls['response' . $i]; ?></label>
+                                    <?php if ( !empty($txt) ) : ?>
+                                        <div class="grades"><?php echo $txt; ?></div>
+                                    <?php endif; ?>
+                                </li>
+                                <?php
+
+                                if ( $i%2 == 0 && !empty($setclass) ) {
+                                    echo "<br style='clear:both;height:1px;'/>";
+                                }                                               
+
+                                if ( !empty($answer['response_options']) 
+                                     && $answer['response_options'] == $i 
+                                     && $this->curaction != 'close' ) { ?>
+                                    <script type="text/javascript">
+                                        saveAnswerAndShowNext(<?php echo $arrallGroupQuestion_dtls['questionid'] ?>, <?php echo $i ?>, '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>');
+                                    </script> <?php
+                                }
+                            }
+                        }
+                        break;
+                        
+                    case 'textarea':
+                        if ( !empty($arrallGroupQuestion_dtls['response1']) ) { ?>
+                            <div class="form-group col-lg-6 mb-0">
+                                <textarea class="form-control fleft<?php echo ($arrallGroupQuestion_dtls['mandatory'] == 'Yes') ? ' mandatory' : ''?>" 
+                                    id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_1'; ?>" 
+                                    name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                    onblur="saveAnswerAndShowNext(<?php echo $arrallGroupQuestion_dtls['questionid'] ?>, $.trim($(this).val()), '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_1'; ?>')"
+                                    data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques'];?>"><?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ""); ?></textarea>
+                            </div> <?php
+                        } 
+                        else {
+                            break;
+                        } ?>
+                        <script type="text/javascript">
+                        <?php
+                        if ( !empty($answer['answer1']) 
+                             && strlen($answer['response_options']) > 0 ) { ?>
+                            saveAnswerAndShowNext(<?php echo $arrallGroupQuestion_dtls['questionid'] ?>, '<?php echo $answer['answer1']; ?>', '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_1'; ?>'); <?php
+                        }
+                        ?>
+                        </script>
+                        <?php
+                        break;
+                            
+                    case 'drop down':
+                        $selval = $arrmyans = $arroptions = $options = '';
+                        if ( trim($arrallGroupQuestion_dtls['response1']) == 'Age' ) {
+                            $dboptions = $this->arrages;
+                            asort($dboptions); 
+                            foreach ( $dboptions as $ky => $vl ) {
+                                $ky = $ky+1;
+                                $options[$ky] = $vl;
+                            }
+                        }
+                        elseif ( trim($arrallGroupQuestion_dtls['response1']) == 'Model' ) {
+                            if ( !empty($answer['answer1']) ) {
+                                $arrmyans = $answer['answer1'];
+                            }
+
+                            $arroptions = $this->getModels( $this->survey['eventid'],
+                                    $this->qIdForPrevBrandName );
+                            if ( !empty($arroptions) ) {
+                                foreach ( $arroptions as $arrd ) {
+                                    $options[$arrd['id']] = $arrd['name'];
+                                }
+                            }
+                        }
+                        elseif ( trim($arrallGroupQuestion_dtls['response1']) == 'Make' ) {
+                            $dboptions = $this->arrmakes;
+                            $dboptions[1] = $this->nootherbrandtext;
+                            asort($dboptions);
+                            if(in_array($arrallGroupQuestion_dtls['questionid'],$this->noOtherBrandQuestionIds)){
+                                $options[1] = $dboptions[1];
+                            }
+                            foreach ( $dboptions as $ky => $vl ) {
+                                if ( $ky != 1 && $ky != 15 ) {
+                                    $options[$ky] = $vl;
+                                }
+                            }
+                            $options[15] = $dboptions[15];
+                        }
+                        elseif ( trim($arrallGroupQuestion_dtls['response1']) == 'Nationname' ) {
+                            if (!empty($answer['answer1'])) {
+                                $myans = $answer['answer1'];
+                                $selval = '';
+                                $arrmyans = explode('::', $answer['answer1']);
+                            }
+
+                            $arroptions = $this->getMarketBasedDealers( $this->survey['eventid'],
+                                    $this->qIdForMarketName );
+                            if ( !empty($arroptions) ) {
+                                foreach ($arroptions as $arrd) {
+                                    if ( $arrd['id'] != $this->survey['dealer_id'] ) {
+                                        $options[$arrd['id']] = $arrd['dealer_name'];
+                                    }
+                                    if ( empty($selval) 
+                                         && !empty($arrmyans[1]) 
+                                         && trim($arrd['id']) == trim($arrmyans[0])) {
+                                        $selval = $arrd['dealer_name'];
+                                    }
+                                }
+                            }
+                        }
+                        elseif ( trim($arrallGroupQuestion_dtls['response1']) == 'Marketname' ) {
+                            if ( !empty($answer['answer1']) ) {
+                                $myans = $answer['answer1'];
+                                $arrmyans = explode('::', $answer['answer1']);
+                            }
+
+                            $selval = '';
+                            $arroptions = $this->getMarkets(3, $this->langid);
+                            foreach ( $arroptions as $arrd ) {
+                                $dbStructName = trim($arrd['country_name']);
+                                $options[$arrd['structid']] = $dbStructName;
+
+                                if ( empty($selval)
+                                     && !empty($arrmyans[1])
+                                     && trim($arrd['structid']) == trim($arrmyans[0]) ) {
+                                    $selval = $dbStructName;
+                                }
+                            }
+                        }
+                        elseif ( trim($arrallGroupQuestion_dtls['response1']) == 'NationsName' ) {
+                            if ( !empty($answer['answer1']) ) {
+                                $myans = $answer['answer1'];
+                                $arrmyans = explode('::', $answer['answer1']);
+                            }
+                            $selval = '';
+                            $arroptions = $this->getNations( $this->langid );
+                            foreach ( $arroptions as $arrd ) {
+                                $dbStructName = trim($arrd['nation_name']);
+                                $options[$arrd['nationid']] = $dbStructName;
+                                if ( empty($selval)
+                                     && !empty($arrmyans[1])
+                                     && trim($arrd['structid']) == trim($arrmyans[0]) ) {
+                                    $selval = $dbStructName;
+                                }
+                            }
+                        }
+                        else {
+                            $options = $this->arroptions;
+                        } ?>
+                        
+                        <div class="form-group col-lg-2 mb-0">
+                            <select <?php if ( $arrallGroupQuestion_dtls['questionid'] == 281) { ?>class="chosen-select" style="width:100%" <?php } ?> id="question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1"
+                                name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                onchange="saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid']?>', $(this).val(), '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1')">
+                            <option value=""> - Select - </option>
+                            <?php
+                            foreach ( $options as $k => $option ) {
+                                $option = trim($option);
+                                $userselval = '';
+                                ?>
+                                    <option value="<?php echo $option; ?>" title="<?php echo $option; ?>"
+                                <?php 
+                                if ( in_array(trim($arrallGroupQuestion_dtls['response1']), array('Marketname', 'Nationname')) ) {
+                                    $userselval = $selval;
+                                } 
+                                elseif ( !empty($answer['answer1']) ) {
+                                   $userselval = $answer['answer1'];
+                                }
+                                echo ( ( !empty($userselval) && ($userselval == $option)) 
+                                       ? 'selected="selected"' : '' );
+                                ?>><?php echo $option ?></option><?php
+                            } ?>
+                            </select>
+                        </div>
+                        <?php 
+                        if ( !empty($answer['answer1']) 
+                             && strlen($answer['answer1']) > 0 
+                             && (stripos($answer['answer1'], "- Select -") === false) ) { ?>
+                            <script type="text/javascript">
+                                saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid']?>', '<?php echo $answer['answer1']; ?>', '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1')
+                            </script> <?php
+                        }
+                        
+                        if ( $arrallGroupQuestion_dtls['questionid'] == 281) { ?>
+                            <script type="text/javascript">
+                                jQuery('.chosen-select').chosen({});
+                            </script>
+                            <?php
+                        }
+                        
+                        break;
+                                        
+                    case 'checkbox':
+                        $userselval = $selector_class = '';
+                        for ( $i = 1; $i <= 11; $i++ ) {
+                            $displayTextarea = FALSE;
+                            if ( $arrallGroupQuestion_dtls['response' . $i] != '' ) { ?>
+                                <li class="col-md-12 col-sm-12 col-xs-12">
+                                    <input type="checkbox" class="process-question<?php echo !empty($selector_class) ? ' ' . $selector_class : ''; ?>"
+                                        name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                        value="<?php echo $i; ?>"
+                                        data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques'];?>"
+                                        id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"
+                                    <?php 
+                                    if ( ( !empty($answer['answer' . $i]) 
+                                           && $answer['answer' . $i] == $arrallGroupQuestion_dtls['response' . $i]) ) {
+                                        echo 'checked="checked"';
+                                        $displayTextarea = TRUE;
+                                    } ?>>
+                                    <label for="question<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"><?php echo $arrallGroupQuestion_dtls['response' . $i]; ?></label>
+                                    <?php if ( $arrallGroupQuestion_dtls['action_response_a'] == 'checkbox_with_comments' ) : ?>
+                                        <div class="form-group col-lg-9 col-md-9 col-sm-12 col-xs-12 pull-right"<?php echo (!$displayTextarea) ? ' style="display:none"' : '';?>>
+                                            <textarea class="form-control fleft" placeholder="Please elaborate"
+                                                id="textarea_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"
+                                                name="question[<?php echo $arrallGroupQuestion_dtls['alert' . $i]; ?>][]"
+                                                onblur="saveAnswerAndShowNext(<?php echo $arrallGroupQuestion_dtls['alert' . $i] ?>, $.trim($(this).val()), '', 'textarea_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>')"
+                                                data-group-last-ques="0"><?php echo $this->getAnswer($this->survey['eventid'], $arrallGroupQuestion_dtls['alert' . $i], 1); ?></textarea>
+                                        </div>
+                                    <?php endif; ?>
+                                </li>                                                
+                                <?php
+                            }
+                        }
+                        ?>
+                        <li><br /><button 
+                                class="btn btn-primary process-question checkbox-button" 
+                                type="button"
+                                data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques'];?>"
+                                id="question_<?php echo $arrallGroupQuestion_dtls['questionid'];?>"><?php echo $this->proceedbutton; ?></button></li>
+                        <?php
+                        if ( !empty($answer['response_options']) ) { ?>
+                            <script type="text/javascript">
+                                //saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid']?>', '<?php echo $answer['response_options'] ?>', '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>')
+                            </script> <?php
+                        }
+                        break;
+                    
+                    case 'text':
+                        if ( !empty($arrallGroupQuestion_dtls['response1']) ) { ?>
+                            <div class="form-group col-lg-2 mb-0">
+                                <input 
+                                    type="text" class="form-control fleft"
+                                    data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques']; ?>"
+                                    id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>" 
+                                    name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                    value="<?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ""); ?>"
+                                    onblur="saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid'];?>', $(this).val(), '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>');">
+                            </div>                
+                            <?php
+                        } 
+                        else {
+                            break;
+                        } 
+                        
+                        if ( !empty($answer['answer1']) ) { ?>
+                            <script type="text/javascript">
+                                saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid'];?>', '<?php echo $answer['answer1']; ?>', '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>')
+                            </script>  <?php 
+                        }
+                        break;
+                    
+                    case 'calendar':
+                        if ( !empty($arrallGroupQuestion_dtls['response1']) ) { ?>
+                            <div class="form-group col-lg-2 mb-0">
+                                <input 
+                                    type="text" class="form-control fleft" readonly="true" style="width:206px"
+                                    data-group-last-ques="<?php echo $arrallGroupQuestion_dtls['group_last_ques']; ?>"
+                                    id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>" 
+                                    name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                    value="<?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ''); ?>"
+                                    onblur="saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid'];?>', $(this).val(), '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>');">
+                            </div>                
+                            <?php
+                        } 
+                        else {
+                            break;
+                        } 
+                        
+                        if ( !empty($answer['answer1']) ) { ?>
+                            <script type="text/javascript">
+                                saveAnswerAndShowNext('<?php echo $arrallGroupQuestion_dtls['questionid'];?>', '<?php echo $answer['answer1']; ?>', '<?php echo ( ($arrallGroupQuestion_dtls['group_last_ques'] == 0) ? '' : 'ID_' . $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']); ?>', 'question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>')
+                            </script>  <?php 
+                        }
+                        ?>
+                        <script type="text/javascript">
+                            $('#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_1'; ?>').MonthPicker({ 
+                                Button: false,
+                                MaxMonth: 0
+                            });
+                        </script>  
+                        <?php 
+                        break;
+                } ?>                 
+            </ul>
+                             
+            <?php if ( !($arrallGroupQuestion_dtls['parent_id'] == '0' 
+                       && $arrallGroupQuestion_dtls['is_parent']) ): ?>
+                            </div></div>
+            <?php endif; ?>
+                    
+            <?php if ( $arrallGroupQuestion_dtls['parent_id'] == '0' ): ?>
+                    </div>
+            <?php endif;
+        }
+    }
+
+    if ( in_array( $buttonlastInfo['input_type'], array('text', 'textarea', 'calendar') ) ) { ?>
+        <button type="button" id="btnProceed" class="btn btn-primary" 
+            data-is-mandatory="<?php echo $buttonlastInfo['mandatory']; ?>"
+            name="question_button[<?php echo $buttonlastInfo['questionid']; ?>][]"
+            onclick="saveAnswerAndShowNext(<?php echo $buttonlastInfo['questionid'] ?>, $.trim($('#question_<?php echo $buttonlastInfo['questionid'] ?>_1').val()), '<?php echo ( ($buttonlastInfo['group_last_ques'] == 0) ? '' : 'ID_' . $buttonlastInfo['ID'] . '_' . $buttonlastInfo['questionid']); ?>', 'question_<?php echo $buttonlastInfo['questionid'] . "_1"; ?>')"
+            ><?php echo $this->proceedbutton?></button>
+    <?php } ?>
+    </div> <?php
+}

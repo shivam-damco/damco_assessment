@@ -1,0 +1,214 @@
+<?php echo  !empty($this->get["chkme"]) ? 
+            $this->headLink()->appendStylesheet($this->baseUrl().'')->appendStylesheet('/css/pdf.css') //9/17/14 11:53 AM added by dipa 
+            : "" ;
+ ?>
+<h2><?php echo $this->translate('Question Analysis Report'); ?></h2> 
+<?php $buttonHidden = "";
+if(empty($this->get["chkme"]))
+{ ?>
+<form name="data-filters" action="<?php echo HTTP_PATH . '/report/questionanalysis/' ?>" method="get" id="frmqa">          	
+   <?php
+   
+    $startDate = !empty($this->get['startDate']) ? $this->get['startDate'] : '';
+    $endDate = !empty($this->get['endDate']) ? $this->get['endDate'] : '';
+    $dateArray = explode('-', $startDate);
+    $startDay = (isset($dateArray[2])) ? $dateArray[2] : '';
+    $startMonth = (isset($dateArray[1])) ? $dateArray[1] : '';
+    $dateArray = explode('-', $endDate);
+    $endDay = (isset($dateArray[2])) ? $dateArray[2] : '';
+    $endMonth = (isset($dateArray[1])) ? $dateArray[1] : '';
+    echo $this->dataFilters(
+            array('event_type','survey','question'), array(
+        'survey_category' => (isset($this->get['survey_category'])) ? $this->get['survey_category'] : '',        
+        'event_type' => (isset($this->get['event_type'])) ? $this->get['event_type'] : '',
+        'survey' => (isset($this->get['survey_id'])) ? $this->get['survey_id'] : '0',
+        'questionid' => (isset($this->get["questionid"])) ? $this->get['questionid'] : '',
+        'date_range' => (isset($this->get['date_range_field'])) ? $this->get['date_range_field'] : '',
+        'period' => array(
+            'period' => (isset($this->get['period'])) ? $this->get['period'] : '',
+            'fromDate' => (isset($this->get['fromDate']))?$this->get['fromDate']:'',
+            'toDate' => (isset($this->get['toDate'])) ? $this->get['toDate']:'',
+            'endDate' => (isset($this->get['endDate']))?$this->get['endDate']:'',
+            'from_month' => (isset($this->get['from_month'])) ? $this->get['from_month'] : '',
+            'from_year' => (isset($this->get['from_year'])) ? $this->get['from_year'] : '',
+            'to_month' => (isset($this->get['to_month'])) ? $this->get['to_month'] : '',
+            'to_year' => (isset($this->get['to_year'])) ? $this->get['to_year'] : '',
+            'month' => (isset($this->get['month'])) ? $this->get['month'] : '',
+            'year' => (isset($this->get['year'])) ? $this->get['year'] : '',
+        ),
+            ), 'report');
+   /*  12/30/15 5:18 PM */
+    $dataString = "";
+    isset($this->get['event_type']) ? $dataString = "&event_type=" . $this->get['event_type'] : "";
+    isset($this->get['period']) ? $dataString.="&period=" . $this->get['period'] : "";
+    isset($this->get['from_month']) ? $dataString.="&from_month=" . $this->get['from_month'] : "";
+    isset($this->get['to_month']) ? $dataString.="&to_month=" . $this->get['to_month'] : "";
+    isset($this->get['month']) ? $dataString.="&month=" . $this->get['month'] : "";
+    isset($this->get['year']) ? $dataString.="&year=" . $this->get['year'] : "";
+    
+    ?>
+    <input type="hidden" name="startDate" id="startDate" value="<?php echo $this->get['startDate'] ?>">
+    <input type="hidden" name="endDate" id="endDate" value="<?php echo $this->get['endDate'] ?>">
+</form>
+<?php
+ }
+ else { ?>    
+    <?php
+    $buttonHidden = !empty($this->get["chkme"]) ? " style=' display: none !important;'" : "" ;
+    $this->get["Question:"]= $this->view->question;
+}
+
+?>
+<!-- All Question Every Answer -->
+        <?php 
+            if(!empty($this->get["questionid"]) && !empty($this->questionResponse)){
+        ?>    
+        <div class="clearfix btn-holder">
+        <div class="pull-right"> 
+<!--        <button type="submit" class="btn btn-primary btn-lg print-button" id="createpdf" <?php echo $buttonHidden ?>><?php echo $this->translate('Export to PDF'); ?></button>-->
+         <!--  <button type="submit" class="btn btn-primary btn-lg print-button" id="exporttoexcel" <?php echo $buttonHidden ?> ><?php echo $this->translate('Export to Excel'); ?></button></div> -->
+        </div>
+        <div class="print-mdr" id="print-question-analysis">
+            <div class="logo-print" style="padding:10px;"><img width="100%" src="<?php echo $this->baseUrl() . "/images/triumph-logo-print.png"; ?>" alt="Triumph"></div>
+            <div class="print-h"><h2><?php echo $this->translate('Question Analysis Report');?></h2></div> 
+            
+        <div class="panel panel-default panel-default-pdf">           
+            <div class="options-responses">
+                <script type="text/javascript" src="<?php echo HTTP_PATH?>/js/highcharts.js"></script>
+                <script type="text/javascript" src="<?php echo HTTP_PATH?>/js/exporting.js"></script>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="brand-table table small-fonts table-striped">
+                <?php 
+                if(!empty($this->questionResponse)) {  
+                ?>    
+                    <div class="">
+                    <button id="btn-open-all" class="btn btn-primary btn-lg print-button">Open all</button>
+                    <button id="btn-close-all" class="btn btn-primary btn-lg print-button">Close all</button>
+                    </div>
+                    
+                    <div class="example" id="events-example">
+                <?php    
+                    $j=0;
+                    foreach($this->questionResponse as $reskey=>$questionwisedata)
+                    {
+                ?>       
+                        <h3><?php echo $questionwisedata['question'];?></h3>
+                        <div class="">
+                            <?php    
+                            
+                        ?>       
+                            <div class="row option-response">
+                                <div class="panel-body">
+                                    <div class="chart-wrapper">
+                                        <div class="col-lg-6">
+                                            <div class="graphs" width='100%' id="container_<?php echo $reskey; ?>" ></div>
+                                        </div>                
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <script type="text/javascript"><?php echo $questionwisedata['chart']->render("chart".$j); ?></script>
+                        <?php        
+                              
+                            $j++;
+                        ?>  
+                        </div>
+                <?php        
+                    }
+                ?>    
+                    </div>
+                <?php
+                }
+                ?> 
+            </table>
+            </div>            
+            </div>        
+        <!-- End All Question Every Answer -->
+        <!-- Graph Wrapper -->  
+        <?php
+        if($this->npsqid > 0 && !empty($this->get["questionid"]) && ($this->get["questionid"] == $this->npsqid) && !empty($this->questionResponse))
+        {
+            $styleFloat = !empty($this->get["chkme"]) ? " style='float:left;'" : "" ;
+            if ($this->recordCount1 == 0) { ?>
+                <div class="info-block white-bg ligh-bord alert-danger">
+                    <div class="alert-info" ><?php echo $this->translate('No record found');?></div>
+                </div> 
+            <?php }
+        }
+        //For Pie chart
+        if ($this->recordCount2 > 0) { 
+        ?>
+         <div class="panel-body">
+            	<div class="chart-wrapper">
+                <div>
+                   <!-- /* abhishek, tt-1454  question analysis report*/ -->
+                  <h2 class="question-analysis"><?php echo $this->translate('Score'); ?></h2>                     <!-- /* EOC  abhishek, tt-1454  question analysis report*/ -->
+                    <div class="graphs" width='100%' id="container2" ></div>
+                </div>                
+                </div>
+        </div>        
+        <?php        
+        }
+        }
+        else
+        {
+            if(isset($this->msg) && $this->msg!= '')
+                echo $this->msg; 
+            else if(is_array($this->flashMessages) && count($this->flashMessages)>0){
+                echo $this->flashMessages['0']['message'];
+            }
+            
+        }
+       
+        
+     if (!empty($this->get["questionid"]) && $this->recordCount2 > 0) { 
+       $this->highcharts2->printScripts();  ?>
+         <!-- /* abhishek, tt-1454  question analysis report*/ --> 
+        </div>
+        <!-- EOC  abhishek, tt- 1454 -->
+       
+      
+<?php 
+        
+     }
+    if ($this->recordCount1 > 0 && !empty($this->get["questionid"])) { ?>
+    <script type="text/javascript"><?php echo $this->highcharts->render("chart1"); ?></script> 
+    <?php
+    }
+    if ($this->recordCount2 > 0 && !empty($this->get["questionid"])) { 
+    ?>  
+        <script type="text/javascript"><?php echo $this->highcharts2->render("chart1"); ?></script>    
+    <?php
+    }
+?>    
+      
+      
+      
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var el = $("#events-example");
+        el.collapse();
+        $("#btn-open-all").click(function() {
+          $("#events-example").trigger("open")
+        })
+        $("#btn-close-all").click(function() {
+          $("#events-example").trigger("close")
+        })
+        
+        <?php   if(isset($this->get['event_type']) && $this->get['event_type'] != ""){?>
+        <?php } else{
+            ?>  $('#EventTypeID option[value="1"]').prop('selected', true);<?php
+        }
+        $qstr = "";
+        if(isset($this->get["month"]) )
+        {
+            $qstr = "&month=".$this->get["month"];
+        }
+        if(isset($this->get["year"]))
+        {
+            $qstr += "&year=".$this->get["year"];
+        }
+        ?>
+        var qstr = "<?php echo $qstr ?>"; 
+        });
+</script>

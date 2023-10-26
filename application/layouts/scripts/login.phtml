@@ -1,0 +1,57 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Damco assessments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<!-- Force IE to use the latest version of its rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php
+	echo $this->render('common/styles.phtml');
+?>
+
+<!--Js Files -->
+<?php
+	echo $this->render('common/scripts.phtml');
+?>
+<!-- Standard iPhone --> 
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $this->serverUrl(); ?>/images/touch-icon.png" />
+<!-- Retina iPhone --> 
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Standard iPad --> 
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Retina iPad --> 
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+</head>
+
+<body>
+<!-- =Page Container -->
+<main class="container-fluid">
+  <!--Header -->
+<?php
+	echo $this->render('login/header.phtml');
+?>
+  <!--End Header -->
+  
+  <!--Content Wrapper -->
+  <section id="wrapper" class="login">
+  	<div class="jumbotron col-lg-6 col-lg-offset-3">
+    	<?php echo $this->layout()->content; ?> </div>
+  </section>
+	
+  <!--End Content Wrapper -->
+  
+  <!--Footer -->
+	<?php 
+		echo $this->render('login/footer.phtml');
+	?>
+  <!--End Footer -->
+</main>
+
+</body>
+</html>

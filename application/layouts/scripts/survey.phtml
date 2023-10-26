@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="" dir="<?php echo $this->direction?>" lang="<?php echo $this->lang_code?>">
+<!--<![endif]-->
+<head>
+<meta charset="<?php echo $this->lang_char_set?>">
+<title>Damco assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<!-- Force IE to use the latest version of its rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="<?php echo $this->serverUrl(); ?>/js/modernizr.custom.96959.js"></script>
+
+<!-- =Bootstrap -->
+<?php
+	echo $this->render('common/styles.phtml');
+?>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!-- =Scripts -->
+<?php
+	echo $this->render('common/scripts.phtml');
+?>
+
+<script type="text/javascript" src="<?php echo $this->serverUrl(); ?>/js/assessment.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->serverUrl(); ?>/js/jquery.blockUI.js"></script>
+<!-- Standard iPhone --> 
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $this->serverUrl(); ?>/images/touch-icon.png" />
+<!-- Retina iPhone --> 
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Standard iPad --> 
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Retina iPad --> 
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+
+<?php if ( $this->direction == 'rtl' ):?>
+<link href="<?php echo $this->serverUrl(); ?>/css/rtl.css" media="screen" rel="stylesheet" type="text/css" >
+<?php endif;?>
+
+</head>
+
+<body>
+
+<!-- =Page Container -->
+<main class="container">
+  <!--Header -->
+  <?php
+	echo $this->render('login/header.phtml');
+?>
+  <!--End Header -->
+  <!--Content Wrapper -->
+   <section id="wrapper">
+    <div id="inner-wrapper">
+      <div class="white-bg padding20 clearfix">
+           <!--Panel -->
+   
+          
+        <!--End Panel -->
+  <?php echo $this->layout()->content; ?> 
+<!--         </div>-->
+          </div>
+          </div>
+   </section>
+  <!--End Content Wrapper -->
+  <!--Footer -->
+  <?php 
+		echo $this->render('common/footer.phtml');
+	?>
+  <!--End Footer -->
+</main>
+<div class="disabled-layer"></div>
+</body>
+</html>

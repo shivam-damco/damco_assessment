@@ -1,0 +1,531 @@
+<?php
+
+//print_r($this->labels);die;
+///* print_r($this->question); ///**/
+//die;
+if (is_array($this->labels)) {
+    $i = 1;
+    foreach ($this->labels as $lbl) {
+        echo "<h3 id='text_" . $lbl['questionid'] . "_" . $this->question['display_page'] . $i . "' >" . $lbl['question'] . "</h3>";
+        $i++;
+    }
+}
+
+if (!empty($this->allGroupQuestion_dtls)) {
+    
+    $flag = FALSE;
+    // $qid_shown=
+    
+    foreach ($this->allGroupQuestion_dtls as $k => $arrallGroupQuestion_dtls) {
+        $buttonlastInfo = $arrallGroupQuestion_dtls;
+        $allGroupEngQuestion_dtls = $this->allGroupEngQuestion_dtls;    
+        
+        
+        // Disable question option is max response for question id reached
+        #$disable = $allGroupEngQuestion_dtls[$k]['max_user']?$allGroupEngQuestion_dtls[$k]['response_cnt']>=$allGroupEngQuestion_dtls[$k]['max_user']?'true':'false':'false';
+        
+        
+        /* echo "ss";print_R($arrallGroupQuestion_dtls);//die;
+          echo "ss";print_R($this->allGroupEngQuestion_dtls); *///die;
+        $answer = !empty($this->answer[$arrallGroupQuestion_dtls['questionid']]) ? $this->answer[$arrallGroupQuestion_dtls['questionid']] : array('');
+        //print_R($this->answer);
+        ?>
+        <?php /* if ($arrallGroupQuestion_dtls['parent_id'] == '0' && $flag): ?>
+            </div></div>
+            <?php
+            $flag = FALSE;
+        endif; */
+        ?>
+        <?php //if ($arrallGroupQuestion_dtls['parent_id'] == '0'): if($arrallGroupQuestion_dtls['question_type']!='T')?>
+            <?php  if($arrallGroupQuestion_dtls['question_type']!='T') { ?>
+			<div class="panel panel-default" id="ID_<?php echo $arrallGroupQuestion_dtls['ID'] . '_' . $arrallGroupQuestion_dtls['questionid']; ?>"> 
+			
+                <div class="panel-heading">
+            <?php echo $allGroupEngQuestion_dtls[$k]['question_number']." ".str_replace('  ', '&nbsp;&nbsp;', $arrallGroupQuestion_dtls['question'])?> 
+                    <input type="hidden" name="questiontext" id="questiontext_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>" 
+                           value="<?php echo htmlspecialchars($allGroupEngQuestion_dtls[$k]['question_number']); ?>::::<?php echo str_replace('  ', '&nbsp;&nbsp;', htmlspecialchars($allGroupEngQuestion_dtls[$k]['question'])); ?>"></div>
+				   
+                <div class="panel-body">
+                <?php // endif; ?>
+                <?php
+                //if (empty($arrallGroupQuestion_dtls['is_parent'])) {
+                            
+                                $addextraclass= "";
+                                if(!empty($this->arrqIdForOneColumn) && in_array($arrallGroupQuestion_dtls['questionid'],$this->arrqIdForOneColumn))
+                                {
+                                    $addextraclass= " listseperate";
+                                }
+                                else
+                                {
+                                    $addextraclass= "";
+                                }
+                                ?>
+                            <ul class="list-inline ques-type <?php echo $addextraclass?>">
+                                <?php
+                                //print_R($this->answer);die;
+                                $showgradelbl = "No";
+                                $arrshowgradelabel = array();
+                                $setclass = '';
+                                $liclass = "";
+                                
+                                if (!empty($arrallGroupQuestion_dtls['grade_label_text'])) {
+                                    $showgradelbl = "Yes";
+                                    $arrgradeLabel = explode(",", trim($arrallGroupQuestion_dtls['grade_label_text'])); //1:Poor,5:Neutral,10:Outstanding
+                                    foreach ($arrgradeLabel as $gl) {
+                                        $showlbl = explode(":", $gl); //1:Poor
+                                        $arrshowgradelabel[trim($showlbl[0])] = trim($showlbl[1]);
+                                    }
+                                }
+                                switch ($arrallGroupQuestion_dtls['input_type']) {
+                                    case 'radio':
+                                        // for chnage CSS 6/17/14 8:08 PM
+                                        $tot_opt = 0;
+                                        if(!empty($this->arrqIdForOneColumn) && !in_array($arrallGroupQuestion_dtls['questionid'],$this->arrqIdForOneColumn))
+                                        {
+                                                for ($cnt = 1; $cnt <= 20; $cnt++) {
+                                                if ($arrallGroupQuestion_dtls['response' . $cnt] != "" && strlen($arrallGroupQuestion_dtls['response' . $cnt]) > 3) {
+                                                    $tot_opt++;
+                                                }
+                                            }
+                                            if ($tot_opt > 3) {
+                                                $setclass = "col-md-6 col-sm-6 col-xs-6";
+                                            }
+                                        
+                                        }
+                                            $totalResponses = 20;
+                                            if ($arrallGroupQuestion_dtls['response20'] != "" && (strpos($arrallGroupQuestion_dtls['response20'], '|') !== false)) {
+                                                $remainingResponses = explode('|', $arrallGroupQuestion_dtls['response20']);
+                                                unset($arrallGroupQuestion_dtls['response20']);
+                                            foreach ($remainingResponses as $response) {
+                                                $arrallGroupQuestion_dtls['response'. $totalResponses] = $response;
+                                                $totalResponses++;
+                                            }
+                                            $totalResponses--;
+                                        }
+                                        //print_R($showgradelabel);
+                                        //for chnage CSS 6/17/14 8:08 PM
+                                        for ($i = 1; $i <= $totalResponses; $i++) {
+                                            if ($this->setOptions) {
+                                                if (!in_array($i, $this->setOptions)) {
+                                                    continue;
+                                                }
+                                            }
+                                            if ($arrallGroupQuestion_dtls['response' . $i] != "") {    
+                                        
+                                            $disabled = (isset($arrallGroupQuestion_dtls['responselog' . $i]) && $arrallGroupQuestion_dtls['responselog' . $i]>=$arrallGroupQuestion_dtls['max_user'])?'disabled="true"':'';
+                                                
+                                                $setclass = "";$txt = "";
+                                                if ($showgradelbl == "Yes") {
+                                                    if (isset($arrshowgradelabel[$i]) && !empty($arrshowgradelabel[$i])) {
+                                                        $txt = $arrshowgradelabel[$i];
+                                                        $setclass = "grades-pare";
+                                                    } else {
+                                                        $txt = "";
+                                                        $setclass = "";
+                                                    }
+                                                }
+                                                elseif(!empty($this->arrqIdForTwoColumn) && in_array($arrallGroupQuestion_dtls['questionid'],$this->arrqIdForTwoColumn))
+                                                {
+                                                     $setclass = "col-md-6 col-sm-12 col-xs-12";
+                                                }
+                                                
+                                                ?>
+                                                <li <?php echo (!empty($txt) > 0 || $tot_opt > 3) ? "class=\"" . $setclass . "\"" : "" ?>>
+                                                    <input type="radio" 
+                                                           name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]" 
+                                                           id = "question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"
+                                                           <?php echo $disabled; ?>                                       
+                                                           value="<?php echo $i//$arrallGroupQuestion_dtls['response' . $i]; ?>" 
+                                                           onclick="processResponse('<?php echo $arrallGroupQuestion_dtls['ID']; ?>', '<?php echo $arrallGroupQuestion_dtls['questionid']; ?>', '<?php echo $i; ?>', '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $(this).attr('name'), '<?php echo $this->langid ?>','<?php echo $this->preview;?>');"
+                                                           <?php
+                                                           if (!empty($answer['response_options']) && $answer['response_options'] == $i) {
+                                                               echo " checked='checked' ";
+                                                           }
+                                                           ?> >
+                                                    <label for="question[<?php echo $arrallGroupQuestion_dtls['questionid'] . ']_' . $i; ?>">
+                                                    <?php echo $arrallGroupQuestion_dtls['response' . $i]; ?></label>
+                                                <?php if (!empty($txt)) { ?><div class="grades"><?php echo $txt ?></div><?php } ?>
+                                                </li>
+                                                <?php
+                                                //as per Ajay 7/11/14 1:21 PM
+                                                if($i%2 == 0 && !empty($setclass))
+                                                {
+                                                    echo "<br style='clear:both;height:1px;'/>";
+                                                }                                               
+                                                //as per Ajay
+                                                //echo $arrallGroupQuestion_dtlsLeft;
+                                                // print_R($answer);
+                                                if (empty($arrallGroupQuestion_dtls['groupid'])) {
+                                                    // if(!empty($arrallGroupQuestion_dtls['is_participate_in_branching']) && !empty($answer['response_options']))/**/
+                                                    if (!empty($answer['response_options']) && $answer['response_options'] == $i && $this->curaction != 'close') { //6/10/14 12:31 PM
+                                                        ?>
+                                                        <script type="text/javascript">
+                                                            //  function callme() {
+                                                            processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] ?>,<?php echo $arrallGroupQuestion_dtls['questionid'] ?>,<?php echo $i ?>, "<?php echo $this->params['survey'] ?>", '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').name, '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+                                                            // }
+
+                                                            // callme();
+
+                                                        </script>
+                                                        <?php
+                                                    }
+                                                } else {
+                                                    if (!empty($answer['response_options']) && $answer['response_options'] == $i) { //6/10/14 12:31 PM
+                                                        ?>
+                                                        <script type="text/javascript">
+                                                            //  function callme() {
+                                                            processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] ?>,<?php echo $arrallGroupQuestion_dtls['questionid'] ?>,<?php echo $i ?>, "<?php echo $this->params['survey'] ?>", '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').name, '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+                                                            // }
+
+                                                            // callme();
+
+                                                        </script>
+                                                        <?php
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    if ($arrallGroupQuestion_dtls['questionid'] == 195) {
+                                    ?>
+                                        <script type="text/javascript">
+                                            $('#question_195_1').parent().hide();
+                                        </script>
+                                    <?php }
+                                    break;
+                                    case 'drop down':
+                                       $selval = "";
+                                        $arrmyans = $arroptions = $options = "";
+                                        //($arrallGroupQuestion_dtlsEng['response1'], $arrallGroupQuestion_dtls, $this->survey);
+                                        // print_R($options);die;
+
+                                        if (trim($arrallGroupQuestion_dtls['response1']) == "Make") {
+                                            $dboptions = $this->arrmakes; //$this->GetMakes($this->arrmakes,$arrallGroupQuestion_dtls['response1']);
+                                            $dboptions[1] = $this->nootherbrandtext;
+                                            asort($dboptions); //7/29/14 2:36 PM
+                                            $options[1]=$dboptions[1];
+                                            foreach($dboptions as $ky=>$vl)
+                                            {
+                                                if($ky !=1 && $ky !=15)
+                                                {
+                                                    $options[$ky]=$vl;
+                                                }
+                                            }
+                                            //print_R($dboptions);
+                                            
+                                            $options[15]=$dboptions[15];
+                                            //print_R($options);die;
+                                        } elseif (trim($arrallGroupQuestion_dtls['response1']) == "Nationname") {
+                                            //print_R($this->survey);
+                                            if (!empty($answer['answer1'])) {
+                                                $myans = $answer['answer1'];
+                                                $selval = "";
+                                                $arrmyans = explode("::", $answer['answer1']); //AR::Argentina  
+                                            }
+                                            
+                                            $arroptions = $this->getMarketBasedDealers($this->survey["eventid"], $this->qIdForMarketName);
+                                            if(!empty($arroptions))
+                                            {
+                                                foreach ($arroptions as $arrd) {
+                                                    if($arrd["id"] != $this->survey["dealer_id"])
+                                                    {
+                                                        $options[$arrd["id"]] = $arrd["dealer_name"];
+                                                    }
+                                                    if (empty($selval) && !empty($arrmyans[1]) && trim($arrd["id"]) == trim($arrmyans[0])) {
+                                                        $selval = $arrd["dealer_name"];
+                                                    }
+                                                    //$selval = (!empty($arrmyans[1]) && $arrd["dealer_name"] == $arrmyans[1]) ? $arrd["dealer_name"] : "";
+                                                }
+                                            }
+                                            //  print_R($arrmyans);  print_R($options); echo $selval;//die;
+                                        } elseif (trim($arrallGroupQuestion_dtls['response1']) == "Marketname") {
+                                            if (!empty($answer['answer1'])) {
+                                                $myans = $answer['answer1'];
+                                                $arrmyans = explode("::", $answer['answer1']); //AR::Argentina 
+                                            }
+
+                                            $selval = "";
+                                            $arroptions = $this->getMarkets(3,$this->langid);///3 means branch id
+                                            foreach ($arroptions as $arrd) {
+                                                $dbStructName = trim($arrd["country_name"]);// trim($arrd["struct_name"]);
+                                                $options[$arrd["structid"]] = $dbStructName;
+                                                
+                                                if (empty($selval) && !empty($arrmyans[1]) && trim($arrd["structid"]) == trim($arrmyans[0])) {
+                                                    $selval = $dbStructName;
+                                                }
+                                            }                                             
+                                        } elseif (trim($arrallGroupQuestion_dtls['response1']) == "NationsName") {
+                                            if (!empty($answer['answer1'])) {
+                                                $myans = $answer['answer1'];
+                                                $arrmyans = explode("::", $answer['answer1']); //AR::Argentina
+                                            }
+                                            $selval = '';
+                                            $arroptions = $this->getNations($this->langid);
+                                            foreach ($arroptions as $arrd) {
+                                                $dbStructName = trim($arrd["nation_name"]);
+                                                $options[$arrd["nationid"]] = $dbStructName;
+                                                if (empty($selval) && !empty($arrmyans[1]) && trim($arrd["structid"]) == trim($arrmyans[0])) {
+                                                    $selval = $dbStructName;
+                                                }
+                                            }
+                                        } else {
+                                            $options = $this->arroptions;
+                                        }
+                                        
+                                        ?><div class="form-group  col-lg-2  mb-0"><select id="question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1"
+                                                name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                                
+                                                onchange="processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] . "," . $arrallGroupQuestion_dtls['questionid']; ?>, $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1 :selected').text().replace(/(['&])/g, '~'),'<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>',$('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').name, '<?php echo $this->langid ?>','<?php echo $this->preview;?>')">
+                                            <option value="0"> - Select - </option>
+                                        <?php
+                                        foreach ($options as $k => $option) {
+                                            $option = trim($option);
+                                            $userselval ="";
+                                            ?>
+                                                <option  value="<?php echo $k; ?>"  title="<?php echo $option; ?>"
+                                            <?php 
+                                            if (in_array(trim($arrallGroupQuestion_dtls['response1']), array("Marketname","Nationname"))) {
+                                                $userselval = $selval;
+                                            } elseif (!empty($answer['answer1'])) {
+                                               $userselval = $answer['answer1'];
+                                            }
+                                            echo ((!empty($userselval) && ($userselval == $option)) ? 'selected="selected"' : '');
+                                            ?>
+                                                         ><?php echo $option ?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+                                        </div>
+                                            <?php 
+                                            //die;
+                                            //echo $answer['answer1'];(trim($answer['answer1']) != " - Select - ")
+                                            if (!empty($answer['answer1']) && strlen($answer['answer1']) > 0 && (stripos($answer['answer1'],"- Select -") === false) ) {
+                                                ?>
+                                            <script type="text/javascript">
+                                                processResponse('<?php echo $arrallGroupQuestion_dtls['ID'] ?>', '<?php echo $arrallGroupQuestion_dtls['questionid']; ?>', jQuery('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1 :selected').text(), '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').name, '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+                                            </script>
+                                                <?php
+                                            }
+                                            break;
+                                        case 'checkbox':
+                                                    $totres = 20;
+                                                    $selval = "";
+                                                    $selector_class = "";
+                                            $marrselval = $arrselval=array();
+                                            $cntchkbox = 0;
+                                            
+                                            //echo date("Y-m-d H:i:s");print_R($arrselval);
+                                            // print_R($arrallGroupQuestion_dtls);die;
+                                            for ($i = 1; $i <= $totres; $i++) {
+                                                if (($cntchkbox > 0) || $arrallGroupQuestion_dtls['response' . $i] != '') {
+                                                $disabled = (isset($arrallGroupQuestion_dtls['responselog' . $i]) && $arrallGroupQuestion_dtls['responselog' . $i]>=$arrallGroupQuestion_dtls['max_user'])?'disabled="true"':'';
+                                                   ?>
+                                                <li class="col-md-6 col-sm-12 col-xs-12">
+                                                    <input
+                                                        type="checkbox"
+                                                        <?php echo $disabled; ?> 
+                                                        <?php echo !empty($selector_class) ? " class = '".$selector_class."'" : "" ?>
+                                                        name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                                        value="<?php echo $i; ?>"
+                                                        id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"
+                                                <?php 
+                                                
+                                                if(!empty($arrselval) && array_key_exists($i,$arrselval))
+                                                {
+                                                     $userselval = $i;
+                                                }
+                                                elseif ((!empty($answer['answer' . $i]) && $answer['answer' . $i] == $arrallGroupQuestion_dtls['response' . $i])) {//echo "dfsdfd";
+                                                        $userselval = $i;//$answer['answer'. $i];
+                                                }
+                                                echo ((!empty($userselval) && ($userselval == $i)) ? 'checked="checked"' : ''); 
+                                                ?>
+                                                 onclick="processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>(this);"       >
+                                                    <label for="question<?php echo $arrallGroupQuestion_dtls['questionid'] . '_' . $i; ?>"><?php echo $arrallGroupQuestion_dtls['response' . $i]; ?></label>
+                                                </li>                                                
+                                                <?php
+                                            }
+                                        }
+                                        ?><br>
+<!--                                        <button class="btn btn-primary" type="button"
+                                                onclick="processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>();"
+                                                ><?php echo $this->OKbutton; ?></button>-->
+                                        <script type="text/javascript">
+                                            processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?> = function(obj) {
+                                                // myselect = "0";
+                                               
+                                                var chkedchkbox = [];
+                                                
+                                                $.each($('input[name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"]:checked'), function() {
+                                                    
+                                                    chkedchkbox.push($(this).val());
+                                                });
+
+                                                if (chkedchkbox.length == 0)
+                                                {
+                                                    chkedchkbox = 1;
+                                                }
+                                                processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] . "," . $arrallGroupQuestion_dtls['questionid']; ?>, chkedchkbox, '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').name, '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+                                            };
+
+                    <?php
+                    if (!empty($answer['response_options']) && $answer['response_options'] > 0) {
+                        echo 'processResponse_' . $arrallGroupQuestion_dtls['questionid'] . '()';
+                    }
+                    ?>
+                                        </script>
+                    <?php
+                    break;
+                // Textarea coding start  -->
+                case 'textarea':
+                    //print_R($this->answer);
+                    //for ($i = 1; $i <= 11; $i++) {
+                    if (!empty($arrallGroupQuestion_dtls['response1'])) {
+                        ?>
+                            <div class="form-group col-lg-6 mb-0">
+<!--                                <label for="question[<?php echo $arrallGroupQuestion_dtls['questionid'] . ']_1'; ?>"><?php echo preg_replace("/[0-9]/", "", $arrallGroupQuestion_dtls['response1']); ?></label>-->
+                                <textarea class="form-control fleft" id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>" 
+                                          name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                          
+                                          onblur="processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>();"
+                                          ><?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ""); ?></textarea>
+                            </div>                
+                        <?php
+                    } else {
+                        break;
+                    }
+                    // }
+                    ?>
+                    <script type="text/javascript">
+                        processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?> = function() {
+                    
+                    processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] . "," . $arrallGroupQuestion_dtls['questionid']; ?>, $("#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>").val(), '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').attr("name"), '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+
+                                            };
+                    <?php
+//echo "Dipa".$this->answer['response_options'];
+                    if (!empty($answer['answer1']) && strlen($answer['response_options']) > 0) {
+                        
+                        echo 'processResponse_' . $arrallGroupQuestion_dtls['questionid'] . '()';
+                    }
+                    ?>
+                    </script>
+
+                    <?php
+                    break;
+                //textarea coding end here
+
+                case 'date':
+                    if (!empty($arrallGroupQuestion_dtls['response1'])) {
+                        ?>
+                            <div class="form-group col-lg-3 mb-0">
+                                <input type="date" class="form-control fleft dateValidation" id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>" 
+                                          name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                          
+                                          onblur="processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>();"
+                                          value="<?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ""); ?>"
+                                >
+                            </div>                
+                        <?php
+                    } else {
+                        break;
+                    }
+                    // }
+                    ?>
+                    <script type="text/javascript">
+                        processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?> = function() {
+                    
+                    processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] . "," . $arrallGroupQuestion_dtls['questionid']; ?>, $("#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>").val(), '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').attr("name"), '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+
+                                            };
+                    <?php
+                    if (!empty($answer['answer1']) && strlen($answer['response_options']) > 0) {
+                        
+                        echo 'processResponse_' . $arrallGroupQuestion_dtls['questionid'] . '()';
+                    }
+                    ?>
+                    </script>
+
+                    <?php
+                    break;
+
+                case 'text':
+                   
+                    if (!empty($arrallGroupQuestion_dtls['response1'])) {
+                        ?>
+                            <div class="form-group  col-lg-2  mb-0">
+                                <input 
+                                    type="text" class="form-control fleft" id="question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>" name="question[<?php echo $arrallGroupQuestion_dtls['questionid']; ?>][]"
+                                    value="<?php echo (!empty($answer['answer1']) ? $answer['answer1'] : ""); ?>" 
+                                     
+                                    onblur="processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>();" 
+                                >
+                            </div>                
+                            <?php
+                        } else {
+                            break;
+                        }
+                        // }
+                        ?>
+
+                        <script type="text/javascript">
+                            processResponse_<?php echo $arrallGroupQuestion_dtls['questionid']; ?> = function() {
+                            // var textboxval = $("#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>").val().replace(/(['])/g, '~').replace(/([&])/g, '#');
+                            // var isDate = "<?php echo $arrallGroupQuestion_dtls['input_type'] ?>";
+                            // if(isDate == 'date'){
+                            //   $("#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>").datepicker({
+                            //             dateFormat: "yy-mm-dd"
+                            //     });
+                            // }
+
+                            var textboxval = htmlEncode($("#question_<?php echo $arrallGroupQuestion_dtls['questionid'] . "_1"; ?>").val());
+                    processResponse(<?php echo $arrallGroupQuestion_dtls['ID'] . "," . $arrallGroupQuestion_dtls['questionid']; ?>, encodeURIComponent(textboxval), '<?php echo $this->params['survey']; ?>', '<?php echo $this->curaction ?>', '<?php echo $this->anscnt ?>', $('#question_<?php echo $arrallGroupQuestion_dtls['questionid']; ?>_1').attr("name"), '<?php echo $this->langid ?>','<?php echo $this->preview;?>');
+
+                                            };
+                    <?php
+                    if (!empty($answer['answer1']) && strlen($answer['response_options']) > 0) {
+                        echo 'processResponse_' . $arrallGroupQuestion_dtls['questionid'] . '()';
+                    }
+                    ?>
+                    </script>
+
+                    <?php
+                    break;
+                //textarea coding end here
+            }
+            ?>                 
+                            </ul>
+                           
+            <?php if (!($arrallGroupQuestion_dtls['parent_id'] == '0' && $arrallGroupQuestion_dtls['is_parent'])): ?>
+                            </div>
+                           
+                        </div>
+                       
+			
+            <?php endif; ?>
+			  <?php } ?>	
+            <?php if ($arrallGroupQuestion_dtls['parent_id'] == '0'): ?>
+                    </div>
+            <?php endif; ?>
+                                <?php
+                            }
+                      //  }
+
+                        //echo "xd";print_R($this->allGroupQuestion_dtls);die;
+                        if (in_array($buttonlastInfo['input_type'], array("text", "textarea"))) {
+                            $i = 1;
+                        }
+                        elseif(in_array($buttonlastInfo['input_type'], array("radio")))
+                        {
+                            
+                        }
+                        ?>
+       <!-- <button type='button' id='btnProceed' class='btn btn-primary' name="question_button[<?php echo $buttonlastInfo['questionid']; ?>][]"
+                ctrl_lastElementName="question[<?php echo $buttonlastInfo['questionid']; ?>][]"><?php echo $this->proceedbutton?></button> -->
+        <?php
+    }
+?>
+<script type="text/javascript">
+ var questions = document.getElementsByName('questiontext');
+ solved = questions.length - 1;
+ progress_bar(solved);
+</script>

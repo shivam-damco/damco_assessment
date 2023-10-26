@@ -1,0 +1,82 @@
+<?php
+if($this->controller == "esr" || $this->controller == "mdr" )
+{
+    ob_start();
+}
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<title>Damco assessments</title>
+<link rel="icon" href="<?php echo $this->serverUrl()."/images/favicon.ico";?>">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<!-- Force IE to use the latest version of its rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- =Bootstrap -->
+<?php
+	echo $this->render('common/styles.phtml');
+?>
+<!-- =Scripts -->
+<?php
+	echo $this->render('common/scripts.phtml');
+?>
+<!-- Standard iPhone --> 
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $this->serverUrl(); ?>/images/touch-icon.png" />
+<!-- Retina iPhone --> 
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Standard iPad --> 
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+<!-- Retina iPad --> 
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $this->serverUrl(); ?>/touch-icon.png" />
+</head>
+<body>
+<!-- =Page Container -->
+<main class="container">
+  <!--Header -->
+	<?php
+		echo $this->render('common/header.phtml');
+	?>
+    
+  <!--End Header -->
+  
+  <!--Navigation -->
+  <!--End Navigation -->
+  
+  <!--Content Wrapper -->
+	<section id="wrapper" class="row">
+		<div id="inner-wrapper">
+			<?php echo $this->layout()->content; ?>
+		</div>
+	</section>
+	
+  <!--End Content Wrapper -->
+  
+  <!--Footer -->
+        <?php 
+            echo $this->render('common/footer.phtml');
+	?>
+   <!--End Footer -->
+ </main>
+ </body>
+</html>
+<?php
+if($this->controller == "esr" || $this->controller == "mdr" )
+{
+    $output = ob_get_contents();
+    $headerinfo=$this->get;
+    unset($headerinfo["nation"]);
+    $footertext = $this->CreatePdfInfo($headerinfo,"pdf_filter");
+    $output = str_replace("</head>", "<link href='". HTTP_PATH ."/css/pdf.css' rel='stylesheet' type='text/css' ></head>", $output);
+    $output = str_replace("</header>", "</header>".$footertext, $output);
+     //   ob_end_clean();
+    $user = Zend_Auth::getInstance()->getIdentity();
+    unlink(APPLICATION_PATH . '/../public/chartSVGFiles/'.$this->controller.'_'.$user->id.'.phtml');
+    file_put_contents(APPLICATION_PATH . '/../public/chartSVGFiles/'.$this->controller.'_'.$user->id.'.phtml', $output);
+}
+?>

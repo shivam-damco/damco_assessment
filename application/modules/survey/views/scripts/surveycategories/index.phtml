@@ -1,0 +1,59 @@
+<h2><?php echo $this->translate('List Survey Category'); ?></h2>
+<?php
+    // print_r($this->EventTypesData);
+?>
+<?php echo $this->flashMessages( $this->flashMessages ); ?>
+<form name="data-filters" action="<?php echo HTTP_PATH.'/event/index/'?>" method="get">
+<?php 
+//    echo $this->dataFilters( array() );
+?>
+</form>
+
+<div class="data-table white-bg padding20">
+    <?php
+        if ( $this->hasAccess( $this->role_name, $this->get['module'], 'surveycategories', 'add' ) ) {
+    ?>
+        <a href="<?php echo HTTP_PATH.'/survey/surveycategories/add'?>">
+            <button class="btn btn-primary pull-right add-survey-btn">Add Survey Category</button>
+        </a>
+    <?php } ?>
+<table id="category-grid" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Survey Category Name');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th><?php echo $this->translate('Survey Category Name');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </tfoot>
+    
+</table>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+   var datatableObj=  $('#category-grid').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "bFilter": false,
+        "bSort" : true,
+        "iDisplayLength": 10,
+        "order": [[ 0, "asc"]],
+        "aoColumnDefs": [
+		{
+                "aTargets": [1],
+                "bSortable": false
+            },
+			
+       ],
+        "ajax": CURRENT_URL
+    });
+
+   
+});
+</script>

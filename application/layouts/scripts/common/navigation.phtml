@@ -1,0 +1,11 @@
+<section id="nav" class="row" <?php echo !empty($this->get["chkme"]) ? " style='display:none;' ": "";?>>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#">Main Menu</a> </div>
+      <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <?php echo $this->getNavigation(); ?>
+      </div>
+    </nav>
+  </section>
+  

@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    var multiplier="<?php echo $this->multiplier?>";
+    var bttntext="<?php echo $this->submitbuttontext?>";
+    var lang_charset="<?php echo $this->lang_char_set?>";
+    var survey_notselected_text="<?php echo $this->survey_notselected_text?>";
+    var survey_error_text="<?php echo $this->survey_error_text?>";
+</script>
+
+<div id="domMessage" class="disabled-layer">
+<!--    <img src="<?php echo HTTP_PATH?>/images/survey_loader.gif" />-->
+</div>
+<!-- for question part -->
+<div id="survey-form" class="survey-ques-answ">
+    <form class="form" id="surveyfrm" action="/survey/index/submit/" method="Post">            
+        <?php include_once('process-response.phtml') ?>
+        
+        <div class="panel panel-default" id="ID_pbar">
+            <div class="panel-body">
+                
+                <div id="thankyoudiv" style="display:none;"><?php echo $this->survey_pre_submit_text;?></div>
+
+                <!--Progress Bar -->
+                
+                <div class="progress-row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <p><?php echo $this->progressbar; ?></p>
+                        <div class="progress">
+                            <div id="prog_bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"> 0% </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Progress Bar -->
+            </div>
+            <div class="panel-footer">
+                <div class="action-buttons-row">
+                    <ul class="list-inline">
+                        <li>
+                            
+                        <input type="hidden" name="survey" id="survey" value="<?php echo $this->params['survey'];?>">
+						<input type="hidden" name="grpval" id="grpval" value="">
+						<input type="hidden" name="task" id="task" value="">
+						<input type="hidden" name="langid" id="langid" value="<?php echo $this->langid;?>">
+						<a href="#"  class="btn btn-primary btn-lg" onClick="window.open('','_self').close();" id = "close_window" style="display:none;">Close </a>
+			 
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+    <?php 
+		if(isset($this->preview) && ($this->preview == 'true')){
+	?>
+	<script>
+	$(document).ready(function(){
+		 $("#close_window").show();
+	 });
+	</script>
+
+
+<?php 
+}
+    //echo "<pre>"; print_r($this->session->locale); ?>

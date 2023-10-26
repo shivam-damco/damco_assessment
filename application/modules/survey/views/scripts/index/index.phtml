@@ -1,0 +1,22 @@
+<div class="survey_start_content">
+	<center<?php echo ($this->langid == 12) ? " style=\"text-align: left;\"" : "" ;?>>
+        <div id="domMessage" class="disabled-layer">&nbsp;        
+        </div>
+	<div>
+		<?php echo $this->introtext; ?>
+		<center>
+                    <form id="frm-intro" action="" method="Post">
+                            <input type="hidden" name="survey" value="<?php echo $this->params['survey']; ?>">
+                            <br>
+                            <span class="button">
+                                    <span>
+                                       <input type="hidden" name="survey" id="survey" value="<?php echo $this->params['survey']; ?>">
+                                       <input type="hidden" name="langid" id="langid" value="<?php echo $this->langid; ?>">
+                                       <input class="btn btn-primary" type="button" id="introsubmit" value="<?php echo $this->startbutton; ?>" />						
+                                    </span>
+                            </span>
+                    </form>
+		</center>
+	</div>
+	</center>
+</div>

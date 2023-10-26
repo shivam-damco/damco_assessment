@@ -1,0 +1,37 @@
+<section id="wrapper">
+    <div id="inner-wrapper">
+
+        <h2><?php echo $this->translate('Import Questions'); ?></h2>
+        </div>
+        <?php echo $this->flashMessages( $this->flashMessages ); ?>
+        <div class="edit-event-form white-bg padding20 question-add">
+            <form class="form-horizontal" role="form" name="question" action="" method="POST" enctype="multipart/form-data"> 
+                 <div class="form-group" id="csv_upload">
+                  <label for="survey_name" class="col-md-3 col-sm-4">
+                    <dt id="add_record-label">
+                      <label for="add_record" class="optional">Upload a File:</label>
+                    </dt> (CSV only)
+                  </label>
+                  <div class="col-sm-5">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2097152" id="MAX_FILE_SIZE">
+                    <input type="file" name="add_record" id="add_record">
+                    <a href="../../../../../../uploads/questionsample.csv">Sample File</a>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submit->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="goBack();" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->event_typeid->renderViewHelper(); ?>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+

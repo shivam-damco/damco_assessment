@@ -1,0 +1,63 @@
+@media only screen and (max-width: 991px){
+	.navbar-nav > li > a {padding: 6px 10px;}
+	.navbar-default {
+    	background: #323232;
+	    border: 0 none;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    	 background:url(../images/nav-bg.png) repeat-x 0 -26px;
+	    color: #a0b8d8;
+	}
+	.navbar-default .navbar-brand {
+    	color: #fff;
+	}
+        
+}
+
+@media only screen and (max-width: 768px){
+	.logo {text-align:center;}
+	.head-right-links .login-info{display:none;}	
+	.navbar-header {display:block;}
+	.navbar-collapse {padding-left:15px;}
+	.dropdown.open {border-bottom:1px solid #e5e5e5;}
+	#footer {width:100%;}
+	
+	
+	#optdiv .date-from strong,
+	#optdiv .date-to strong{display:inline-block; *display:inline; *zoom:1; width:50px;}
+	#optdiv .date-to strong{width:44px;}
+	.show-report .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) { width:90px;}
+	.prov-feedback { text-align:left;}	
+	.prov-feedback p {display:inline-block;}
+	.prov-feedback ul.list-inline {display:inline-block; margin-left:10px;}
+	.action-buttons-row ul li + li{margin-top:5px;}
+	.select-lang-wrapp {text-align:center;} /* =16-June 2013 */
+	.select-lang-wrapp .pull-right{float:none !important;} /* =16-June 2013 */
+        .menu-label{padding-top: 0;}
+        .data-table table{min-width:1000px;}
+        /* Rakesh 7/28/14 2:03 PM */
+        .table-responsive > .table > thead > tr > th, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tfoot > tr > td {
+    white-space: normal;
+}
+	
+}
+
+@media only screen and (max-width: 480px){
+	.show-report .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) { width:100px;}
+	#optdiv > div + div {padding-top:15px;}
+	.forgot-pwd li + li {border-left:0; display:block;}
+	.select-lang .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+    	margin-left: 0;
+		margin-top:10px;
+    	width: 100%;
+		}
+.ques-type li{display:block;}
+}
+
+@media only screen and (max-width: 320px){
+	.show-report .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) { width:70px;}
+}
+
+@media print{
+    th{text-align:left !important;}
+}

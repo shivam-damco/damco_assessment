@@ -1,0 +1,72 @@
+body {width:1000px; font-size: 12px;}
+   *{	box-sizing: border-box;}
+    *[class|=col-]{float:left;}
+
+    
+    .col-lg-1,.col-sm-1,.col-md-1,
+    .col-xs-1{width:7.33333333%;
+    }
+    .col-lg-2,.col-sm-2,.col-md-2,
+    .col-xs-2{width:15.66666667%;}
+    
+    .col-lg-3,.col-sm-3,.col-md-3,
+    .col-xs-3{width:24%;}
+    
+    .col-lg-4,.col-sm-4,.col-md-4,
+    .col-xs-4{width:32.33333333%;}
+    
+    .col-lg-5,.col-sm-5,.col-md-5,
+    .col-xs-5{width:40.66666667%;}
+    
+    .col-lg-6,.col-sm-6,.col-md-6,
+    .col-xs-6{width:50%;}
+    
+    .col-lg-7,.col-sm-7,.col-md-7,
+    .col-xs-7{width:57.33333333%;}
+    
+    .col-lg-8,.col-sm-8,.col-md-8,
+    .col-xs-8{width:65.66666667%;}
+    
+    .col-lg-9,.col-sm-9,.col-md-9,
+    .col-xs-9{width:74%;}
+    
+    .col-lg-10,.col-sm-10,.col-md-10,
+    .col-xs-10{width:82.33333333%;}
+    
+    .col-lg-11,.col-sm-11,.col-md-11,
+    .col-xs-11{width:90.66666667%;}
+    
+    .col-lg-12,.col-sm-12,.col-md-12,
+    .col-xs-12{width:100%;}
+ 
+    .print-h{display:block;font-family:arial;}
+	.logo-print{display:block;width:100%}
+    
+.panel-default {
+   border: 1px solid #ddd
+}
+
+
+.table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.table > thead > tr > th{text-align:left!important;font-family:arial;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;}
+.table > tbody > tr > td{font-family:arial;border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;}
+a{color:#000;}
+
+h4{font-size:30px!important;font-family:arial;}
+
+
+.print-esr{width:1300px!important;}
+.print-esr .panel-heading {
+    background: url("/images/table_heading_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+@media print{@page {size: landscape;}}

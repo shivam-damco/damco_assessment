@@ -1,0 +1,155 @@
+<h2><?php echo $this->translate('List Survey Status'); ?></h2>
+
+<?php echo $this->flashMessages( $this->flashMessages ); ?>
+<form name="data-filters" action="<?php echo HTTP_PATH.'/event/index/'?>" method="get">
+<?php 
+//    echo $this->dataFilters( array() );
+?>
+</form>
+	        
+<div class="data-table white-bg padding20">
+     <?php 
+     if((isset($this->get['rpt_type']) && !empty($this->get['rpt_type'])&& $this->get['rpt_type']=='rawdata'))
+     { 
+      if ( $this->hasAccess( $this->role_name, 
+                   $this->get['module'], 
+                   'index',
+                   'exportrawdata' ) ):?>
+        <div class="btn-export">        
+          <button type="submit" class="btn btn-primary btn-lg" id="exportBtn"
+                onClick="parent.location='/event/index/exportrawdata/<?php 
+                if(isset($_SERVER['REDIRECT_QUERY_STRING'])) 
+                    echo '?'.$_SERVER['REDIRECT_QUERY_STRING'];
+                else
+                    echo "?date_range_field=".$this->get['date_range_field']."&period="
+                        .$this->get['period'];?>'"><?php echo $this->translate('Raw Data Download');?>
+         </button>
+      </div> 
+     <?php endif;}
+             
+     else {
+        if ( $this->hasAccess( $this->role_name, 
+                           $this->get['module'], 
+                           'index',
+                           'exportdata' ) ):?>
+    <div class="btn-export">        
+          <button type="submit" class="btn btn-primary btn-lg" id="exportBtn"
+                onClick="exportToExcelFilters()"><?php echo $this->translate('Export to Excel');?>
+         </button>
+    </div>
+     <?php endif; } ?> 
+<table id="event-status-grid" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            
+            <th><?php echo $this->translate('Employee Id');?></th>
+			<th><?php echo $this->translate('Name');?></th>
+			<th><?php echo $this->translate('Email');?></th>
+            <th><?php echo $this->translate('Survey');?></th>
+            <th><?php echo $this->translate('Status');?></th>
+            <th><?php echo $this->translate('Response Date');?></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            
+            <th><?php echo $this->translate('Employee Id');?></th>
+			<th><?php echo $this->translate('Name');?></th>
+			<th><?php echo $this->translate('Email');?></th>
+            <th><?php echo $this->translate('Survey');?></th>
+            <th><?php echo $this->translate('Status');?></th>
+            <th><?php echo $this->translate('Response Date');?></th>
+        </tr>
+    </tfoot>
+    
+</table>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   var datatableObj=  $('#event-status-grid').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "bFilter": false,
+        "bSort" : true,
+        "iDisplayLength": 10,
+        "order": [[ 0, "asc" ]],
+        "aoColumnDefs": [
+            {
+                "aTargets": [1],
+                "mData": null,
+                "mRender": function(data, type, full) {
+                     var view = '';
+                     if (data[4] == 'Closed' || data[4] == 'Did not qualify') {
+                         view = '<a href="'+BASE_URL+'/event/scorecard/index?eventid='
+                +btoa(data[1])+'&modulename=eventlist" title="View Record" target="_blank">'+data[1]+'</a>';
+                    }
+                    else
+                    {
+                        view=data[1];
+                    }
+                    return view;
+                }
+            },
+            {
+                "aTargets": [1],
+                "bSortable": true
+            },
+			{
+                "aTargets": [2],
+                "bSortable": false
+            },
+            {
+                "aTargets": [3],
+                "bSortable": true
+            },
+			{
+                "aTargets": [4],
+                "bSortable": false
+            }],
+        "ajax": CURRENT_URL
+    } );
+
+    var eventFired = function ( type ) {
+
+		var sortdata = datatableObj.fnSettings().aaSorting;
+		var sortArr = sortdata[0].toString().split(',');
+		var queryString;
+		<?php 
+                if(isset($this->get['rpt_type']) && $this->get['rpt_type']=='rawdata'){
+                    if(isset($_SERVER['REDIRECT_QUERY_STRING'])){ ?>
+			queryString = "/event/index/exportrawdata/?<?php echo $_SERVER['REDIRECT_QUERY_STRING'];?>&ordercolumn="+sortArr[0]+"&orderdir="+sortArr[1];
+                    <?php }else {?>
+                        queryString = "/event/index/exportrawdata/?event_type=<?php echo $this->get['event_type'];?>&date_range_field=&period=&ordercolumn="+sortArr[0]+"&orderdir="+sortArr[1];
+                    <?php } }
+                    
+                else {
+                
+		if(isset($_SERVER['REDIRECT_QUERY_STRING'])){ ?>
+			queryString = "/event/index/exportdata/?<?php echo $_SERVER['REDIRECT_QUERY_STRING'];?>&ordercolumn="+sortArr[0]+"&orderdir="+sortArr[1];
+		<?php }else{ ?>
+			queryString = "/event/index/exportdata/?date_range_field=&period=&ordercolumn="+sortArr[0]+"&orderdir="+sortArr[1];
+                <?php } } ?>
+		$("#exportBtn").attr("onclick","parent.location='"+queryString+ "'");
+    }
+    
+    $('#event-grid')
+        .on( 'order.dt',  function () { 
+            eventFired('Order'); } )
+        .dataTable();
+});
+
+    function exportToExcelFilters() {
+        var order = $('#event-status-grid').DataTable().order();
+        var url = '/event/index/exportdata/surveyid/<?php echo $this->get['surveyid'] ?>/<?php 
+                if(isset($_SERVER['REDIRECT_QUERY_STRING'])) 
+                    echo '?'.$_SERVER['REDIRECT_QUERY_STRING'];
+                else
+                    echo "?date_range_field=".$this->get['date_range_field']."&period="
+                        .$this->get['period'];?>';
+        url = url+"&columnIndex="+order[0][0]+"&order_by="+order[0][1];
+        parent.location = url;                        
+    }
+</script>

@@ -1,0 +1,1567 @@
+------=_Part_993264_448943609.1409211956554
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: text-body
+
+LinkedIn Groups
+
+
+=20
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Popular Discussions
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Title:  (New)The Complete Web Development Course - Learn By Building Apps
+Posted by: Dilip Sonawane, Developer at Infosys
+Link: http://www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;m=
+idToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D19&amp;m=3Dgroup_=
+discussions&amp;ts=3Dtextdisc-0&amp;itemID=3D5910270742204801026&amp;itemTy=
+pe=3Dmember&amp;anetID=3D2260295
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Other Popular Discussions
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Title:  (New)Learn Database Design using PostgreSQL
+Posted by: fiona pugh, programmer at zendex
+Link: http://www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;m=
+idToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D20&amp;m=3Dgroup_=
+discussions&amp;ts=3Dtextdisc-1&amp;itemID=3D5910247292673208324&amp;itemTy=
+pe=3Dmember&amp;anetID=3D2260295
+
+----------------------------------------------------
+You are receiving Groups Digest emails. Unsubscribe here: https://www.linke=
+din.com/e/v2?e=3D12lusk-hzdseutd-4z&t=3Deus&midToken=3DAQF4Q6Q-XYzoRA&track=
+ing=3Deml-b2_anet_digest-unsub_text&ek=3Db2_anet_digest&loid=3DAQG5x4jIAL_b=
+agAAAUgbk_0tMvz6OxlL0OObAMdg4C4xLibhhCFjhAvxRoN-98SXf2yUgwUtmaY_3rCOZg&eid=
+=3D12lusk-hzdseutd-4z
+
+This email was intended for Amit Kumar (Sr. Software Engineer at Damco Solu=
+tions Pvt Ltd). Learn why we included this at the following link: http://ww=
+w.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&a=3DcustomerServiceUrl&midToken=
+=3DAQF4Q6Q-XYzoRA&ek=3Db2_anet_digest&articleId=3D4788
+&copy;2014 LinkedIn Ireland Limited, Registered in Ireland as a private lim=
+ited company, Company Number 477441, Registered Office: 70 Sir John Roberso=
+n&apos;s Quay, Dublin 2
+------=_Part_993264_448943609.1409211956554
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: html-body
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"-webkit-text-size-adj=
+ust:none;">
+ <head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3Dutf-8" /=
+>
+  <meta name=3D"HandheldFriendly" content=3D"true" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width; initial-scale=3D=
+0.666667; maximum-scale=3D0.666667; user-scalable=3D0" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width" />
+  <title></title>
+  <style type=3D"text/css">@media all and (max-width:590px) { *[class].resp=
+onsive { width:290px !important; } *[id]#center { width:50%; margin:0 auto;=
+ display:table; } *[class].responsive-spacer table { width:20px !important;=
+ } *[class].vspacer { margin-top:10px !important; margin-bottom:15px !impor=
+tant; margin-left:0 !important; } *[class].res-font14 { font-size:14px !imp=
+ortant; } *[class].res-font16 { font-size:16px !important; } *[class].res-f=
+ont13 { font-size:13px !important; } *[class].res-font12 { font-size:12px !=
+important; } *[class].res-font10 { font-size:10px !important; } *[class].re=
+s-font18 { font-size:18px !important; } *[class].res-font18 span { font-siz=
+e:18px !important; } *[class].responsive-50per { width:100% !important; } *=
+[class].responsive-spacer70 { width:70px !important; } *[class].hideIMG { h=
+eight:0px !important; width:0px !important; } *[class].res-height30 { heigh=
+t:30px !important; } *[class].res-height20 { height:20px !important; } *[cl=
+ass].res-height20 div { height:20px !important; } *[class].res-height10 { h=
+eight:10px !important; } *[class].res-height10 div { height:10px !important=
+; } *[class].res-height10.email-spacer div { height:10px !important; min-he=
+ight:10px !important; line-height:10px !important; font-size:10px !importan=
+t; } *[class].res-height0 { height:0px !important; } *[class].res-height0 d=
+iv { height:0px !important; } *[class].res-width280 { width:280px !importan=
+t; } *[class].res-width25 { width:25px !important; } *[class].res-width10 {=
+ width:10px !important; } *[class].res-width10 table { width:10px !importan=
+t; } *[class].res-width120 { width:120px !important; } *[class].res-padding=
+ { width:0 !important; } *[class].res-padding table { width:0 !important; }=
+ *[class].cellpadding-none { width:0px !important; } *[class].cellpadding-n=
+one table { border:collapse !important; } *[class].cellpadding-none table t=
+d { padding:0 !important; } *[class].display-none { display:none !important=
+; } *[class].display-block { display:block !important; } *[class].remove-ma=
+rgin { margin:0 !important; } *[class].remove-border { border:none !importa=
+nt; } *[class].res-img60 { width:60px !important; height:60px !important; }=
+ *[class].res-img75 { width:75px !important; height:75px !important; } *[cl=
+ass].res-img100 { width:100px !important; height:100px !important; } *[clas=
+s].res-img320 { width:320px !important; height:auto !important; position:re=
+lative; } *[class].res-img90x63 { width:90px !important; height:63px !impor=
+tant; } *[class].res-border { border-top:1px solid #E1E1E1 !important; } *[=
+class].responsive2col { width:100% !important; } *[class].center-content { =
+text-align:center !important; } *[class].hide-for-mobile { display:none !im=
+portant; } *[class].show-for-mobile { width:100% !important; max-height:non=
+e !important; visibility:visible !important; overflow:visible !important; f=
+loat:none !important; height:auto !important; display:block !important; } *=
+[class].responsive-table { display:table !important; } *[class].responsive-=
+row { display:table-row !important; } *[class].responsive-cell { display:ta=
+ble-cell !important; } *[class].fix-table-content { table-layout:fixed; } *=
+[class].res-padding08 { padding-top:8px; } *[class].header-spacer { table-l=
+ayout:auto !important; width:250px !important; } *[class].header-spacer td,=
+ *[class].header-spacer div { width:250px !important; } *[class].res-width6=
+0 { width:60px !important; } *[class].res-height5 { height:5px !important; =
+} *[class].res-font-bold { font-weight:bold !important; } *[class].res-widt=
+h100p { width:100% !important; } *[class].display-inline { display:inline !=
+important; } *[class].background-none { background:none !important; } *[cla=
+ss].discussion-item { border-top:1px solid #e2e2e2 !important; padding-top:=
+10px !important; } *[class].first-item { border-top:0 !important; } *[class=
+].hero-comment { background-color:transparent !important; } *[class].disc-s=
+plit { border-bottom:1px solid #e2e2e2; } *[class].blue-arrow { height:8px =
+!important; width:4px !important; display:inline !important; } } @media all=
+ and (-webkit-min-device-pixel-ratio:1.5) { *[id]#base-header-logo { backgr=
+ound-image:url(http://s.c.lnkd.licdn.com/scds/common/u/images/email/logos/l=
+ogo_linkedin_tm_email_197x48_v1.png) !important; background-size:95px; back=
+ground-repeat:no-repeat; width:95px !important; height:21px !important; } *=
+[id]#base-header-logo img { display:none; } *[id]#base-header-logo a { heig=
+ht:21px !important; } *[id]#base-header-logo-china { background-image:url(h=
+ttp://s.c.lnkd.licdn.com/scds/common/u/images/email/logos/logo_linkedin_tm_=
+china_email_266x42_v1.png) !important; background-size:133px; background-re=
+peat:no-repeat; width:133px !important; height:21px !important; } *[id]#bas=
+e-header-logo-china img { display:none; } *[id]#base-header-logo-china a { =
+height:21px !important; } } </style>
+ </head>
+ <body style=3D"background-color:#DFDFDF;padding:0;margin:0 auto;width:100%=
+;">
+  <span style=3D"display: none !important;font-size: 1px;visibility: hidden=
+;opacity: 0;color: transparent;height: 0;width: 0;mso-hide: all;"></span>
+  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif; border-collapse:collapse; width:100% !impor=
+tant; font-family:Helvetica,Arial,sans-serif; margin:0; padding:0;" width=
+=3D"100%" bgcolor=3D"#DFDFDF">
+   <tbody>
+    <tr>
+     <td colspan=3D"3">
+      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font=
+-family:Helvetica,Arial,sans-serif; " width=3D"1">
+       <tbody>
+        <tr>
+         <td>
+          <div style=3D"height:5px;font-size:5px;line-height:5px;">
+           &nbsp;
+          </div></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+    <tr>
+     <td>
+      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"cent=
+er" width=3D"100%" style=3D"table-layout: fixed;">
+       <tbody>
+        <tr>
+         <td align=3D"center">
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+font-family:Helvetica,Arial,sans-serif; min-width:290px;" width=3D"600" cla=
+ss=3D"responsive">
+           <tbody>
+            <tr>
+             <td style=3D"font-family:Helvetica,Arial,sans-serif;">
+              <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"1" class=3D"email-spacer">
+               <tbody>
+                <tr>
+                 <td>
+                  <div style=3D"height:8px;font-size:8px;line-height:8px">
+                   &nbsp;
+                  </div></td>
+                </tr>
+               </tbody>
+              </table>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif;" width=3D"100%" bgcolor=3D"#DDD=
+DDD">
+               <tbody>
+                <tr>
+                 <td align=3D"left" valign=3D"middle" width=3D"95" height=
+=3D"21" id=3D"base-header-logo"><a style=3D"text-decoration:none;cursor:poi=
+nter;border:none;display:block;height:21px;width:100%;" href=3D"http://www.=
+linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dnmp&amp;midToken=3DAQF4Q6Q=
+-XYzoRA&amp;ek=3Db2_anet_digest"><img src=3D"http://s.c.lnkd.licdn.com/scds=
+/common/u/images/email/logos/logo_linkedin_tm_email_95x21_v1.png" width=3D"=
+95" height=3D"21" alt=3D"LinkedIn" style=3D"border:none;text-decoration:non=
+e;" /></a></td>
+                 <td width=3D"15">
+                  <table width=3D"15" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td valign=3D"bottom" align=3D"left"><span style=3D"color:=
+#666666; font-size:16px;">Groups</span></td>
+                </tr>
+               </tbody>
+              </table>
+              <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"1" class=3D"email-spacer">
+               <tbody>
+                <tr>
+                 <td>
+                  <div style=3D"height:8px;font-size:8px;line-height:8px">
+                   &nbsp;
+                  </div></td>
+                </tr>
+               </tbody>
+              </table>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif;" width=3D"100%" bgcolor=3D"#333=
+333">
+               <tbody>
+                <tr>
+                 <td width=3D"20" class=3D"responsive-spacer">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td width=3D"100%">
+                  <table width=3D"560" cellspacing=3D"0" cellpadding=3D"1" =
+border=3D"0" class=3D"header-spacer" style=3D"table-layout: fixed;">
+                   <tbody>
+                    <tr>
+                     <td width=3D"560">
+                      <div style=3D"height:12px;font-size:12px;line-height:=
+12px;width:560px;">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td width=3D"20" class=3D"responsive-spacer">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%" bgcolor=3D"#FF=
+FFFF">
+               <tbody>
+                <tr>
+                 <td>
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"font-family:Helvetica,Arial,sans-serif; background:#eeeeee;border-l=
+eft:1px solid #cecece;border-right:1px solid #cecece;text-align:left;" widt=
+h=3D"100%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <table width=3D"1" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" class=3D"email-spacer">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <div style=3D"height:10px;font-size:10px;line-hei=
+ght:10px">
+                           &nbsp;
+                          </div></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td width=3D"20">
+                          <table width=3D"20" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td width=3D"100" height=3D"50"><a href=3D"http://=
+www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgmp&amp;midToken=3DAQF=
+4Q6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D0&amp;m=3Dhero&amp;ts=3Dview_g=
+roup&amp;gid=3D2260295"><img src=3D"http://m.c.lnkd.licdn.com/media/p/1/000=
+/031/158/1f7fa52.png" width=3D"100" height=3D"50" style=3D"display:block;bo=
+rder:1px solid #cecece;" alt=3D"The PHP India" /></a></td>
+                         <td width=3D"20">
+                          <table width=3D"20" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td>
+                          <table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; background:#eeeeee;=
+" width=3D"100%">
+                           <tbody>
+                            <tr class=3D"hide-for-mobile">
+                             <td style=3D"font-size:16px;font-weight:bold;c=
+olor:#333333;">Trending discussions in:</td>
+                            </tr>
+                            <tr>
+                             <td style=3D"font-size:16px;"><a href=3D"http:=
+//www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgmp&amp;midToken=3DA=
+QF4Q6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D0&amp;m=3Dhero&amp;ts=3Dview=
+_group&amp;gid=3D2260295" style=3D"color:#333333;text-decoration:none;">The=
+ PHP India</a></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td width=3D"20">
+                          <table width=3D"20" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td style=3D"border-bottomr:1px solid #cecece;">
+                          <table width=3D"1" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:10px;font-size:10px;line=
+-height:10px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td width=3D"20">
+                          <table width=3D"20" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+font-family:Helvetica,Arial,sans-serif; width:600px;table-layout:fixed;back=
+ground:#ffffff;border:1px solid #ffffff;border-bottom:2px solid #bcbcbc;bor=
+der-left:1px solid #cecece;border-right:1px solid #cecece;text-align:left;"=
+ width=3D"600" class=3D"responsive">
+           <tbody>
+            <tr>
+             <td>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+               <tbody>
+                <tr>
+                 <td width=3D"20">
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td>
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"font-family:Helvetica,Arial,sans-serif; font-size:12px;word-wrap:br=
+eak-word;" width=3D"100%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <table width=3D"1" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" class=3D"email-spacer">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <div style=3D"height:20px;font-size:20px;line-hei=
+ght:20px">
+                           &nbsp;
+                          </div></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td width=3D"30"><a href=3D"http://www.linkedin.co=
+m/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Damf&amp;midToken=3DAQF4Q6Q-XYzoRA&amp=
+;ek=3Db2_anet_digest&amp;li=3D5&amp;m=3Dhero&amp;ts=3Dhero-disc-memberactiv=
+ity-0&amp;gid=3D2260295&amp;memberID=3D332852719"><img src=3D"http://m.c.ln=
+kd.licdn.com/mpr/mpr/shrink_30_30/p/1/005/050/0e2/371a517.jpg" alt=3D"Dilip=
+ Sonawane" width=3D"30" height=3D"30" style=3D"border:none;outline:none;tex=
+t-decoration:none;display:block;" /></a></td>
+                         <td width=3D"9">
+                          <table width=3D"1" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td style=3D"font-size:18px;"><a href=3D"http://ww=
+w.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q=
+6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D4&amp;m=3Dhero&amp;ts=3Dhero-dis=
+c-disc-0&amp;itemID=3D5910270742204801026&amp;itemType=3Dmember&amp;anetID=
+=3D2260295" style=3D"color:#2d8cd7;text-decoration:none;">The Complete Web =
+Development Course - Learn By Building Apps</a></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width=3D"1" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" class=3D"email-spacer">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <div style=3D"height:3px;font-size:3px;line-heigh=
+t:3px">
+                           &nbsp;
+                          </div></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; word-wrap:break-wor=
+d;" width=3D"100%">
+                           <tbody>
+                            <tr>
+                             <td width=3D"40">
+                              <table width=3D"40" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <div style=3D"height:0px;font-size:0px;li=
+ne-height:0px">
+                                   &nbsp;
+                                  </div></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                             <td><a href=3D"http://www.linkedin.com/e/v2?e=
+=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2=
+_anet_digest&amp;li=3D6&amp;m=3Dhero&amp;ts=3Dhero-disc-name-0&amp;itemID=
+=3D5910270742204801026&amp;itemType=3Dmember&amp;anetID=3D2260295" style=3D=
+"font-size:13px;color:#333333;text-decoration:none;">Dilip Sonawane</a></td=
+>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width=3D"1" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" class=3D"email-spacer">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <div style=3D"height:6px;font-size:6px;line-heigh=
+t:6px">
+                           &nbsp;
+                          </div></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td width=3D"39" class=3D"hide-for-mobile">
+                          <table width=3D"1" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td>
+                          <table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                           <tbody>
+                            <tr class=3D"hide-for-mobile">
+                             <td>
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%=
+">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:5px;font-size:5p=
+x;line-height:5px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                                <tr>
+                                 <td width=3D"100" class=3D"hide-for-mobile=
+"><a href=3D"http://www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dpl=
+h&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet_digest&amp;li=3D8&amp;m=3D=
+hero&amp;ts=3Dhero-disc-attached-article&amp;urlhash=3DK8aN&amp;url=3Dhttps=
+%3A%2F%2Fwww%2Eudemy%2Ecom%2Fthe-complete-web-development-course-learn-by-b=
+uilding-apps%2F%3FcouponCode%3Dkiranwebdev" style=3D"border:0;outline:none;=
+text-decoration:none;"><img src=3D"http://m.c.lnkd.licdn.com/media-proxy/ex=
+t?w=3D120&amp;h=3D70&amp;hash=3D3zAluWICDJFI8%2B66TICBhyvTXdM%3D&amp;ora=3D=
+1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6_lx4X2xUs4amEvgKxqkZMRI_dC2j1RXv_vs=
+rTPzKrOpLAe7KhyyUJeioHkgEwEOj9RTSOEY3ma90" width=3D"120" alt=3D"The Complet=
+e Web Development Course - Learn By Building Apps by..." /></a></td>
+                                 <td width=3D"10">
+                                  <table width=3D"10" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:0px;font-size:0p=
+x;line-height:0px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                 <td>
+                                  <table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"=
+100%">
+                                   <tbody>
+                                    <tr>
+                                     <td><a href=3D"http://www.linkedin.com=
+/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;=
+ek=3Db2_anet_digest&amp;li=3D9&amp;m=3Dhero&amp;ts=3Dhero-disc-0&amp;itemID=
+=3D5910270742204801026&amp;itemType=3Dmember&amp;anetID=3D2260295" style=3D=
+"font-size:11px;color:#333333;font-weight:bold;text-decoration:none;">The C=
+omplete Web Development Course - Learn By Building Apps by...</a></td>
+                                    </tr>
+                                    <tr>
+                                     <td><a href=3D"http://www.linkedin.com=
+/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;=
+ek=3Db2_anet_digest&amp;li=3D9&amp;m=3Dhero&amp;ts=3Dhero-disc-0&amp;itemID=
+=3D5910270742204801026&amp;itemType=3Dmember&amp;anetID=3D2260295" style=3D=
+"font-size:11px;color:#666666;text-decoration:none;">Master PHP-MySQL by Bu=
+ilding 10 Projects</a></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                                <tr>
+                                 <td>
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:5px;font-size:5p=
+x;line-height:5px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr class=3D"hide-for-mobile">
+                             <td>
+                              <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <div style=3D"height:10px;font-size:10px;=
+line-height:10px">
+                                   &nbsp;
+                                  </div></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td>
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" align=3D"left">
+                               <tbody>
+                                <tr>
+                                 <td align=3D"center" height=3D"30" valign=
+=3D"middle" bgcolor=3D"#287BBC" background=3D"http://s.c.lnkd.licdn.com/scd=
+s/common/u/img/email/bg_btn_katy_blue_medium.png" style=3D"background:url(h=
+ttp://s.c.lnkd.licdn.com/scds/common/u/img/email/bg_btn_katy_blue_medium.pn=
+g) repeat-x scroll bottom #287BBC;background-color:#287BBC;border:1px solid=
+ #1B5480;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px=
+; cursor: pointer;">
+                                  <table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"=
+100%" bgcolor=3D"transparent">
+                                   <tbody>
+                                    <tr>
+                                     <td width=3D"13">
+                                      <table width=3D"13px" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                       <tbody>
+                                        <tr>
+                                         <td>
+                                          <div style=3D"height:0px;font-siz=
+e:0px;line-height:0px">
+                                           &nbsp;
+                                          </div></td>
+                                        </tr>
+                                       </tbody>
+                                      </table></td>
+                                     <td><a href=3D"http://www.linkedin.com=
+/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;=
+ek=3Db2_anet_digest&amp;li=3D4&amp;m=3Dhero&amp;ts=3Dhero-disc-disc-0&amp;i=
+temID=3D5910270742204801026&amp;itemType=3Dmember&amp;anetID=3D2260295" sty=
+le=3D"text-decoration:none; font-size: 13px;font-family: Helvetica,Arial,sa=
+ns-serif;font-weight: bold;color: white;white-space: nowrap;display: block;=
+" target=3D"_blank"><span style=3D"font-size: 13px;font-family: Helvetica,A=
+rial,sans-serif;font-weight: bold;color: white;white-space: nowrap;display:=
+ block;">View Discussion</span></a></td>
+                                     <td width=3D"13">
+                                      <table width=3D"13px" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                       <tbody>
+                                        <tr>
+                                         <td>
+                                          <div style=3D"height:0px;font-siz=
+e:0px;line-height:0px">
+                                           &nbsp;
+                                          </div></td>
+                                        </tr>
+                                       </tbody>
+                                      </table></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td>
+                              <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <div style=3D"height:20px;font-size:20px;=
+line-height:20px">
+                                   &nbsp;
+                                  </div></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td>
+                              <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <div style=3D"height:30px;font-size:30px;=
+line-height:30px">
+                                   &nbsp;
+                                  </div></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td width=3D"20">
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+           <tbody>
+            <tr>
+             <td height=3D"10">
+              <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"1" class=3D"email-spacer">
+               <tbody>
+                <tr>
+                 <td>
+                  <div style=3D"height:0px;font-size:0px;line-height:0px">
+                   &nbsp;
+                  </div></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+font-family:Helvetica,Arial,sans-serif; width:600px;table-layout:fixed;back=
+ground:#ffffff;border:1px solid #ffffff;border-bottom:2px solid #bcbcbc;bor=
+der-left:1px solid #cecece;border-right:1px solid #cecece;text-align:left;"=
+ width=3D"600" class=3D"responsive">
+           <tbody>
+            <tr>
+             <td>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+               <tbody>
+                <tr>
+                 <td class=3D"res-height5">
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td class=3D"res-width10" width=3D"20">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td class=3D"res-font14" style=3D"font-size:16px;"><span s=
+tyle=3D"color:#444444;">Contribute to active discussions</span></td>
+                 <td class=3D"res-width10" width=3D"20">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+               <tbody>
+                <tr>
+                 <td class=3D"res-width10" width=3D"20">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td class=3D"res-height5" style=3D"border-bottom-color:#e2=
+e2e2;border-bottom-width:1px;border-bottom-style:solid;">
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td class=3D"res-width10" width=3D"20">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+               <tbody>
+                <tr>
+                 <td width=3D"20" class=3D"res-width10">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td>
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; word-wrap:break-wor=
+d;" width=3D"100%">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%=
+">
+                               <tbody>
+                                <tr>
+                                 <td style=3D"color:#AAAAAA;font-size:13px;=
+"><span style=3D"line-height:20px;">New discussion</span></td>
+                                </tr>
+                                <tr>
+                                 <td>
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:5px;font-size:5p=
+x;line-height:5px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td>
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%=
+">
+                               <tbody>
+                                <tr>
+                                 <td width=3D"30"><a href=3D"http://www.lin=
+kedin.com/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XY=
+zoRA&amp;ek=3Db2_anet_digest&amp;li=3D12&amp;m=3Dgroup_discussions&amp;ts=
+=3Dgrouppost-pic-1&amp;itemID=3D5910247292673208324&amp;itemType=3Dmember&a=
+mp;anetID=3D2260295"><img src=3D"http://m.c.lnkd.licdn.com/mpr/mpr/shrink_3=
+0_30/p/8/005/044/0e4/19d917f.jpg" alt=3D"fiona pugh" width=3D"30" height=3D=
+"30" style=3D"border:none;outline:none;text-decoration:none;display:block;"=
+ /></a></td>
+                                 <td width=3D"9">
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"1" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:0px;font-size:0p=
+x;line-height:0px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                 <td valign=3D"top" style=3D"font-size:18px=
+;" class=3D"res-font14"><a href=3D"http://www.linkedin.com/e/v2?e=3D12lusk-=
+hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet_dige=
+st&amp;li=3D10&amp;m=3Dgroup_discussions&amp;ts=3Dgrouppost-disc-1&amp;item=
+ID=3D5910247292673208324&amp;itemType=3Dmember&amp;anetID=3D2260295" style=
+=3D"color:#2d8cd7;text-decoration:none;">Learn Database Design using Postgr=
+eSQL</a></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td>
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%=
+">
+                               <tbody>
+                                <tr>
+                                 <td height=3D"5">
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:5px;font-size:5p=
+x;line-height:5px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                                <tr>
+                                 <td>
+                                  <table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"=
+100%">
+                                   <tbody>
+                                    <tr>
+                                     <td width=3D"40">
+                                      <table width=3D"40" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" class=3D"email-spacer">
+                                       <tbody>
+                                        <tr>
+                                         <td>
+                                          <div style=3D"height:0px;font-siz=
+e:0px;line-height:0px">
+                                           &nbsp;
+                                          </div></td>
+                                        </tr>
+                                       </tbody>
+                                      </table></td>
+                                     <td><a href=3D"http://www.linkedin.com=
+/e/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Dgde&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;=
+ek=3Db2_anet_digest&amp;li=3D13&amp;m=3Dgroup_discussions&amp;ts=3Dgrouppos=
+t-name-1&amp;itemID=3D5910247292673208324&amp;itemType=3Dmember&amp;anetID=
+=3D2260295" style=3D"line-height:20px;color:#333333;text-decoration:none;fo=
+nt-size:13px;">fiona pugh</a></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                                <tr>
+                                 <td height=3D"3">
+                                  <table width=3D"1" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" class=3D"email-spacer">
+                                   <tbody>
+                                    <tr>
+                                     <td>
+                                      <div style=3D"height:3px;font-size:3p=
+x;line-height:3px">
+                                       &nbsp;
+                                      </div></td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                                <tr>
+                                 <td>
+                                  <table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"=
+100%">
+                                   <tbody>
+                                    <tr>
+                                     <td width=3D"40">
+                                      <table width=3D"40" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" class=3D"email-spacer">
+                                       <tbody>
+                                        <tr>
+                                         <td>
+                                          <div style=3D"height:0px;font-siz=
+e:0px;line-height:0px">
+                                           &nbsp;
+                                          </div></td>
+                                        </tr>
+                                       </tbody>
+                                      </table></td>
+                                     <td style=3D"font-size:13px;color:#AAA=
+AAA;">The Ultimate Guide to master the world most Advance Open Source Datab=
+ase</td>
+                                    </tr>
+                                   </tbody>
+                                  </table></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td height=3D"15">
+                              <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"email-spacer">
+                               <tbody>
+                                <tr>
+                                 <td>
+                                  <div style=3D"height:15px;font-size:15px;=
+line-height:15px">
+                                   &nbsp;
+                                  </div></td>
+                                </tr>
+                               </tbody>
+                              </table></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                        <tr>
+                         <td>
+                          <table width=3D"1" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:20px;font-size:20px;line=
+-height:20px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                 <td class=3D"res-width10">
+                  <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:0px;font-size:0px;line-height:0p=
+x">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; background-color:#f2f2f2" width=
+=3D"100%">
+               <tbody>
+                <tr>
+                 <td>
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td align=3D"center" style=3D"font-size:14px">
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" a=
+lign=3D"center">
+                   <tbody>
+                    <tr>
+                     <td align=3D"center" height=3D"30" valign=3D"middle" b=
+gcolor=3D"#287BBC" background=3D"http://s.c.lnkd.licdn.com/scds/common/u/im=
+g/email/bg_btn_katy_blue_medium.png" style=3D"background:url(http://s.c.lnk=
+d.licdn.com/scds/common/u/img/email/bg_btn_katy_blue_medium.png) repeat-x s=
+croll bottom #287BBC;background-color:#287BBC;border:1px solid #1B5480;-moz=
+-border-radius:3px;-webkit-border-radius:3px;border-radius:3px; cursor: poi=
+nter;">
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%" bgcolo=
+r=3D"transparent">
+                       <tbody>
+                        <tr>
+                         <td width=3D"13">
+                          <table width=3D"13px" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                         <td><a href=3D"http://www.linkedin.com/e/v2?e=3D12=
+lusk-hzdseutd-4z&amp;t=3Dgmp&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet=
+_digest&amp;li=3D15&amp;m=3Dgroup_discussions&amp;ts=3Ddiscussions_footer&a=
+mp;gid=3D2260295" style=3D"text-decoration:none; font-size: 13px;font-famil=
+y: Helvetica,Arial,sans-serif;font-weight: bold;color: white;white-space: n=
+owrap;display: block;" target=3D"_blank"><span style=3D"font-size: 13px;fon=
+t-family: Helvetica,Arial,sans-serif;font-weight: bold;color: white;white-s=
+pace: nowrap;display: block;">See more at LinkedIn</span></a></td>
+                         <td width=3D"13">
+                          <table width=3D"13px" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"1" class=3D"email-spacer">
+                           <tbody>
+                            <tr>
+                             <td>
+                              <div style=3D"height:0px;font-size:0px;line-h=
+eight:0px">
+                               &nbsp;
+                              </div></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+font-family:Helvetica,Arial,sans-serif; " width=3D"600" class=3D"responsive=
+">
+           <tbody>
+            <tr>
+             <td align=3D"left">
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%" class=3D"respo=
+nsive">
+               <tbody>
+                <tr>
+                 <td>
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:10px;font-size:10px;line-height:=
+10px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td align=3D"left">
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"font-family:Helvetica,Arial,sans-serif; font-size:11px; font-family=
+:Helvetica,Arial,sans-serif; color:#999999;" width=3D"100%" class=3D"respon=
+sive res-font10">
+                   <tbody>
+                    <tr>
+                     <td>You are receiving Groups Digest emails. <a style=
+=3D"text-decoration:none;color:#0077B5;" href=3D"https://www.linkedin.com/e=
+/v2?e=3D12lusk-hzdseutd-4z&amp;t=3Deus&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;tr=
+acking=3Deml-b2_anet_digest-unsub_html&amp;ek=3Db2_anet_digest&amp;loid=3DA=
+QGIQQd4yX4-egAAAUgbk_0t8QznJD8Tcic-QWgrCAt9FkPnFOGqoyJFY3BRG5mLRU3mWRecGJjp=
+-VHF7w&amp;eid=3D12lusk-hzdseutd-4z">Unsubscribe</a></td>
+                    </tr>
+                    <tr>
+                     <td>This email was intended for Amit Kumar (Sr. Softwa=
+re Engineer at Damco Solutions Pvt Ltd). <a style=3D"text-decoration:none;c=
+olor:#0077B5;" href=3D"http://www.linkedin.com/e/v2?e=3D12lusk-hzdseutd-4z&=
+amp;a=3DcustomerServiceUrl&amp;midToken=3DAQF4Q6Q-XYzoRA&amp;ek=3Db2_anet_d=
+igest&amp;articleId=3D4788">Learn why we included this.</a></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <table width=3D"1" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" class=3D"email-spacer">
+                       <tbody>
+                        <tr>
+                         <td>
+                          <div style=3D"height:10px;font-size:10px;line-hei=
+ght:10px">
+                           &nbsp;
+                          </div></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td>&copy;2014 LinkedIn Ireland, Gardner House, Wilton=
+ Plaza, Wilton Place, Dublin 2, Ireland</td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"1" class=3D"email-spacer">
+                   <tbody>
+                    <tr>
+                     <td>
+                      <div style=3D"height:20px;font-size:20px;line-height:=
+20px">
+                       &nbsp;
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+  <img src=3D"http://www.linkedin.com/emimp/12lusk-hzdseutd-4z.gif" style=
+=3D"width:1px; height:1px;" />
+ </body>
+</html>
+------=_Part_993264_448943609.1409211956554--
+
+ ----------------------------------------------------------------------------------------------------------------------------- 
+---1664858152-1153123848-1409212846=:44416
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I just downloaded the new hike messenger. What a big change from WhatsApp!=
+=0A=0AIt's got amazing Stickers, the ability to choose who sees my Last See=
+n and some really cool Chat Themes. =0A=0AThe best part? Hike has thing cal=
+led Hidden Mode that lets you hide your private chats, from the world! Awes=
+ome!=0A=0ADownload it like asap from http://hike.in!=0A=0ASent from Yahoo M=
+ail on Android=0A=0A
+---1664858152-1153123848-1409212846=:44416
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tr><td valign=3D"t=
+op"><p>I just downloaded the new hike messenger. What a big change from Wha=
+tsApp!</p>=0A<p>It's got amazing Stickers, the ability to choose who sees m=
+y Last Seen and some really cool Chat Themes. </p>=0A<p>The best part? Hike=
+ has thing called Hidden Mode that lets you hide your private chats, from t=
+he world! Awesome!</p>=0A<p>Download it like asap from http://hike.in!</p>=
+=0A<p><a href=3D"https://uk.overview.mail.yahoo.com/mobile/?.src=3DAndroid"=
+>Sent from Yahoo Mail on Android</a></p>=0A</td></tr></table>
+---1664858152-1153123848-1409212846=:44416--
+
+ ----------------------------------------------------------------------------------------------------------------------------- 
+--001a113a5cc6cf3ccf0500f841fc
+Content-Type: text/plain; charset=UTF-8
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of
+its recipients. This is a permanent error. The following address
+failed:
+
+"info@motorrad-kuhnert.de":
+domain not found, "motorrad-kuhnert.de"
+
+
+
+--- The header of the original message is following. ---
+
+Received: from localhost ([162.13.184.178])
+        by mrelayeu.kundenserver.de (node=mreue006) with ESMTP (Nemesis)
+        id 0LaeOS-1WdNjy0p3Y-00kNJ0; Mon, 18 Aug 2014 13:42:06 +0200
+Return-Path: triumphcsi.bounceback@gmail.com
+#EventID#: 46659
+From: Triumph <no-reply@triumph.360osi.com>
+Subject: Triumph Kundenzufriedenheitsumfrage
+To: info@motorrad-kuhnert.de,
+ anette-laubinger@t-online.de,
+ juergen@motorradshop-kuhnert.de,
+ info@motorradshop-kuhnert.de,
+ marcus@motorradshop-kuhnert.de
+Date: Mon, 18 Aug 2014 12:42:05 +0100
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+MIME-Version: 1.0
+Message-Id: <0LaeOS-1WdNjy0p3Y-00kNJ0@mrelayeu.kundenserver.de>
+X-Provags-ID: V02:K0:e7Gdi1poG8FyJySIVqQzJ7S5J6ujUxeNGY1JFsl5LHa
+ jJC+ANPBf6LgWlRJEfgAQVn1AtjgAeTGAxR5YuR08Nz1jcgqFH
+ UCScDMYQQBhE8l7wBOOBvAxx3z69BJmWCtOOR2k7+3m0p40/+t
+ yA4Bd3zjoPZgJG/CRlSj1Vd/uElmlOSUJqjWb5ZAEZUxYQ9NCL
+ rql0rb+TUi5LskBJfNRu7HFffyVhE9ln1I0TjvN4ZjcYLBfRpe
+ vnwF4MU26MTJYrjdReB1Lawa0L1sXHlPdryqkhdQitYw/IxDdh
+ nYpFLoj+OX9gOuzimQqGwLYWr/zmnU85QVXYbRlQYYEmvxr61F
+ AObaE7UVYBP1ToVbDzjfK9d6keCIl8kY5qt+DK8RlovYPJvsKO
+ GmfGu3RdBQa6Q==
+X-UI-Out-Filterresults: notjunk:1;
+
+
+
+
+
+
+
+-- 
+Thanks & Regards
+
+Amit Kumar
+M1: +91 9718996066
+Email: amitsit2005@gmail.com
+
+--001a113a5cc6cf3ccf0500f841fc
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote">This message was created automatically by mail delivery softwa=
+re.<br>
+
+<br>
+A message that you sent could not be delivered to one or more of<br>
+its recipients. This is a permanent error. The following address<br>
+failed:<br>
+<br>
+&quot;<a href=3D"mailto:info@motorrad-kuhnert.de" target=3D"_blank">info@mo=
+torrad-kuhnert.de</a>&quot;:<br>
+domain not found, &quot;<a href=3D"http://motorrad-kuhnert.de" target=3D"_b=
+lank">motorrad-kuhnert.de</a>&quot;<br>
+<br>
+<br>
+<br>
+--- The header of the original message is following. ---<br>
+<br>
+Received: from localhost ([162.13.184.178])<br>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 by <a href=3D"http://mrelayeu.kundenserver.de" =
+target=3D"_blank">mrelayeu.kundenserver.de</a> (node=3Dmreue006) with ESMTP=
+ (Nemesis)<br>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 id 0LaeOS-1WdNjy0p3Y-00kNJ0; Mon, 18 Aug 2014 1=
+3:42:06 +0200<br>
+Return-Path: <a href=3D"mailto:triumphcsi.bounceback@gmail.com" target=3D"_=
+blank">triumphcsi.bounceback@gmail.com</a><br>
+#EventID#: 46659<br>
+From: Triumph &lt;<a href=3D"mailto:no-reply@triumph.360osi.com" target=3D"=
+_blank">no-reply@triumph.360osi.com</a>&gt;<br>
+Subject: Triumph Kundenzufriedenheitsumfrage<br>
+To: <a href=3D"mailto:info@motorrad-kuhnert.de" target=3D"_blank">info@moto=
+rrad-kuhnert.de</a>,<br>
+=C2=A0<a href=3D"mailto:anette-laubinger@t-online.de" target=3D"_blank">ane=
+tte-laubinger@t-online.de</a>,<br>
+=C2=A0<a href=3D"mailto:juergen@motorradshop-kuhnert.de" target=3D"_blank">=
+juergen@motorradshop-kuhnert.de</a>,<br>
+=C2=A0<a href=3D"mailto:info@motorradshop-kuhnert.de" target=3D"_blank">inf=
+o@motorradshop-kuhnert.de</a>,<br>
+=C2=A0<a href=3D"mailto:marcus@motorradshop-kuhnert.de" target=3D"_blank">m=
+arcus@motorradshop-kuhnert.de</a><br>
+Date: Mon, 18 Aug 2014 12:42:05 +0100<br>
+Content-Type: text/html; charset=3DUTF-8<br>
+Content-Transfer-Encoding: quoted-printable<br>
+Content-Disposition: inline<br>
+MIME-Version: 1.0<br>
+Message-Id: &lt;<a href=3D"mailto:0LaeOS-1WdNjy0p3Y-00kNJ0@mrelayeu.kundens=
+erver.de" target=3D"_blank">0LaeOS-1WdNjy0p3Y-00kNJ0@mrelayeu.kundenserver.=
+de</a>&gt;<br>
+X-Provags-ID: V02:K0:e7Gdi1poG8FyJySIVqQzJ7S5J6ujUxeNGY1JFsl5LHa<br>
+=C2=A0jJC+ANPBf6LgWlRJEfgAQVn1AtjgAeTGAxR5YuR08Nz1jcgqFH<br>
+=C2=A0UCScDMYQQBhE8l7wBOOBvAxx3z69BJmWCtOOR2k7+3m0p40/+t<br>
+=C2=A0yA4Bd3zjoPZgJG/CRlSj1Vd/uElmlOSUJqjWb5ZAEZUxYQ9NCL<br>
+=C2=A0rql0rb+TUi5LskBJfNRu7HFffyVhE9ln1I0TjvN4ZjcYLBfRpe<br>
+=C2=A0vnwF4MU26MTJYrjdReB1Lawa0L1sXHlPdryqkhdQitYw/IxDdh<br>
+=C2=A0nYpFLoj+OX9gOuzimQqGwLYWr/zmnU85QVXYbRlQYYEmvxr61F<br>
+=C2=A0AObaE7UVYBP1ToVbDzjfK9d6keCIl8kY5qt+DK8RlovYPJvsKO<br>
+=C2=A0GmfGu3RdBQa6Q=3D=3D<br>
+X-UI-Out-Filterresults: notjunk:1;<br>
+<br>
+<br>
+<br>
+</div><br></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div style=3D"font-size:1=
+0pt;color:rgb(102,102,102);font-family:verdana,arial,helvetica,sans-serif">=
+<span lang=3D"EN-GB" style=3D"font-family:Verdana,sans-serif;font-size:9pt"=
+>Thanks &amp; Regards</span></div>
+<div style=3D"font-size:10pt;color:rgb(102,102,102);font-family:verdana,ari=
+al,helvetica,sans-serif"><span lang=3D"EN-GB" style=3D"font-family:Verdana,=
+sans-serif;font-size:9pt"></span>=C2=A0</div><div style=3D"font-size:10pt;c=
+olor:rgb(102,102,102);font-family:verdana,arial,helvetica,sans-serif">
+<span lang=3D"EN-GB" style=3D"font-family:Verdana,sans-serif;font-size:9pt"=
+>Amit Kumar=C2=A0</span></div><div style=3D"font-size:10pt;color:rgb(102,10=
+2,102);font-family:verdana,arial,helvetica,sans-serif"><span style=3D"font-=
+family:Verdana,sans-serif;font-size:8pt">M1: +91=C2=A09718996066</span></di=
+v>
+<div style=3D"color:rgb(102,102,102);font-family:Arial"><span lang=3D"EN-GB=
+" style=3D"font-family:Verdana,sans-serif;font-size:8pt">Email: <a href=3D"=
+mailto:amitsit2005@gmail.com" target=3D"_blank">amitsit2005@gmail.com</a></=
+span></div>
+
+</div>
+
+--001a113a5cc6cf3ccf0500f841fc--
+ ----------------------------------------------------------------------------------------------------------------------------- 

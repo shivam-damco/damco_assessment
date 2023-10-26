@@ -1,0 +1,347 @@
+<!--
+ * 
+ * @author Anuj
+ * @date   31 May, 2014
+ * @version 1.0
+-->
+<!--Content Wrapper -->
+<section id="wrapper" class="top-padding">
+    <div id="inner-wrapper">
+        
+        <h2><?php echo $this->translate('Run Survey'); ?></h2>
+        <div class="error-messages">
+        <?php
+        if (!empty($this->messages)) {
+            $error = '<div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+                    . $this->messages . '</div</div </div></div>';
+            echo $error;
+        }
+        ?>
+        </div>
+        <div class="edit-event-form white-bg padding20">
+            <form class="form-horizontal" role="form" name="editevent" action="" method="POST" enctype="multipart/form-data"> 
+
+                <?php //echo "<pre>";print_R($this->form->getElement("dealer_name"));//echo "<pre>";print_r($this->EventData); ?>
+				<div class="form-group">
+                    <label for="survey_category" class="col-md-3 col-sm-4"><?php echo $this->form->survey_category->renderLabel() ?></label>
+                    <div class="col-sm-5">
+                        <?php echo $this->form->survey_category->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+                <div class="form-group">
+                    <label for="dealer_name" class="col-md-3 col-sm-4"><?php echo $this->form->event_type->renderLabel() ?></label>
+                    <div class="col-sm-5">
+                        <?php echo $this->form->event_type->renderViewHelper(); ?>
+                    </div>
+                </div>
+               
+                
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->start_date->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->start_date->renderViewHelper(); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email_address" class="col-md-3 col-sm-4"><?php echo $this->form->end_date->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->end_date->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+                <div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->survey_name->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->survey_name->renderViewHelper(); ?>
+                    </div>
+                </div>
+                <?php /* ?>
+                <div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->email_subject->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->email_subject->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+				<div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->required_time->renderLabel(); ?></label>
+                    <div class="col-sm-5">
+                         <?php echo $this->form->required_time->renderViewHelper(); ?>
+                    </div>
+                </div>
+				<?php */ ?>
+				<div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->survey_invite_subject->renderLabel(); ?></label>
+                    <div class="col-sm-6">
+                         <?php echo $this->form->survey_invite_subject->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+				<div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->survey_invite_text->renderLabel(); ?></label>
+                    <div class="col-sm-6">
+                         <?php echo $this->form->survey_invite_text->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+				<div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->landing_page_message->renderLabel(); ?></label>
+                    <div class="col-sm-6">
+                         <?php echo $this->form->landing_page_message->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+				<div class="form-group">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->survey_thanks_message->renderLabel(); ?></label>
+                    <div class="col-sm-6">
+                         <?php echo $this->form->survey_thanks_message->renderViewHelper(); ?>
+                    </div>
+                </div>
+				
+			
+				
+                <div class="form-group selector-radio-form">
+                    <label for="email_address" class="col-md-3 col-sm-4">Filter <!--<span class="required" style="color:red;">*</span>--></label>
+                    <div class="col-sm-5 selector-radio">
+                        <?php
+                            foreach($this->radioData as $radio)
+                            {
+                        ?>
+                                <div class="select-div">
+                                <label>
+                                    <input id="<?php echo $radio;?>" class="checkbox-div" type="checkbox" value="<?php echo $radio;?>" name="selector" onclick="selectorAjaxRequest($(this));">
+                                    <!-- <input id="" class="selector-value[]" type="hidden" value="<?php echo $radio;?>" name="selector-value[]" onclick=""> -->
+                                    <?php echo $radio;?>
+                                </label><br/>
+                                <div class="multi-select-div div-<?php echo str_replace(" ","",$radio);;?>"></div>
+                                </div>
+                                <br/>
+                        <?php        
+                            }
+                         
+                         ?>
+                    </div>
+                </div>
+			
+
+                <div class="formAjax"></div>    
+<!--                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <button id="backButton" type="button" onclick="formAjaxRequest();" class="btn btn-primary"><?php echo $this->translate('Filter'); ?></button> 
+                    </div>
+                </div>-->
+                <div class="formAjaxEmployee"></div>  
+				
+				<div class="form-group" id = "csv_upload">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->add_record->renderLabel(); ?>(CSV only)</label>
+                    <div class="col-sm-5">
+                         <?php  echo $this->form->add_record->renderFile();?>
+						<a href='../../../../../../uploads/Sample.csv' >Sample File</a>
+                    </div>
+                </div>
+                <div class="form-group" id = "external_aspirants">
+                    <label for="survey_name" class="col-md-3 col-sm-4"><?php echo $this->form->add_external_aspirants->renderLabel(); ?>(CSV only)</label>
+                    <div class="col-sm-5">
+                         <?php  echo $this->form->add_external_aspirants->renderFile();?>
+                        <a href='../../../../../../uploads/External_Aspirants.csv' >Sample File</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-md-offset-3 col-sm-offset-4">
+                        <?php echo $this->form->submitbtn->renderViewHelper(); ?>
+						<?php echo $this->form->emailbtn->renderViewHelper(); ?>
+						<?php echo $this->form->test_email_status->renderViewHelper(); ?>
+                        <button id="backButton" type="button" onclick="location.href='<?php echo HTTP_PATH.'/survey/eventtype/'?>'" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $("#start_date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',    
+             minDate: 0, // 0 days offset = today
+    
+        });
+        
+        $("#end_date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',       
+             minDate: 0, // 0 days offset = today
+        });
+		
+		$("#send_survey_on").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',       
+             minDate: 0, // 0 days offset = today
+        });
+		
+     });
+
+$(document).change(function() {
+    //set initial state.
+    $($("input[name='selector']:checked").val() ).val($(this).is(':checked'));
+
+    if($("input[name='selector']:checked").val() != null) {
+        $("#csv_upload").hide();
+		$("#external_aspirants").hide();
+	}
+	else{
+        $("#csv_upload").show();
+		$("#external_aspirants").show();
+	}
+
+    if($('#add_record')[0].files.length=='1'){
+        $("#external_aspirants").hide();
+    }
+
+});
+
+$('#submit,#send_test_email').on('click',function(){
+    var errors = new Array();
+    if($(this).attr("id") == 'send_test_email') {
+		$("#test_email_status").val('1');
+	}
+	else {
+		$("#test_email_status").val('0');
+	}
+    
+    jQuery('.error-messages').html('');
+    
+    if ($('#event_type').val() == '') 
+    {
+       // errors.push('Please select survey');
+    }
+    
+    if ($('#survey_name').val() == '') 
+    {
+        errors.push('Please enter survey instance name');
+    }
+    
+    if ($('#start_date').val() == '') 
+    {
+        errors.push('Please enter start date');
+    }
+    
+    if ($('#end_date').val() == '') 
+    {
+        errors.push('Please enter end date');
+    }
+    
+    if(tinymce.get('landing_page_message').getContent() == '') {
+        errors.push('Please add landing page message');
+    }
+    
+    if(tinymce.get('survey_thanks_message').getContent() == '') {
+        errors.push('Please add survey thanks message');
+    }
+
+    if($('#start_date').val() != '' && $('#end_date').val() != '' && $('#end_date').datepicker("getDate") < $('#start_date').datepicker("getDate"))
+    {
+        errors.push('Start date can not be greater than end date');
+    }
+    var error = 1;
+    
+    if($('#add_record')[0].files.length=='1'){
+		error = 0;
+	}
+
+    if($('#add_external_aspirants')[0].files.length=='1'){
+        error = 0;
+    }
+	
+    if(error)
+    {
+        $("input[name='selector']:checked").each(function(){
+           if($(this).parents('.select-div').find('.form_ajax').val() == null || $(this).parents('.select-div').find('.form_ajax').val() == '')
+           {
+               error = 0;
+               errors.push('Please select '+$(this).val());
+           }
+        });
+    }
+    
+    if(error)
+    {
+        if($('#form_ajax_employee').val() == null || $('#form_ajax_employee').val() == '')
+        {
+            errors.push('Please select employee');
+        }
+    }
+    if(errors.length != 0)
+    {
+        var errorHtml = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><br/>';
+            for (i = 0; i < errors.length; i++) 
+            {
+               errorHtml += errors[i] + "<br>";
+            }
+
+        errorHtml +=  '</div</div </div></div></div>';
+
+        jQuery('.error-messages').html(errorHtml);
+        return false;
+    }
+    
+ });
+ $('#event_type,#start_date,#end_date').on('change',function(){
+	 
+	 var eventType = ($('#event_type option:selected').text());
+	 var startDate = '';
+	 var endDate = '';
+	 if(($('#start_date')).val()){
+	  startDate = formatDate(($('#start_date')).val());
+	 }
+	 if(($('#end_date')).val()){
+	  endDate = formatDate(($('#end_date')).val());
+	 }
+	 var d = new Date();
+	 var dynamicSurveyName = eventType+" "+startDate+" To "+endDate;
+	 $('#survey_name').val(dynamicSurveyName);
+});
+
+function formatDate(dateStr){
+	dateArr = dateStr.split("/");
+	reformatedDate = dateArr[2]+"-"+dateArr[1]+"-"+dateArr[0];
+	var d = new Date(reformatedDate);
+	var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	var day = ("0" + (d.getDate())).slice(-2);
+	return day+'-'+monthNames[d.getMonth()]+'-'+d.getFullYear().toString().substr(2,2);
+}	
+
+tinymce.init({
+    selector:'textarea#survey_invite_text',
+    plugins: "link",
+    height: 600,
+    width:600,
+	menubar: true,
+    branding: false,
+    toolbar: "link"
+	
+  });
+  
+  tinymce.init({
+    selector:'textarea#landing_page_message',
+    plugins: "link",
+	height: 200,
+    branding: false,
+    menubar: true,
+    toolbar: "link"
+  });
+  
+  tinymce.init({
+    selector:'textarea#survey_thanks_message',
+    plugins: "link",
+	height: 200,
+    branding: false,
+    menubar: true,
+    toolbar: "link"
+  });
+</script>

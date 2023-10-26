@@ -1,0 +1,40 @@
+<h2><?php echo $this->translate('Manage Branching'); ?></h2>
+
+<?php
+if (!empty($this->messages)) {
+    $error = '<div class=""><div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong>'
+            . $this->messages . '</div</div </div></div></div>';
+    echo $error;
+}
+?>
+<div class="manage-branching white-bg padding20 question-add">
+    <form class="form-horizontal" role="form" name="branching" action="" method="POST"> 
+        <ul id="sortable" class="connectedSortable">
+            <?php  foreach($this->result as $key=>$val){?>
+            <li class="ui-state-default " id="<?php echo $val['questionid']?>" ><?php echo ($val['input_type'] == '') ? '(Label)      ' : '('.ucfirst($val['input_type']).')      '; echo $val['question']?></li>
+            <?php } ?>
+        </ul>
+        <button class="btn btn-primary" id="submit" onclick="submitform();">Submit</button>
+        <button id="backButton" type="button" onclick="goBack();" class="btn btn-primary"><?php echo $this->translate('Cancel'); ?></button> 
+        <input type="hidden" value="" name="order" id="order"/>
+    </form>
+</div>
+<script type="text/javascript" >
+    jQuery(document).ready(function(){
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+    });
+    function submitform(){
+        var order = $( "#sortable" ).sortable( "toArray" );
+        $("#order").val(order);
+        
+    }
+    
+    $('#submit').on('click',function(){
+        $(window).off('beforeunload');
+    });
+    
+    $(window).bind('beforeunload', function(){
+	return 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.';
+    });
+</script>

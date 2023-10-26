@@ -1,0 +1,21 @@
+<?php
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/bootstrap.min.css?v='.rand());
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/bootstrap-select.css');
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/bootstrap-combined.css');
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/style.css');
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/jquery.dataTables.min.css');
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/layout.css');
+	$this->headLink()->appendStylesheet($this->serverUrl().'/css/theme.css');
+        $this->headLink()->appendStylesheet($this->serverUrl().'/css/jquery-ui.css');
+        $this->headLink()->appendStylesheet($this->serverUrl().'/css/print.css','print');
+	
+        echo $this->headLink();
+?>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="<?php echo $this->serverUrl().'/js/html5shiv.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $this->serverUrl().'/js/respond.min.js'; ?>"></script>
+<![endif]-->
+

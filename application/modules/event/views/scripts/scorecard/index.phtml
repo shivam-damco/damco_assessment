@@ -1,0 +1,148 @@
+<!--
+ * 
+ * @author Anuj
+ * @date   31 May, 2014
+ * @version 1.0
+-->
+<?php
+//$dataString = "";
+//isset($this->get['event_type']) ? $dataString = "event_type=" . $this->get['event_type'] . "&" : '';
+//isset($this->get['startDate']) ? $dataString.="startDate=" . $this->get['startDate'] . "&" : '';
+//isset($this->get['endDate']) ? $dataString.="endDate=" . $this->get['endDate'] . "&" : '';
+//isset($this->get['dealer_id']) ? $dataString.="dealer_id=" . $this->get['dealer_id'] . "&" : '';
+//isset($this->get['branch']) ? $dataString.="branch=" . $this->get['branch'] . "&" : '';
+//isset($this->get['sales_region']) ? $dataString.="sales_region=" . $this->get['sales_region'] . "&" : '';
+//isset($this->get['market']) ? $dataString.="market=" . $this->get['market'] . "&" : '';
+//isset($this->get['series_name']) ? $dataString.="series_name=" . $this->get['series_name'] : '';
+?>
+<div class="logo-print" style="padding:10px;"><img src="<?php echo $this->baseUrl() . "/images/triumph-logo-print.png"; ?>" alt="Triumph"></div>
+<h2 style='font-family:Arial, Helvetica, sans-serif;'><?php echo $this->translate('Survey Result'); ?></h2> 
+<?php // if (isset($this->get['source'])) { ?>
+    <!--<div style="margin-left:650px"><a href="<?php echo HTTP_PATH ?>/report/dashboard/showdrilldown?<?php echo $dataString; ?>">Back</a></div>-->
+<?php // } ?>
+
+<section id="wrapper" style='font-family:Arial, Helvetica, sans-serif;'>
+    <div id="inner-wrapper">
+        <div class="white-bg padding20">
+            <div class="clearfix btn-holder" style="display:none;"><div class="pull-right"><button type="submit" id="print-button" class="btn btn-primary btn-lg" onclick="printscorecard()"><?php echo $this->translate('Print'); ?></button></div></div>
+
+            <!--Panel -->
+            <div class="panel panel-default">
+
+                <div class="table-responsive">                 
+                    <!-- 8/18/14 12:46 PM -->    
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="eventDetails table-condensed" style="border:1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td width="20%" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd"><strong><?php echo $this->translate('Employee ID'); ?></strong></td>
+                                <td  style="border-right:1px solid #ddd;border-bottom:1px solid #ddd;"   colspan="3">
+                                    <?php echo $this->employee[0]['employee_id'];?>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td width="20%" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd"><strong><?php echo $this->translate('Employee Name'); ?></strong></td>
+                                <td  style="border-right:1px solid #ddd;border-bottom:1px solid #ddd;"   colspan="3">
+                                <?php echo $this->employee[0]['employee_name'];?></td>
+                                
+                            </tr>
+                            <tr>
+                                <td width="20%" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd"><strong><?php echo $this->translate('Employee Department'); ?></strong></td>
+                                <td  style="border-right:1px solid #ddd;border-bottom:1px solid #ddd;"   colspan="3">
+                                <?php echo $this->employee[0]['employee_department']; ?></td>
+                                
+                            </tr>
+                            <tr>
+                                <td width="20%" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd"><strong><?php echo $this->translate('Response Date'); ?></strong></td>
+                                <td  style="border-right:1px solid #ddd;border-bottom:1px solid #ddd;"   colspan="3">
+                                <?php echo $this->employee[0]['survey_date'];?></td>
+                                
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--End Panel -->
+
+            <!--Survey Score Card -->
+            <div class="panel panel-default" >
+                <div class="panel-heading clearfix">
+                    <strong><?php echo $this->translate('Scorecard'); ?></strong>
+                </div>
+                <div class="table-responsive">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  class="table table-condensed">
+                        <tr>
+                           <th valign="middle" height="25" align="left" class="panel-heading clearfix" style="width:50px;" ></th>
+                            <th valign="middle" height="25" align="left" class="panel-heading clearfix" ><strong><?php echo $this->translate('Questions'); ?></strong></th>
+                            <th valign="middle" height="25" align="center" class="panel-heading clearfix"  style="text-align:center;width:250px"><strong><?php echo $this->translate('Response'); ?></strong></th>
+                        </tr>
+                        <tbody>
+                            <?php
+                            if (!empty($this->arrResponseData)):
+                                $i = 0;
+
+                                foreach ($this->arrResponseData as $scorecarddata) {
+
+                                    if ($scorecarddata['question_type'] == 'T' || $scorecarddata['question_type'] == 'V') {
+                                        ?>
+                                        <tr>
+                                            <td valign="middle" height="25" align="left" class="alert alert-warning" style="border-left:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;" colspan='2'><strong><?php echo $scorecarddata['question']; ?></strong></td>
+                                            <td valign="middle" height="25" align="center" class="alert alert-warning" style="border-left:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;">&nbsp;</td>
+                                        </tr>
+                                        <?php
+                                    } else {
+                                        $answer = '';
+                                        $class = '';
+                                        
+                                          $answer = $this->showAnswers($scorecarddata,$this->langid);
+                                        ?>
+
+                                        <tr <?php echo $class; ?>  >
+                                            <td style="border-left:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;width:50px;"><?php echo "<b>" . $scorecarddata['question_number'] . "</b>". (!empty($scorecarddata['question_number'])?'.':'');
+                                                               
+                                                            ?>
+                                            </td>
+                                            <td  valign="middle" height="25" align="left" style="border-left:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;"> <?php echo$scorecarddata['question']; ?> </td>
+                                            <td valign="middle"  height="25" align="center" style="background: #D1D1D1;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;width:250px;"> <?php echo $answer; ?></td>
+                                        </tr>    
+                                        <?php
+                                        unset($answer);
+                                    }
+                                    $i++;
+                                    if ($i % 10 == 0) {
+                                        ?></table><table width="100%" cellspacing="0" cellpadding="0" border="0" class=" table table-condensed"><?php
+                                    }
+                                }
+
+                            endif;
+                            
+                                                 
+                            ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    function printscorecard()
+    {
+        var myWindow = window.open('', '', 'width=800,height=800');
+        var ButtonControl = document.getElementById("print-button");
+        ButtonControl.style.visibility = "hidden";
+        myWindow.document.write(document.getElementById("wrapper").innerHTML);
+         //document.getElementById(two).style.display = 'none';
+         
+        myWindow.document.close();
+        ButtonControl.style.visibility = 'visible';
+        myWindow.focus();
+        myWindow.print();
+        ButtonControl.style.visibility = 'visible';
+        myWindow.close();
+        ButtonControl.style.visibility = 'visible';
+
+    }
+</script>

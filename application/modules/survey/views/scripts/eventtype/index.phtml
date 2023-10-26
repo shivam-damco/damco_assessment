@@ -1,0 +1,99 @@
+<h2><?php echo $this->translate('List Survey'); ?></h2>
+<?php
+    // print_r($this->EventTypesData);
+?>
+<?php echo $this->flashMessages( $this->flashMessages ); ?>
+<form name="data-filters" action="<?php echo HTTP_PATH.'/event/index/'?>" method="get">
+<?php 
+//    echo $this->dataFilters( array() );
+?>
+</form>
+	        
+<div class="data-table white-bg padding20">
+    <?php
+        if ( $this->hasAccess( $this->role_name, $this->get['module'], 'eventtype', 'add' ) ) {
+    ?>
+        <a href="<?php echo HTTP_PATH.'/survey/eventtype/add'?>">
+            <button class="btn btn-primary pull-right add-survey-btn">Add Survey</button>
+        </a> 
+    <?php } ?>
+     
+<table id="event-grid" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('');?></th>
+	    <th><?php echo $this->translate('Survey Category');?></th>
+            <th><?php echo $this->translate('Survey Title');?></th>         
+	    <th><?php echo $this->translate('Created Date');?></th>         
+            <!--<th><?php echo $this->translate('Description');?></th> -->
+            <th><?php echo $this->translate('Department');?></th>
+            <th><?php echo $this->translate('Instance Count');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th><?php echo $this->translate('');?></th>
+            <th><?php echo $this->translate('Survey Category');?></th>
+            <th><?php echo $this->translate('Survey Title');?></th>
+            <th><?php echo $this->translate('Created Date');?></th>    
+            <!--<th><?php echo $this->translate('Description');?></th> -->
+            <th><?php echo $this->translate('Department');?></th>
+            <th><?php echo $this->translate('Instance Count');?></th>
+            <th><?php echo $this->translate('Action');?></th>
+        </tr>
+    </tfoot>
+    
+</table>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+   var datatableObj=  $('#event-grid').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "bFilter": true,
+        "bSort" : true,
+        "iDisplayLength": 10,
+        "order": [[ 3, "desc" ]],
+        "aoColumnDefs": [
+            {
+                "aTargets": [0],
+                "mData": null,
+                "mRender": function(data, type, full) {
+                     var view = '';
+                     if (data[4] == 'Closed' || data[4] == 'Did not qualify') {
+                         view = '<a href="'+BASE_URL+'/event/scorecard/index?eventid='
+                +btoa(data[0])+'&modulename=eventlist" title="View Record" target="_blank">'+data[0]+'</a>';
+                    }
+                    else
+                    {
+                        view=data[0];
+                    }
+                    return view;
+                }
+            },
+            {
+                "aTargets": [4],
+                "bSortable": false
+            },
+            {
+                "aTargets": [5],
+                "bSortable": false
+            },
+			{
+                "aTargets": [6],
+                "bSortable": false
+            },
+            {
+                "targets": [0],
+                "visible": false
+            }
+            ],
+        "ajax": CURRENT_URL
+    });
+
+   
+});
+</script>
